@@ -17,12 +17,22 @@ $ sudo apt clean
 $ sudo apt install <package-name>
 ```
 
+git
+vim-nox
+firmware-linux
+firmware-iwlwifi
+ufw
+gufw
+arc-theme
+lightdm-gtk-greeter-settings
 
 ## Remove
 
 ```bash
-$ sudo apt remove --purge <package-name>
+$ sudo apt remove --autoremove --purge <package-name>
 ```
 
+avahi-daemon
+avahi-autoipd
 
 ## Other
