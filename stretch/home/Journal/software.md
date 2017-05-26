@@ -17,6 +17,11 @@ $ sudo apt clean
 $ sudo apt install <package-name>
 ```
 
+### GUI
+i3 feh xdotools
+redshift-gtk
+gtk-redshift
+
 ### Internet
 chromium chromium-l10n chromium-widevine
 transmission
@@ -27,9 +32,11 @@ gimp inkscape
 libavcodec-extra
 
 ### Tools
-git vim-nox
+vim-nox
 ufw gufw
-
+htop
+ranger
+trash-cli
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -37,8 +44,21 @@ firmware-realtek r8168-dkms
 
 ### Fonts
 fonts-liberation2 ttf-bitstream-vera ttf-dejavu ttf-freefont ttf-mscorefonts-installer
+xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
+ttf-xfree86-nonfree 
+
+### Office
+zathura-djvu zathura-ps zathura-cb
+mupdf
+gnome-calculator
+sane
+libreoffice-l10n-tr
+libreoffice-help-tr
 
 ### Development
+
+#### Git
+git gitg
 
 #### C/C++
 g++
@@ -50,6 +70,10 @@ dirmngr
 oracle-java8-installer
 default-jdk
 openjdk-8-source
+netbeans
+
+#### Python3
+ipython3
 
 #### Docker
 apt-transport-https
@@ -57,15 +81,18 @@ ca-certificates
 curl
 gnupg2
 software-properties-common
+docker-ce
 
 #### VirtualBox
 virtualbox-5.1
 
+#### Archive
+p7zip-rar rar unrar
+
 ### Misc.
 arc-theme
 lightdm-gtk-greeter-settings
-
-
+xfce4-screenshooter-plugin
 
 ## Remove
 
