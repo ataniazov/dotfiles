@@ -20,7 +20,6 @@ $ sudo apt install <package-name>
 ### GUI
 i3 feh xdotools
 redshift-gtk
-gtk-redshift
 
 ### Internet
 chromium chromium-l10n chromium-widevine
@@ -51,7 +50,7 @@ ttf-xfree86-nonfree
 zathura-djvu zathura-ps zathura-cb
 mupdf
 gnome-calculator
-sane
+simple-scan
 libreoffice-l10n-tr
 libreoffice-help-tr
 
