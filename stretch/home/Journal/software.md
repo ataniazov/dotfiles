@@ -30,12 +30,19 @@ mpv cmus
 gimp inkscape
 libavcodec-extra
 
+#### MTP
+libimobiledevice-utils
+gvfs-backends
+gvfs-bin
+gvfs-fuse
+
 ### Tools
 vim-nox
 ufw gufw
 htop
 ranger
 trash-cli
+
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -84,6 +91,9 @@ docker-ce
 
 #### VirtualBox
 virtualbox-5.1
+
+#### KVM
+virt-manager
 
 #### Archive
 p7zip-rar rar unrar

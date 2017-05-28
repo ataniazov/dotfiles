@@ -100,3 +100,22 @@ $ sudo apt-get update
 $ sudo apt-get install virtualbox-5.1
 
 ```
+
+* Disabled systemd services:
+
+```bash
+$ sudo systemctl disable
+
+bluetooth.service
+
+docker.socket
+docker.service
+
+libvirt-guests.service
+libvirtd.service
+
+vboxautostart-service.service
+vboxdrv.service
+vboxballoonctrl-service.service
+vboxweb-service.service
+```

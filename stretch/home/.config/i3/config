@@ -13,9 +13,10 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
 #font pango:Terminus 11px
 #font pango:DejaVu Sans Mono 8
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -110,6 +111,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 bindsym $mod+o focus child
 
+# move the currently focused window to the scratchpad
+#bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+z move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+#bindsym $mod+minus scratchpad show
+bindsym $mod+z scratchpad show
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -174,9 +184,19 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
+	tray_output primary
         status_command i3status
-	colors {
 
+	colors {
+		background #222222
+		statusline #ffffff
+		separator #666666
+		# colorclass	   border  backgr. text
+		focused_workspace  #E7E8EB #E7E8EB #222222
+		active_workspace   #E7E8EB #222222 #ffffff
+		inactive_workspace #E7E8EB #222222 #E7E8EB
+		urgent_workspace   #2f343a #900000 #ffffff
+		binding_mode       #2f343a #900000 #ffffff
 	}
 }
 
@@ -212,13 +232,13 @@ focus_follows_mouse no
 exec --no-startup-id $HOME/.config/i3/startup.sh
 
 # Wallpaper setting
-exec_always --no-startup-id feh --bg-scale ~/Pictures/background.jpg
-#exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
+exec_always --no-startup-id feh --bg-scale ~/Pictures/mountains.png
 
 # Set caps-lock as a modifier and dvorak as keyboard layout
 exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
 
 # Set ratpoison-like behaviour hot-keys
+#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
 bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
 bindsym $mod+b exec --no-startup-id xdotool mousemove 1600 900
 # Toggle between dock mode and hide mode
@@ -226,6 +246,10 @@ bindsym $mod+m bar mode toggle
 
 # The middle button with modifier toggles floating
 bindsym --whole-window $mod+button2 floating toggle
+
+# i3lock
+bindsym $mod+Shift+backslash exec \
+		--no-startup-id i3lock -n -d -c 000000 -f	# i3lock
 
 # Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
 bindsym Print exec --no-startup-id amixer set Master 5%-
@@ -240,26 +264,42 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master toggle
 # Application lunch hot-keys
 bindsym $mod+g exec firefox --private-window			# Firefox
 bindsym $mod+Shift+g exec chromium --incognito			# Chromium
+#bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
+
+# Redshift
+#exec --no-startup-id redshift-gtk -c /home/delta/.config/redshift.conf
 
 # Java
-exec --no-startup-id wmname LG3D
+#exec --no-startup-id wmname LG3D
 #bindsym $mod+Shift+i exec idea					# Intellij IDEA
-bindsym $mod+Shift+backslash exec \
-		--no-startup-id i3lock -n -d -c 000000 -f	# i3lock
+
+# Multi-Monitor settings
+#bindsym $mod+x exec --no-startup-id sh /home/delta/.screenlayout/multihead.sh | i3-msg restart
 
 # Fast ScreenShot
-bindsym $mod+x exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pictures/
+#bindsym $mod+x exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pictures/
 
 # TESTING CONFIGURATIONS
 
 #bindsym control+t mode "$mode_launcher"
 #set $mode_launcher Launch: [m]ousepad
-
-mode "$mode_launcher" {
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-    bindsym m exec --no-startup-id mousepad
-}
+#mode "$mode_launcher" {
+#    bindsym Escape mode "default"
+#    bindsym Return mode "default"
+#    bindsym m exec --no-startup-id mousepad
+#}
 
 #bindsym $mod+Tab exec --no-startup-id $HOME/.config/i3/i3FocusNext.sh
 #bindsym $mod+Tab container next
+
+# QT Creator
+#bindsym $mod+Shift+q exec --no-startup-id /home/delta/Qt/Tools/QtCreator/bin/qtcreator
+
+# Start Spotify
+#bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
+
+#assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $workspace0
+#exec --no-startup-id i3-msg 'workspace 0; exec chromium --kiosk --disable-extensions https://play.spotify.com/browse'
+#exec --no-startup-id i3-msg 'workspace $workspace0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
+
+#exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
