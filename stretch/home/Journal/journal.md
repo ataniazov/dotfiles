@@ -7,3 +7,4 @@
 * Disabled pcsprk **beep** sound
 * Edited **us** language **dvorak** variant to support turkish characters
 * Installed **docker-ce** & **virtualbox-5.1** from official repository
+* Installed **nodejs** from official repository

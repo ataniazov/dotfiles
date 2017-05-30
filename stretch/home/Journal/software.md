@@ -42,7 +42,8 @@ ufw gufw
 htop
 ranger
 trash-cli
-
+gnome-terminal
+udiskie
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -81,6 +82,9 @@ netbeans
 #### Python3
 ipython3
 
+#### Haskell
+haskell-platform
+
 #### Docker
 apt-transport-https
 ca-certificates
@@ -99,9 +103,11 @@ virt-manager
 p7zip-rar rar unrar
 
 ### Misc.
-arc-theme
+greybird-gtk-theme
 lightdm-gtk-greeter-settings
-xfce4-screenshooter-plugin
+
+autoconf
+libgtk-3-dev
 
 ## Remove
 
@@ -113,3 +119,5 @@ avahi-daemon
 avahi-autoipd
 
 ## Other
+nodejs
+

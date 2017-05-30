@@ -4,10 +4,12 @@ pkill xfsettingsd
 pkill xfce4-power-manager
 pkill xfce4-volumed
 pkill redshift
+pkill polkit-gnome-authentication-agent-1
 #pkill compton
 #pkill conky
 sleep 1
 # StartUp daemons
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 xfsettingsd &
 xfce4-power-manager &
 xfce4-volumed &

@@ -106,16 +106,22 @@ $ sudo apt-get install virtualbox-5.1
 ```bash
 $ sudo systemctl disable
 
-bluetooth.service
+- bluetooth.service
 
-docker.socket
-docker.service
+- docker.socket
+- docker.service
 
-libvirt-guests.service
-libvirtd.service
+- libvirt-guests.service
+- libvirtd.service
 
-vboxautostart-service.service
-vboxdrv.service
-vboxballoonctrl-service.service
-vboxweb-service.service
+- vboxautostart-service.service
+- vboxdrv.service
+- vboxballoonctrl-service.service
+- vboxweb-service.service
+```
+
+* Installed **nodejs** from official repository
+```bash
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
