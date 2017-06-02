@@ -228,24 +228,25 @@ new_float normal 1 px
 hide_edge_borders none
 focus_follows_mouse no
 
-# StartUp daemons
-exec --no-startup-id $HOME/.config/i3/startup.sh
-
-# Wallpaper setting
-exec_always --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/mountains.png
-
-# Set caps-lock as a modifier and dvorak as keyboard layout
-exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
-
-# Set ratpoison-like behaviour hot-keys
-#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
-bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
-bindsym $mod+b exec --no-startup-id xdotool mousemove 1600 900
 # Toggle between dock mode and hide mode
 bindsym $mod+m bar mode toggle
 
 # The middle button with modifier toggles floating
 bindsym --whole-window $mod+button2 floating toggle
+
+# StartUp daemons
+exec --no-startup-id $HOME/.config/i3/startup.sh
+
+# Set caps-lock as a modifier and dvorak as keyboard layout
+exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
+
+# Wallpaper setting
+exec_always --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/background.png
+
+# Set ratpoison-like behaviour hot-keys
+#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
+bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
+bindsym $mod+b exec --no-startup-id xdotool mousemove 1600 900
 
 # i3lock
 bindsym $mod+Shift+backslash exec \
@@ -265,6 +266,9 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 bindsym $mod+g exec firefox --private-window			# Firefox
 bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
+#
+# Fast ScreenShot
+bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pictures/
 
 # Redshift
 #exec --no-startup-id redshift-gtk -c /home/delta/.config/redshift.conf
@@ -276,8 +280,6 @@ bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 # Multi-Monitor settings
 #bindsym $mod+x exec --no-startup-id sh /home/delta/.screenlayout/multihead.sh | i3-msg restart
 
-# Fast ScreenShot
-#bindsym $mod+x exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pictures/
 
 # TESTING CONFIGURATIONS
 

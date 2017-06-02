@@ -44,6 +44,7 @@ ranger
 trash-cli
 gnome-terminal
 udiskie
+gpick
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -84,6 +85,8 @@ ipython3
 
 #### Haskell
 haskell-platform
+stylish-haskell ghc-mod hasktags hoogle hlint ghc-modi
+haskell-platform-doc haskell-platform-prof haskell-stack
 
 #### Docker
 apt-transport-https
