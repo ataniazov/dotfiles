@@ -32,11 +32,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up l
-#set $down k
-set $down slash
+set $down k
 set $left j
-#set $right semicolon
-set $right k
+set $right semicolon
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -130,8 +128,8 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-#bindsym $mod+0 workspace 10
-bindsym $mod+0 workspace 0
+bindsym $mod+0 workspace 10
+#bindsym $mod+0 workspace 0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -143,8 +141,8 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-#bindsym $mod+Shift+0 move container to workspace 10
-bindsym $mod+Shift+0 move container to workspace 0
+bindsym $mod+Shift+0 move container to workspace 10
+#bindsym $mod+Shift+0 move container to workspace 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,22 +184,10 @@ bar {
 	position top
 	tray_output primary
         status_command i3status
-
-	colors {
-		background #222222
-		statusline #ffffff
-		separator #666666
-		# colorclass	   border  backgr. text
-		focused_workspace  #E7E8EB #E7E8EB #222222
-		active_workspace   #E7E8EB #222222 #ffffff
-		inactive_workspace #E7E8EB #222222 #E7E8EB
-		urgent_workspace   #2f343a #900000 #ffffff
-		binding_mode       #2f343a #900000 #ffffff
-	}
 }
 
 ##############################################################################
-#                                  DELTA                                     #
+#                                  USER                                      #
 ##############################################################################
 
 # Automatic back-and-forth when switching to the current workspace
@@ -210,26 +196,16 @@ workspace_auto_back_and_forth yes
 # Delaying urgency hint reset on workspace change
 force_display_urgency_hint 500 ms
 
-# Changing colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #E7E8EB #E7E8EB #000000 #2e9ef4   #E7E8EB #285577
-client.focused_inactive #333333 #494949 #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-client.background       #ffffff
-
 # window and border settings
 #new_window normal 0 px
 #new_window none
-new_window 1pixel
-new_float normal 1 px
+#new_window 1pixel
+#new_float normal 1 px
 hide_edge_borders none
 focus_follows_mouse no
 
 # Toggle between dock mode and hide mode
-bindsym $mod+m bar mode toggle
+bindsym $mod+Shift+b bar mode toggle
 
 # The middle button with modifier toggles floating
 bindsym --whole-window $mod+button2 floating toggle
@@ -238,7 +214,7 @@ bindsym --whole-window $mod+button2 floating toggle
 exec --no-startup-id $HOME/.config/i3/startup.sh
 
 # Set caps-lock as a modifier and dvorak as keyboard layout
-exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
+exec_always --no-startup-id setxkbmap -layout "us,tr" -option "grp:alt_space_toggle,grp_led:scroll"
 
 # Wallpaper setting
 exec_always --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/background.png
@@ -249,7 +225,7 @@ exec_always --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/background.png
 bindsym $mod+b exec --no-startup-id xdotool mousemove 1600 900
 
 # i3lock
-bindsym $mod+Shift+backslash exec \
+#bindsym $mod+Shift+backslash exec \
 		--no-startup-id i3lock -n -d -c 000000 -f	# i3lock
 
 # Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
@@ -280,7 +256,6 @@ bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pi
 # Multi-Monitor settings
 #bindsym $mod+x exec --no-startup-id sh /home/delta/.screenlayout/multihead.sh | i3-msg restart
 
-
 # TESTING CONFIGURATIONS
 
 #bindsym control+t mode "$mode_launcher"
@@ -290,18 +265,5 @@ bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pi
 #    bindsym Return mode "default"
 #    bindsym m exec --no-startup-id mousepad
 #}
-
-#bindsym $mod+Tab exec --no-startup-id $HOME/.config/i3/i3FocusNext.sh
-#bindsym $mod+Tab container next
-
-# QT Creator
-#bindsym $mod+Shift+q exec --no-startup-id /home/delta/Qt/Tools/QtCreator/bin/qtcreator
-
-# Start Spotify
-#bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
-
-#assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $workspace0
-#exec --no-startup-id i3-msg 'workspace 0; exec chromium --kiosk --disable-extensions https://play.spotify.com/browse'
-#exec --no-startup-id i3-msg 'workspace $workspace0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )

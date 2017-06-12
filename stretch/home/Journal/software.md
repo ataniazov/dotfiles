@@ -45,6 +45,8 @@ trash-cli
 gnome-terminal
 udiskie
 gpick
+blueman
+gnome-disk-utility
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -62,6 +64,7 @@ gnome-calculator
 simple-scan
 libreoffice-l10n-tr
 libreoffice-help-tr
+libreoffice-style-breeze
 
 ### Development
 
@@ -87,6 +90,11 @@ ipython3
 haskell-platform
 stylish-haskell ghc-mod hasktags hoogle hlint ghc-modi
 haskell-platform-doc haskell-platform-prof haskell-stack
+haskell-doc
+
+#### Erlang
+erlang
+erlang-doc
 
 #### Docker
 apt-transport-https

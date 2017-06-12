@@ -1,9 +1,10 @@
+
 # This hosts file is a merged collection of hosts from reputable sources,
 # with a dash of crowd sourcing via Github
 #
-# Date: May 24 2017
+# Date: June 08 2017
 # Extensions added to this file: gambling
-# Number of unique domains: 37,565
+# Number of unique domains: 37,905
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # Project home page: https://github.com/StevenBlack/hosts
@@ -17375,7 +17376,7 @@ fe80::1%lo0 localhost
 
 
 
-# Last updated: Wed, 24 May 2017 at 18:43:27 GMT
+# Last updated: Tue, 06 Jun 2017 at 17:05:57 GMT
 
 
 
@@ -18054,6 +18055,7 @@ fe80::1%lo0 localhost
 0.0.0.0 cyseal.cyveillance.com
 0.0.0.0 da.ce.bd.a9.top.list.ru
 0.0.0.0 data2.perf.overture.com
+0.0.0.0 dc43.s290.meetrics.net
 0.0.0.0 dclk.themarketer.com
 0.0.0.0 delivery.loopingclick.com
 0.0.0.0 detectorcarecenter.in
@@ -18068,6 +18070,7 @@ fe80::1%lo0 localhost
 0.0.0.0 ds.amateurmatch.com
 0.0.0.0 dv-fw-a-nat.iovation.com
 0.0.0.0 dwclick.com
+0.0.0.0 dyn.emetriq.de
 0.0.0.0 e-2dj6wfk4ehd5afq.stats.esomniture.com
 0.0.0.0 e-2dj6wfk4ggdzkbo.stats.esomniture.com
 0.0.0.0 e-2dj6wfk4gkcpiep.stats.esomniture.com
@@ -18184,6 +18187,7 @@ fe80::1%lo0 localhost
 0.0.0.0 hit39.chart.dk
 0.0.0.0 hits.gureport.co.uk
 0.0.0.0 http300.edge.ru4.com
+0.0.0.0 i.track112.site
 0.0.0.0 iccee.com
 0.0.0.0 ieplugin.com
 0.0.0.0 iesnare.co.uk
@@ -18377,6 +18381,7 @@ fe80::1%lo0 localhost
 0.0.0.0 s1-tracking.adalyser.com
 0.0.0.0 s1.thecounter.com
 0.0.0.0 s2.youtube.com
+0.0.0.0 s290.mxcdn.net
 0.0.0.0 sa.jumptap.com
 0.0.0.0 scorecardresearch.com
 0.0.0.0 scribe.twitter.com
@@ -19427,6 +19432,7 @@ fe80::1%lo0 localhost
 0.0.0.0 phormsolution.com
 0.0.0.0 phpancake.com
 0.0.0.0 picture-uploads.com
+0.0.0.0 pigredoben12.sytes.net
 0.0.0.0 pilltabletsrxbargain.net
 0.0.0.0 pop.net21pk.com
 0.0.0.0 post.netchina.com.cn
@@ -19622,6 +19628,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.cambonanza.com
 0.0.0.0 www.caramail.com
 0.0.0.0 www.chelick.net
+0.0.0.0 www.commercialclientsgroup.ru
 0.0.0.0 www.didata.bw
 0.0.0.0 www.dietsecret.ru
 0.0.0.0 www.eroyear.ru
@@ -19690,6 +19697,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.someonewhocares.com
 0.0.0.0 www.speedtestbeta.com
 0.0.0.0 www.stopphoulplay.com
+0.0.0.0 www.taba.site
 0.0.0.0 www.tanger.com.br
 0.0.0.0 www.tattooshaha.info
 0.0.0.0 www.te81.net
@@ -20795,6 +20803,7 @@ fe80::1%lo0 localhost
 0.0.0.0 aads.treehugger.com
 0.0.0.0 aams1.aim4media.com
 0.0.0.0 aan.amazon.com
+0.0.0.0 aax-cpm.amazon-adsystem.com
 0.0.0.0 aax-us-pdx.amazon-adsystem.com
 0.0.0.0 abcnews.footprint.net
 0.0.0.0 abrogatesdv.info
@@ -21615,6 +21624,7 @@ fe80::1%lo0 localhost
 0.0.0.0 ads.gmg.valueclick.net
 0.0.0.0 ads.gmodules.com
 0.0.0.0 ads.god.co.uk
+0.0.0.0 ads.gold
 0.0.0.0 ads.golfweek.com
 0.0.0.0 ads.gorillanation.com
 0.0.0.0 ads.gplusmedia.com
@@ -22469,6 +22479,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adshmmsg.qq.com
 0.0.0.0 adsim.sabah.com.tr
 0.0.0.0 adsinimages.com
+0.0.0.0 adsino24.com
 0.0.0.0 adsintl.starwave.com
 0.0.0.0 adslvfile.qq.com
 0.0.0.0 adslvseed.qq.com
@@ -22617,6 +22628,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adzservice.theday.com
 0.0.0.0 ae-gb.mgid.com
 0.0.0.0 ae.goodsblock.marketgid.com
+0.0.0.0 afdyfxfrwbfy.com
 0.0.0.0 aff.foxtab.com
 0.0.0.0 aff.gittigidiyor.com
 0.0.0.0 aff.promodeals.nl
@@ -22708,6 +22720,10 @@ fe80::1%lo0 localhost
 0.0.0.0 api.shoppingminds.net
 0.0.0.0 apopt.hbmediapro.com
 0.0.0.0 app.datafastguru.info
+0.0.0.0 app.getresponse.com
+0.0.0.0 app2.letmacwork.world
+0.0.0.0 app3.letmacwork.world
+0.0.0.0 app4.letslowbefast.today
 0.0.0.0 apparel-offer.com
 0.0.0.0 apparelncs.com
 0.0.0.0 appdev.addthis.com
@@ -22780,6 +22796,7 @@ fe80::1%lo0 localhost
 0.0.0.0 atdmt.com
 0.0.0.0 athena-ads.wikia.com
 0.0.0.0 atm.youku.com
+0.0.0.0 atout-energie-69.com
 0.0.0.0 au.ads.link4ads.com
 0.0.0.0 aud.pubmatic.com
 0.0.0.0 aureate.com
@@ -22821,6 +22838,7 @@ fe80::1%lo0 localhost
 0.0.0.0 banery.acr.pl
 0.0.0.0 banery.netart.pl
 0.0.0.0 banery.onet.pl
+0.0.0.0 bang-hotties.com
 0.0.0.0 banki.onet.pl
 0.0.0.0 bankofamerica.tt.omtrdc.net
 0.0.0.0 banlv.baidu.com
@@ -23088,6 +23106,7 @@ fe80::1%lo0 localhost
 0.0.0.0 cards.virtuagirlhd.com
 0.0.0.0 careers-rewardpath.com
 0.0.0.0 careers.canwestad.net
+0.0.0.0 carmuffler.net
 0.0.0.0 carrier.bz
 0.0.0.0 cashadvancework.com
 0.0.0.0 cashback.co.uk
@@ -23118,6 +23137,7 @@ fe80::1%lo0 localhost
 0.0.0.0 cdn.constafun.com
 0.0.0.0 cdn.crowdignite.com
 0.0.0.0 cdn.dustyorate.com
+0.0.0.0 cdn.employchannel.info
 0.0.0.0 cdn.epommarket.com
 0.0.0.0 cdn.eyewonder.com
 0.0.0.0 cdn.freefaits.com
@@ -23441,6 +23461,7 @@ fe80::1%lo0 localhost
 0.0.0.0 dcads.sina.com.cn
 0.0.0.0 dctracking.com
 0.0.0.0 de.ads.justpremium.com
+0.0.0.0 dealitright.click
 0.0.0.0 dearerfonder.info
 0.0.0.0 del1.phillyburbs.com
 0.0.0.0 delb.mspaceads.com
@@ -23512,6 +23533,7 @@ fe80::1%lo0 localhost
 0.0.0.0 dtm.advertising.com
 0.0.0.0 dub.mobileads.msn.com
 0.0.0.0 dy.admerize.be
+0.0.0.0 dyn.loolav.space
 0.0.0.0 dzl.baidu.com
 0.0.0.0 e-ltvp.inmobi.com
 0.0.0.0 e.admob.com
@@ -23621,6 +23643,7 @@ fe80::1%lo0 localhost
 0.0.0.0 finance-offer.com
 0.0.0.0 finanzmeldungen.com
 0.0.0.0 finder.cox.net
+0.0.0.0 findsexguide.com
 0.0.0.0 firstgame.xyz
 0.0.0.0 fixbonus.com
 0.0.0.0 fliteilex.com
@@ -23800,6 +23823,7 @@ fe80::1%lo0 localhost
 0.0.0.0 getacooltv.com
 0.0.0.0 getafreeiphone.org
 0.0.0.0 getagiftonline.com
+0.0.0.0 getmyads.com
 0.0.0.0 getmyads24.com
 0.0.0.0 getmyfreebabystuff.com
 0.0.0.0 getmyfreegear.com
@@ -23912,6 +23936,7 @@ fe80::1%lo0 localhost
 0.0.0.0 helpmymacfaster.club
 0.0.0.0 hermes.airad.com
 0.0.0.0 hightrafficads.com
+0.0.0.0 hikesearch.net
 0.0.0.0 himediads.com
 0.0.0.0 histats.com
 0.0.0.0 histock.info
@@ -24310,6 +24335,7 @@ fe80::1%lo0 localhost
 0.0.0.0 m4.media-box.co
 0.0.0.0 m4ymh0220.tech
 0.0.0.0 ma.baidu.com
+0.0.0.0 mac-helper.site
 0.0.0.0 mac.system-alert1.com
 0.0.0.0 macaddictads.snv.futurenet.com
 0.0.0.0 macads.net
@@ -24361,6 +24387,7 @@ fe80::1%lo0 localhost
 0.0.0.0 maxserving.com
 0.0.0.0 mb01.com
 0.0.0.0 mbox2.offermatica.com
+0.0.0.0 mcagbtdcwklf.com
 0.0.0.0 mcfg.sandai.net
 0.0.0.0 mds.centrport.net
 0.0.0.0 media-fire.org
@@ -24514,7 +24541,9 @@ fe80::1%lo0 localhost
 0.0.0.0 my.trgino.com
 0.0.0.0 my2.hizliizlefilm.net
 0.0.0.0 my2.teknoter.com
+0.0.0.0 myanyone.net
 0.0.0.0 myasiantv.gsspcln.jp
+0.0.0.0 mybinaryoptionsrobot.com
 0.0.0.0 mycamptrack.com
 0.0.0.0 mycashback.co.uk
 0.0.0.0 mycelloffer.com
@@ -24577,6 +24606,8 @@ fe80::1%lo0 localhost
 0.0.0.0 newsterminalvelocity.com
 0.0.0.0 newt1.adultworld.com
 0.0.0.0 newtger.info
+0.0.0.0 newversionupdate.space4update.pw
+0.0.0.0 newversionupdate.space4updating.win
 0.0.0.0 ng.virgul.com
 0.0.0.0 ngads.smartage.com
 0.0.0.0 nicappazaza.com
@@ -24658,12 +24689,15 @@ fe80::1%lo0 localhost
 0.0.0.0 offerreality.com
 0.0.0.0 offers.bycontext.com
 0.0.0.0 offers.impower.com
+0.0.0.0 offers.nordvpn.com
 0.0.0.0 offers.royalvegascasino.com
 0.0.0.0 offertrakking.info
 0.0.0.0 offertunity.click
 0.0.0.0 offerx.co.uk
+0.0.0.0 ogulzxfxrmow.com
 0.0.0.0 ohmydating.com
 0.0.0.0 oidiscover.com
+0.0.0.0 oik.mactechinfo.info
 0.0.0.0 oimsgad.qq.com
 0.0.0.0 oinadserve.com
 0.0.0.0 oix-rubyem.net
@@ -24686,6 +24720,7 @@ fe80::1%lo0 localhost
 0.0.0.0 okel.co
 0.0.0.0 old-darkroast.adknowledge.com
 0.0.0.0 olqdh.top
+0.0.0.0 om.elvenar.com
 0.0.0.0 ometrics.warnerbros.com
 0.0.0.0 online1.webcams.com
 0.0.0.0 onlineads.magicvalley.com
@@ -24746,6 +24781,7 @@ fe80::1%lo0 localhost
 0.0.0.0 p3p.alibaba.com
 0.0.0.0 p3p.mmstat.com
 0.0.0.0 p4psearch.china.alibaba.com
+0.0.0.0 paclitor.com
 0.0.0.0 page.0ffer.eu
 0.0.0.0 pagead.googlesyndication.com
 0.0.0.0 pagead1.googlesyndication.com
@@ -24895,6 +24931,7 @@ fe80::1%lo0 localhost
 0.0.0.0 posed2shade.com
 0.0.0.0 post.rmbn.ru
 0.0.0.0 poster-op2joygames.me
+0.0.0.0 poster.gamesprite.me
 0.0.0.0 postmasterdirect.com
 0.0.0.0 pp.free.fr
 0.0.0.0 pp2.pptv.com
@@ -25066,6 +25103,7 @@ fe80::1%lo0 localhost
 0.0.0.0 realads.realmedia.com
 0.0.0.0 realgfsbucks.com
 0.0.0.0 realizemobicom.com
+0.0.0.0 realizmobi.com
 0.0.0.0 realmedia-a800.d4p.net
 0.0.0.0 realmedia.advance.net
 0.0.0.0 record.commissionlounge.com
@@ -25126,6 +25164,7 @@ fe80::1%lo0 localhost
 0.0.0.0 revsci.net
 0.0.0.0 rewardblvd.com
 0.0.0.0 rewardhotspot.com
+0.0.0.0 rewardpoll.com
 0.0.0.0 rewardsflow.com
 0.0.0.0 rh.qq.com
 0.0.0.0 rich.qq.com
@@ -25375,10 +25414,12 @@ fe80::1%lo0 localhost
 0.0.0.0 shops-malls-rewardpath.com
 0.0.0.0 shoptosaveenergy.com
 0.0.0.0 show-msgch.qq.com
+0.0.0.0 show.targead.com
 0.0.0.0 showads1000.pubmatic.com
 0.0.0.0 showadsak.pubmatic.com
 0.0.0.0 shrek.6.cn
 0.0.0.0 sifomedia.citypaketet.se
+0.0.0.0 signoredom.com
 0.0.0.0 signup.advance.net
 0.0.0.0 simba.6.cn
 0.0.0.0 simpleads.net
@@ -25390,6 +25431,7 @@ fe80::1%lo0 localhost
 0.0.0.0 skill.skilljam.com
 0.0.0.0 slayinglance.com
 0.0.0.0 slimspots.com
+0.0.0.0 slowmac.tech
 0.0.0.0 slowmacfaster.trade
 0.0.0.0 smart-scripts.com
 0.0.0.0 smart.besonders.ru
@@ -25411,12 +25453,14 @@ fe80::1%lo0 localhost
 0.0.0.0 sochr.com
 0.0.0.0 social.bidsystem.com
 0.0.0.0 softlinkers.popunder.ru
+0.0.0.0 softreadynow.thespaceupdatespcandmac.info
 0.0.0.0 softwarepiset.com
 0.0.0.0 sokrates.adtech.de
 0.0.0.0 sokrates.adtech.fr
 0.0.0.0 sokrates.adtech.us
 0.0.0.0 sol-images.adbureau.net
 0.0.0.0 sol.adbureau.net
+0.0.0.0 solicita.info
 0.0.0.0 solitairetime.com
 0.0.0.0 solution.weborama.fr
 0.0.0.0 somethingawful.crwdcntrl.net
@@ -25456,6 +25500,7 @@ fe80::1%lo0 localhost
 0.0.0.0 sq2trk2.com
 0.0.0.0 ssads.osdn.com
 0.0.0.0 ssl-nl.persgroep.edgekey.net
+0.0.0.0 ssl4anyone5.com
 0.0.0.0 sso.canada.com
 0.0.0.0 ssp.adplus.co.id
 0.0.0.0 ssp.anyclip-media.com
@@ -25506,6 +25551,7 @@ fe80::1%lo0 localhost
 0.0.0.0 static.l3.cdn.adsucks.com
 0.0.0.0 static.linkz.net
 0.0.0.0 static.lstat.youku.com
+0.0.0.0 static.mackeeper.com
 0.0.0.0 static.mediav.com
 0.0.0.0 static.nrelate.com
 0.0.0.0 static.onlinevenditatio.space
@@ -25543,6 +25589,7 @@ fe80::1%lo0 localhost
 0.0.0.0 status.addthis.com
 0.0.0.0 stephanie.tnctrx.com
 0.0.0.0 stocker.bonnint.net
+0.0.0.0 stoiximan.gr
 0.0.0.0 storage.bulletproofserving.com
 0.0.0.0 storage.softure.com
 0.0.0.0 stts.rbc.ru
@@ -25578,6 +25625,7 @@ fe80::1%lo0 localhost
 0.0.0.0 synad2.nuffnang.com.cn
 0.0.0.0 syncaccess.net
 0.0.0.0 syndicated.mondominishows.com
+0.0.0.0 syndication.exdynsrv.com
 0.0.0.0 sysadmin.map24.com
 0.0.0.0 sysip.net
 0.0.0.0 t.admob.com
@@ -25596,6 +25644,7 @@ fe80::1%lo0 localhost
 0.0.0.0 tags.rllcll.com
 0.0.0.0 tags.tagcade.com
 0.0.0.0 tags.toroadvertising.com
+0.0.0.0 takeprofitsystem.com
 0.0.0.0 taking-technology.com
 0.0.0.0 taloussanomat.linkpulse.com
 0.0.0.0 taobaoafp.allyes.com
@@ -26038,6 +26087,7 @@ fe80::1%lo0 localhost
 0.0.0.0 webwise.bt.com
 0.0.0.0 wegetpaid.net
 0.0.0.0 wegotmedia.co
+0.0.0.0 welcome.faptitans.com
 0.0.0.0 welcome.pussysaga.com
 0.0.0.0 werkenbijliones.nl
 0.0.0.0 widespace.com
@@ -26418,6 +26468,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.freelaptopnation.com
 0.0.0.0 www.freelaptopreward.com
 0.0.0.0 www.freelaptopwebsites.com
+0.0.0.0 www.freemaintenancesysforpcandmac.top
 0.0.0.0 www.freenation.com
 0.0.0.0 www.freeoffers-toys.com
 0.0.0.0 www.freepayasyougotopupuk.co.uk
@@ -26531,6 +26582,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.jivox.com
 0.0.0.0 www.jl29jd25sm24mc29.com
 0.0.0.0 www.joinfree.ro
+0.0.0.0 www.jolic2.com
 0.0.0.0 www.jxliu.com
 0.0.0.0 www.kampanyatakip.net
 0.0.0.0 www.keywordblocks.com
@@ -26560,6 +26612,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.lejournaldescarrieres.com
 0.0.0.0 www.linkhut.com
 0.0.0.0 www.linkpulse.com
+0.0.0.0 www.linkredirect.biz
 0.0.0.0 www.linkwithin.com
 0.0.0.0 www.liones.nl
 0.0.0.0 www.lldiettracker.com
@@ -26660,6 +26713,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.phoenixads.co.in
 0.0.0.0 www.phorm.com
 0.0.0.0 www.pick-savings.com
+0.0.0.0 www.placelocal.com
 0.0.0.0 www.plasmatv4free.com
 0.0.0.0 www.plasmatvreward.com
 0.0.0.0 www.politicalopinionsurvey.com
@@ -26741,6 +26795,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.sizzle-savings.com
 0.0.0.0 www.smart-scripts.com
 0.0.0.0 www.smarttargetting.com
+0.0.0.0 www.smichovbike.cz
 0.0.0.0 www.smokersopinionpoll.com
 0.0.0.0 www.smspop.com
 0.0.0.0 www.sochr.com
@@ -26839,6 +26894,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.videohube.eu
 0.0.0.0 www.videomediagroep.nl
 0.0.0.0 www.view4cash.de
+0.0.0.0 www.vipromoffers.com
 0.0.0.0 www.virtumundo.com
 0.0.0.0 www.vmcsatellite.com
 0.0.0.0 www.voucher-for-you.online
@@ -26992,6 +27048,7 @@ fe80::1%lo0 localhost
 0.0.0.0 y.admob.com
 0.0.0.0 yadro.ru
 0.0.0.0 yepdigital.adk2x.com
+0.0.0.0 yhit.press
 0.0.0.0 yie4zooseif.info
 0.0.0.0 yieldmanagement.adbooth.net
 0.0.0.0 yieldmanager.net
@@ -28924,7 +28981,7 @@ fe80::1%lo0 localhost
 
 #   http://www.malwaredomainlist.com/hostslist/hosts.txt   #
 
-#         Last updated: Tue, 16 May 17 12:37:06 +0000      #
+#         Last updated: Sat, 03 Jun 17 22:22:01 +0000      #
 
 
 
@@ -29528,6 +29585,7 @@ fe80::1%lo0 localhost
 0.0.0.0 salon77.co.uk
 0.0.0.0 santacruzsuspension.com
 0.0.0.0 sanya.vipc2f.com
+0.0.0.0 sarahdaniella.com
 0.0.0.0 sasson-cpa.co.il
 0.0.0.0 sayherbal.com
 0.0.0.0 sbnc.hak.su
@@ -30193,7 +30251,7 @@ fe80::1%lo0 localhost
 
 # Niektore funkcje oferowane przez filtr nie sa dostepne w ponizszym pliku ze wzgledu na ograniczenia hosts.
 
-# Aktualizacja zbiorowa: H2017052101
+# Aktualizacja zbiorowa: H2017060301
 
 
 
@@ -30406,7 +30464,6 @@ fe80::1%lo0 localhost
 0.0.0.0 pokemongo.ixweb.pl
 0.0.0.0 pokepakiet.pl
 0.0.0.0 fejsowate.com.pl
-0.0.0.0 ipzd.pl
 0.0.0.0 interesuj-ace.pl
 0.0.0.0 idupcie.pl
 0.0.0.0 showup-tv.com.pl
@@ -30602,7 +30659,6 @@ fe80::1%lo0 localhost
 0.0.0.0 e-sprawdz-punkty-karne.pl
 0.0.0.0 e-punkty.pl
 0.0.0.0 ile-bedziesz-zyc.pl
-0.0.0.0 firebid.pl
 0.0.0.0 fbviews.pl
 0.0.0.0 views-fb.pl
 0.0.0.0 face-color.net.pl
@@ -30710,6 +30766,7 @@ fe80::1%lo0 localhost
 0.0.0.0 zostan-testerka.club
 0.0.0.0 milkatesterzy.club
 0.0.0.0 odbierz-50.pl
+0.0.0.0 ipzd.pl
 0.0.0.0 5000-cotydzien.com
 0.0.0.0 odbior-nagrody.pl
 0.0.0.0 chomikuj-pobieranie.net
@@ -30774,6 +30831,23 @@ fe80::1%lo0 localhost
 0.0.0.0 profolan.pl
 0.0.0.0 szamponrevita.pl
 0.0.0.0 pobeiranie.pl
+0.0.0.0 ekosmetyki.net.pl
+0.0.0.0 kosmetyki.tm.pl
+0.0.0.0 skuteczna-dieta.co.pl
+0.0.0.0 kinujemy.pl
+0.0.0.0 zed21.net
+0.0.0.0 wyniki-lista.pl
+0.0.0.0 tanieaukcje.com.pl
+0.0.0.0 firebid.pl
+0.0.0.0 tilido.com
+0.0.0.0 kobieta-kobietom.com.pl
+0.0.0.0 skracacz.com
+0.0.0.0 mecze-live24.pl
+0.0.0.0 ogladamy24.pl
+0.0.0.0 pobieranko.eu
+0.0.0.0 promocionesparati.com
+0.0.0.0 prawdziwe-konkursy.pl
+0.0.0.0 blissinstalls.com
 
 
 # Strony z aliasami (lub podobne), ktore nie sa wspierane przez administratorow.
@@ -30878,10 +30952,14 @@ fe80::1%lo0 localhost
 0.0.0.0 iuyt.pl
 0.0.0.0 url1.pl
 0.0.0.0 7sdn.pl
+0.0.0.0 23rf.pl
+0.0.0.0 2mx9.pl
 
 
 # Szybko wygaszajace
 
+0.0.0.0 platnosc.link
+0.0.0.0 formularz-konkurs.tk
 0.0.0.0 s8-nowy-wygraj.comli.com
 0.0.0.0 ssd4.pdns.cz
 0.0.0.0 walesa.pdns.download
@@ -31455,10 +31533,32 @@ fe80::1%lo0 localhost
 0.0.0.0 patol01.pw
 0.0.0.0 free-deals.faith
 0.0.0.0 prizeestates.cricket
+0.0.0.0 www.bramka-sms-za-darmo.pl
+0.0.0.0 api.myeforsa.pl
+0.0.0.0 m.pl.videoinbox.net
+0.0.0.0 p.promocionesparati.com
+0.0.0.0 iphone7.wygraj-teraz.com
+0.0.0.0 www.downloads-mobile.com
+0.0.0.0 www.prawdziwe-konkursy.pl
 
 
 # Przekrety
 
+0.0.0.0 freshiuz.com
+0.0.0.0 downloads-mobile.com
+0.0.0.0 wygrajfidgetspinner.pl
+0.0.0.0 win-wot.pl
+0.0.0.0 highspeednow1.net
+0.0.0.0 videoinbox.net
+0.0.0.0 myeforsa.pl
+0.0.0.0 eforsa.pl
+0.0.0.0 widget-eforsa.pl
+0.0.0.0 oddamzadarmo.eu
+0.0.0.0 m3gadownload.pl
+0.0.0.0 downloaddy.net
+0.0.0.0 4k-player.pl
+0.0.0.0 dieta-personalna.pl
+0.0.0.0 beauty-b0x.pl
 0.0.0.0 pay2me.pl
 0.0.0.0 yourmovies.pl
 0.0.0.0 top-deal.com.pl
@@ -31506,9 +31606,7 @@ fe80::1%lo0 localhost
 0.0.0.0 twojapewnadata.pl
 0.0.0.0 przelicznikczasufb.pl
 0.0.0.0 hdseriale.pl
-0.0.0.0 videtubs.pl
 0.0.0.0 nowepliki.pl
-0.0.0.0 fspys.pl
 0.0.0.0 skincrate.net
 0.0.0.0 winwotgold.pl
 0.0.0.0 watchmyfb.pl
@@ -31536,8 +31634,6 @@ fe80::1%lo0 localhost
 0.0.0.0 chargx.pl
 0.0.0.0 airmax-kupony.pl
 0.0.0.0 wylosujgry.pl
-0.0.0.0 wygrajps4pro.pl
-0.0.0.0 wygrajjacka.pl
 0.0.0.0 i-wiadomosci.pl
 0.0.0.0 przepismix.pl
 0.0.0.0 rejestrowanko.com.pl
@@ -31549,6 +31645,7 @@ fe80::1%lo0 localhost
 0.0.0.0 tescikiq.pl
 0.0.0.0 steamdoladowanie.pl
 0.0.0.0 ladujpsc.pl
+0.0.0.0 wygrajjacka.pl
 0.0.0.0 bonykupony.pl
 0.0.0.0 mojeiq.pl
 0.0.0.0 odliczamy.net
@@ -31556,6 +31653,7 @@ fe80::1%lo0 localhost
 0.0.0.0 tankuje-paliwo.pl
 0.0.0.0 videoroom.pl
 0.0.0.0 movies-base.pl
+0.0.0.0 wygrajps4pro.pl
 0.0.0.0 wygrajairpods.pl
 0.0.0.0 mediainner.pl
 0.0.0.0 wygrajxboxones.pl
@@ -31578,6 +31676,7 @@ fe80::1%lo0 localhost
 0.0.0.0 zapiszto.pl
 0.0.0.0 odbierzpokemon.pl
 0.0.0.0 file-folders.pl
+0.0.0.0 fspys.pl
 0.0.0.0 hdsport-stream.pl
 0.0.0.0 insta-follow.pl
 0.0.0.0 fb-colors.pl
@@ -31600,6 +31699,7 @@ fe80::1%lo0 localhost
 0.0.0.0 podgladamy.com
 0.0.0.0 videos-base.pl
 0.0.0.0 bazafilmowa.org
+0.0.0.0 videtubs.pl
 0.0.0.0 carking.pl
 0.0.0.0 djcombox.pl
 0.0.0.0 jamba.pl
@@ -32247,7 +32347,6 @@ fe80::1%lo0 localhost
 0.0.0.0 www.test-zdrady-na-telefon.pl
 0.0.0.0 www.odpicujfure.pl
 0.0.0.0 beka.pl
-0.0.0.0 www.bramka-sms-za-darmo.pl
 0.0.0.0 kasa-sms.pl
 0.0.0.0 pinkstar.pl
 0.0.0.0 72933.pl
@@ -32397,10 +32496,10 @@ fe80::1%lo0 localhost
 0.0.0.0 najprzydatniejsze.blogspot.com
 
 
-# Inne
+#
 
-0.0.0.0 eforsa.pl
-0.0.0.0 widget-eforsa.pl
+#
+
 # Ad server list for use with hosts files to block ads
 
 #
@@ -32411,7 +32510,7 @@ fe80::1%lo0 localhost
 
 # last updated:   Tue, 23 May 2017 01:50:44 GMT
 
-# entries:        2338
+# entries:        2333
 
 # format:         hosts (hosts -- in hosts file format)
 
@@ -32425,7 +32524,7 @@ fe80::1%lo0 localhost
 
 #
 
-# start date:    Wed, 24 May 2017 00:00:00
+# start date:    Thu, 08 Jun 2017 00:00:00
 
 0.0.0.0 101com.com
 0.0.0.0 101order.com
@@ -33119,6 +33218,7 @@ fe80::1%lo0 localhost
 0.0.0.0 dialerporn.com
 0.0.0.0 direct-xxx-access.com
 0.0.0.0 directaclick.com
+0.0.0.0 directivepub.com
 0.0.0.0 directorym.com
 0.0.0.0 directtrack.com
 0.0.0.0 discountclick.com
@@ -33705,7 +33805,6 @@ fe80::1%lo0 localhost
 0.0.0.0 start.freeze.com
 0.0.0.0 stat.cliche.se
 0.0.0.0 stat.pl
-0.0.0.0 stat.su
 0.0.0.0 stat.zenon.net
 0.0.0.0 stat24.com
 0.0.0.0 static.itrack.it
@@ -33774,7 +33873,6 @@ fe80::1%lo0 localhost
 0.0.0.0 top20free.com
 0.0.0.0 top90.ro
 0.0.0.0 topbarh.box.sk
-0.0.0.0 topblogarea.se
 0.0.0.0 topbucks.com
 0.0.0.0 topforall.com
 0.0.0.0 topgamesites.net
@@ -33889,7 +33987,6 @@ fe80::1%lo0 localhost
 0.0.0.0 whenu.com
 0.0.0.0 whispa.com
 0.0.0.0 whoisonline.net
-0.0.0.0 wholesaletraffic.info
 0.0.0.0 widgetbucks.com
 0.0.0.0 window.nixnet.cz
 0.0.0.0 wintricksbanner.googlepages.com
@@ -34557,7 +34654,7 @@ fe80::1%lo0 localhost
 
 ### Last Updated
 
-### Updated: Wed May 24 10:38:52 SAST 2017
+### Updated: Wed Jun  7 12:53:09 SAST 2017
 
 ### End Last Updated
 
@@ -34682,6 +34779,7 @@ fe80::1%lo0 localhost
 0.0.0.0 7wind.ru
 0.0.0.0 7yue.org
 0.0.0.0 7zap.com
+0.0.0.0 83net.jp
 0.0.0.0 8558l.jobs.net
 0.0.0.0 883zy.com
 0.0.0.0 888.com
@@ -34713,11 +34811,11 @@ fe80::1%lo0 localhost
 0.0.0.0 abbp1.website
 0.0.0.0 abclauncher.com
 0.0.0.0 abctoppictures.net
-0.0.0.0 abc.xyz
 0.0.0.0 abiente.ru
 0.0.0.0 abovetherivernc.com
 0.0.0.0 absolutelyanalog.com
 0.0.0.0 absolute-s.ru
+0.0.0.0 absugars.com
 0.0.0.0 abtasty.com
 0.0.0.0 abusora.com
 0.0.0.0 abwa.tk
@@ -34752,8 +34850,8 @@ fe80::1%lo0 localhost
 0.0.0.0 adpremium.org
 0.0.0.0 adrenalin-stk.ru
 0.0.0.0 ads-cool.pro
+0.0.0.0 adservme.com
 0.0.0.0 adsfresh.men
-0.0.0.0 ads.gold
 0.0.0.0 adsland.men
 0.0.0.0 adssafeprotected.com
 0.0.0.0 ads-seo.men
@@ -34761,6 +34859,7 @@ fe80::1%lo0 localhost
 0.0.0.0 adtech.fr
 0.0.0.0 adtech.us
 0.0.0.0 adtiger.tk
+0.0.0.0 adult3dgames.com
 0.0.0.0 adultactioncam.com
 0.0.0.0 adultfullhd.com
 0.0.0.0 adultgalls.com
@@ -34769,9 +34868,11 @@ fe80::1%lo0 localhost
 0.0.0.0 adultwebhosting.info
 0.0.0.0 advancedcleaner.com
 0.0.0.0 adventureparkcostarica.com
+0.0.0.0 adverster.com
 0.0.0.0 advocatemsk.ru
 0.0.0.0 advokateg.ru
 0.0.0.0 ad-words.ru
+0.0.0.0 adzerg.com
 0.0.0.0 adzpower.com
 0.0.0.0 aero2.ru
 0.0.0.0 aerogo.com
@@ -34780,8 +34881,10 @@ fe80::1%lo0 localhost
 0.0.0.0 afora.ru
 0.0.0.0 afslankpillen2017nl.eu
 0.0.0.0 agahinameh.com
+0.0.0.0 agecheckadult.com
 0.0.0.0 aghanyna.com
 0.0.0.0 agreda.pluto.ro
+0.0.0.0 agysya.ru
 0.0.0.0 air-edem.ru
 0.0.0.0 airlandsea.info
 0.0.0.0 airmaxshoes-2016.com
@@ -34793,6 +34896,7 @@ fe80::1%lo0 localhost
 0.0.0.0 akvamaster.dp.ua
 0.0.0.0 alarmobninsk.ru
 0.0.0.0 albamargroup.com
+0.0.0.0 albumsuper.info
 0.0.0.0 alekseevec.ru
 0.0.0.0 alert-fdm.xyz
 0.0.0.0 alert-fjg.xyz
@@ -34804,6 +34908,7 @@ fe80::1%lo0 localhost
 0.0.0.0 alfa-medosmotr.ru
 0.0.0.0 alfapro.ru
 0.0.0.0 alf-img.com
+0.0.0.0 algerianembassy.co.in
 0.0.0.0 alibestsale.com
 0.0.0.0 alienwheel.es
 0.0.0.0 alienwheels.de
@@ -34815,6 +34920,7 @@ fe80::1%lo0 localhost
 0.0.0.0 allboard.xobor.de
 0.0.0.0 allcredits.su
 0.0.0.0 alldubai.biz
+0.0.0.0 allesohnegirls.net
 0.0.0.0 allforminecraft.ru
 0.0.0.0 allknow.info
 0.0.0.0 allkrim.com
@@ -34834,6 +34940,7 @@ fe80::1%lo0 localhost
 0.0.0.0 alphaforum.ru
 0.0.0.0 alphahoverboards.com
 0.0.0.0 alpharma.net
+0.0.0.0 alpinism.ru
 0.0.0.0 alveris.ru
 0.0.0.0 alyeskaresort.com
 0.0.0.0 amanda-porn.ga
@@ -34866,6 +34973,7 @@ fe80::1%lo0 localhost
 0.0.0.0 anonymizeme.pro
 0.0.0.0 anticrawler.org
 0.0.0.0 anti-virus-removal.info
+0.0.0.0 aosexkontakte.net
 0.0.0.0 aosheng-tech.com
 0.0.0.0 apartmentbay.ru
 0.0.0.0 apartmentratings.com
@@ -34920,6 +35028,7 @@ fe80::1%lo0 localhost
 0.0.0.0 arewater.com
 0.0.0.0 arkartex.ru
 0.0.0.0 arraty.altervista.org
+0.0.0.0 artavenuegardenstudios.com
 0.0.0.0 artdeko.info
 0.0.0.0 artefakct.com
 0.0.0.0 articlesdirectoryme.info
@@ -34952,6 +35061,7 @@ fe80::1%lo0 localhost
 0.0.0.0 atovh.local-finders.com
 0.0.0.0 audiobangout.com
 0.0.0.0 ausergrubhof.info
+0.0.0.0 aussie-prizes.com
 0.0.0.0 australia-opening-times.com
 0.0.0.0 auto4style.ru
 0.0.0.0 autoblogger24.info
@@ -35015,6 +35125,7 @@ fe80::1%lo0 localhost
 0.0.0.0 babieca.com
 0.0.0.0 bablonow.ru
 0.0.0.0 babyguns.ru
+0.0.0.0 back.dog
 0.0.0.0 backgroundpictures.net
 0.0.0.0 backlink4u.net
 0.0.0.0 backlinkwatch.com
@@ -35095,8 +35206,10 @@ fe80::1%lo0 localhost
 0.0.0.0 bestwebsiteawards.com
 0.0.0.0 bestwebsitesawards.com
 0.0.0.0 bestwrinklecreamnow.com
+0.0.0.0 bet365.com
 0.0.0.0 betonka.pro
 0.0.0.0 bet-prognoz.com
+0.0.0.0 betterhdporn.com
 0.0.0.0 betterscooter.com
 0.0.0.0 betune.onlinewebshop.net
 0.0.0.0 betwinservice.com
@@ -35116,6 +35229,7 @@ fe80::1%lo0 localhost
 0.0.0.0 bigpenisguide.com
 0.0.0.0 biketank.ga
 0.0.0.0 bikini-image.com
+0.0.0.0 bildsuche.ru
 0.0.0.0 billiard-classic.com.ua
 0.0.0.0 bimatoprost-careprost.com
 0.0.0.0 bimatoprost-careprost.com.ua
@@ -35140,6 +35254,7 @@ fe80::1%lo0 localhost
 0.0.0.0 bizru.info
 0.0.0.0 bjanshee.ru
 0.0.0.0 bkns.vn
+0.0.0.0 blackcurranthumidifiers.site
 0.0.0.0 blackhatworth.com
 0.0.0.0 blackle.com
 0.0.0.0 blackwitchcraft.ru
@@ -35164,17 +35279,22 @@ fe80::1%lo0 localhost
 0.0.0.0 bloke.com
 0.0.0.0 bluejays-jerseys.us
 0.0.0.0 bluerobot.info
+0.0.0.0 bluesman.nu
 0.0.0.0 board.f00d.de
 0.0.0.0 bobba.dzaba.com
 0.0.0.0 bobinoz.com
+0.0.0.0 bochemit.com.ua
+0.0.0.0 bocoarchives.org
 0.0.0.0 bodybuilding-shop.biz
 0.0.0.0 boleznikogi.com
 0.0.0.0 bolezniorganov.ru
 0.0.0.0 bolitgorlo.net
 0.0.0.0 bombla.org
+0.0.0.0 bongacams.com
 0.0.0.0 bongiornos.info
 0.0.0.0 bonux.nextview.ru
 0.0.0.0 boobsimge.com
+0.0.0.0 bookhome.info
 0.0.0.0 bookmaker-bet.com
 0.0.0.0 bookmark4you.com
 0.0.0.0 boole.onlinewebshop.net
@@ -35226,6 +35346,7 @@ fe80::1%lo0 localhost
 0.0.0.0 buttons-for-website.com
 0.0.0.0 buttons-for-your-website.com
 0.0.0.0 buyantiviralwp.com
+0.0.0.0 buybest1.biz
 0.0.0.0 buy-cheap-online.info
 0.0.0.0 buy-cheap-pills-order-online.com
 0.0.0.0 buyessay3.blogspot.ru
@@ -35247,6 +35368,9 @@ fe80::1%lo0 localhost
 0.0.0.0 buyviagraa.blogspot.com
 0.0.0.0 buzzsumo.com
 0.0.0.0 buzzurl.jp
+0.0.0.0 bvlgaribracelet.xyz
+0.0.0.0 bvlgariring.xyz
+0.0.0.0 bvlgariwallet.xyz
 0.0.0.0 bycontext.com
 0.0.0.0 byme.se
 0.0.0.0 bytimedance.ru
@@ -35264,6 +35388,9 @@ fe80::1%lo0 localhost
 0.0.0.0 call-of-duty.info
 0.0.0.0 calstaterealty.us
 0.0.0.0 calvet.altervista.org
+0.0.0.0 camdenmemorials.com
+0.0.0.0 camdolls.com
+0.0.0.0 cam-kontakte.org
 0.0.0.0 candcstuccoandstone.com
 0.0.0.0 candelluxsklep.pl
 0.0.0.0 candiceloves.us
@@ -35292,7 +35419,20 @@ fe80::1%lo0 localhost
 0.0.0.0 carson.getenjoyment.net
 0.0.0.0 carsplate.com
 0.0.0.0 cartechnic.ru
+0.0.0.0 cartierbraceletsreplica.pw
+0.0.0.0 cartierbracelet.xyz
 0.0.0.0 cartierlove2u.com
+0.0.0.0 cartierlove2u.xyz
+0.0.0.0 cartierlovebraceletreplica.xyz
+0.0.0.0 cartierlovebracelet.xyz
+0.0.0.0 cartierloveringreplica.xyz
+0.0.0.0 cartierlovestore.xyz
+0.0.0.0 cartierlove.xyz
+0.0.0.0 cartierreplica.pw
+0.0.0.0 cartierreplica.top
+0.0.0.0 cartierring.xyz
+0.0.0.0 cartiertrinity.xyz
+0.0.0.0 cartierwatch.xyz
 0.0.0.0 casablancamanor.co.za
 0.0.0.0 cashkitten-a.akamaihd.net
 0.0.0.0 casinorewards.info
@@ -35302,9 +35442,11 @@ fe80::1%lo0 localhost
 0.0.0.0 cbcseward.com
 0.0.0.0 cbox.ws
 0.0.0.0 cbys.tk
+0.0.0.0 ccbill.com
 0.0.0.0 cdncash.com
 0.0.0.0 cdncash.net
 0.0.0.0 cdncash.org
+0.0.0.0 cdnnetwok.xyz
 0.0.0.0 cejewelry.xyz
 0.0.0.0 celebsopics.com
 0.0.0.0 c-english.ru
@@ -35318,9 +35460,11 @@ fe80::1%lo0 localhost
 0.0.0.0 cercacamion.it
 0.0.0.0 cete.ru
 0.0.0.0 cezartabac.ro
+0.0.0.0 cfacarrosserie74.com
 0.0.0.0 cfcl.co.uk
 0.0.0.0 cfjump.com
 0.0.0.0 cfsrating.sonicwall.com
+0.0.0.0 c-gainsbourg.com
 0.0.0.0 cgi2.nintendo.co.jp
 0.0.0.0 chastnoeporno.com
 0.0.0.0 chat.ru
@@ -35328,6 +35472,7 @@ fe80::1%lo0 localhost
 0.0.0.0 chcu.net
 0.0.0.0 cheapbarbour.online
 0.0.0.0 cheapbelstaff.online
+0.0.0.0 cheapcigarettesc.info
 0.0.0.0 cheapestjerseys-wholesale.com
 0.0.0.0 cheapjerseysa.com
 0.0.0.0 cheapjerseysap.com
@@ -35335,6 +35480,7 @@ fe80::1%lo0 localhost
 0.0.0.0 cheapjerseysfootballshop.com
 0.0.0.0 cheapmarmot.online
 0.0.0.0 cheapmoncler.pw
+0.0.0.0 cheapmoncler.win
 0.0.0.0 cheappatagonia.online
 0.0.0.0 cheap-pills-norx.com
 0.0.0.0 cheapsergiorossi.online
@@ -35357,11 +35503,17 @@ fe80::1%lo0 localhost
 0.0.0.0 chiptuninger.com
 0.0.0.0 chlooe.com
 0.0.0.0 choosecuisine.com
+0.0.0.0 christianlouboutinoutlet.win
+0.0.0.0 christianlouboutinreplica.pw
+0.0.0.0 christianlouboutinreplica.win
 0.0.0.0 christianlouboutinsaleonline.us
 0.0.0.0 christianlouboutinsaleoutletonline.us
+0.0.0.0 christianlouboutinshoes.xyz
+0.0.0.0 chuckguilford.com
 0.0.0.0 cialisovercounteratwalmartusa.com
 0.0.0.0 cialiswithoutadoctor.net
 0.0.0.0 cigarpass.com
+0.0.0.0 cineacademy.ru
 0.0.0.0 cinemaenergy-hd.ru
 0.0.0.0 ciproandtizanidine.blogspot.com
 0.0.0.0 citizenclsdriveri7.pen.io
@@ -35377,12 +35529,14 @@ fe80::1%lo0 localhost
 0.0.0.0 clean-virus-mac.com
 0.0.0.0 clgrmgds.com
 0.0.0.0 clickaider.com
+0.0.0.0 clickpapa.com
 0.0.0.0 clickso.com
 0.0.0.0 clicksor.net
 0.0.0.0 clinchimage.com
 0.0.0.0 clipartnew.com
 0.0.0.0 clips.ua.ac.be
 0.0.0.0 clmforexeu.com
+0.0.0.0 cl.s7.exct.net
 0.0.0.0 club-musics.ru
 0.0.0.0 club-samodelkin.ru
 0.0.0.0 cmd.kz
@@ -35445,6 +35599,7 @@ fe80::1%lo0 localhost
 0.0.0.0 crazyboost.pro
 0.0.0.0 crd.clan.su
 0.0.0.0 creams.makeforum.eu
+0.0.0.0 creativehutindia.com
 0.0.0.0 creditmoney.com.ua
 0.0.0.0 crest3d.ru
 0.0.0.0 crest-poloski.ru
@@ -35473,16 +35628,19 @@ fe80::1%lo0 localhost
 0.0.0.0 cxpromote.com
 0.0.0.0 cyclobenzaprinevstizanidine.blogspot.com
 0.0.0.0 cymbaltaandtizanidine.blogspot.com
+0.0.0.0 cypernhuset.se
 0.0.0.0 cyprusbuyproperties.com
 0.0.0.0 cyse.tk
 0.0.0.0 czat.wp.pl
 0.0.0.0 dailyrank.net
 0.0.0.0 dailystrength.org
+0.0.0.0 dairyindia.in
 0.0.0.0 dalavia.ru
 0.0.0.0 damedingel.ya.ru
 0.0.0.0 dame-ns.kz
 0.0.0.0 danashop.ru
 0.0.0.0 danceuniverse.ru
+0.0.0.0 dandiyabeats.in
 0.0.0.0 dangphoto.trade
 0.0.0.0 danschawbel.com
 0.0.0.0 daooda.com
@@ -35505,13 +35663,13 @@ fe80::1%lo0 localhost
 0.0.0.0 ddpills.com
 0.0.0.0 deadlinkchecker.com
 0.0.0.0 dealighted.com
-0.0.0.0 dealitright.click
 0.0.0.0 dealright.click
 0.0.0.0 dealwifi.com
 0.0.0.0 deanmoore.ie
 0.0.0.0 dear-diary.ru
 0.0.0.0 decenttools.com
 0.0.0.0 decorationspcs.com
+0.0.0.0 degerlund.net
 0.0.0.0 dekoration.us
 0.0.0.0 dekorkeramik.ru
 0.0.0.0 delayreferat.ru
@@ -35550,6 +35708,7 @@ fe80::1%lo0 localhost
 0.0.0.0 digitalfaq.com
 0.0.0.0 digital-sale.su
 0.0.0.0 digital-video-processing.com
+0.0.0.0 dignitasdata.se
 0.0.0.0 dikx.gdn
 0.0.0.0 dildofotzen.net
 0.0.0.0 diminishedvalueoforegon.com
@@ -35564,6 +35723,8 @@ fe80::1%lo0 localhost
 0.0.0.0 dispo.de
 0.0.0.0 disruptingdinnerparties.com
 0.0.0.0 distver.ru
+0.0.0.0 div.as
+0.0.0.0 divatraffic.com
 0.0.0.0 diy-handmade-ideas.com
 0.0.0.0 djekxa.ru
 0.0.0.0 djonwatch.ru
@@ -35588,6 +35749,7 @@ fe80::1%lo0 localhost
 0.0.0.0 doktoronline.no
 0.0.0.0 dokumentalkino.net
 0.0.0.0 domain2008.com
+0.0.0.0 domaincrawler.com
 0.0.0.0 domainsatcost.com
 0.0.0.0 domain-submit.info
 0.0.0.0 domain-tracker.com
@@ -35595,6 +35757,7 @@ fe80::1%lo0 localhost
 0.0.0.0 domik-derevne.ru
 0.0.0.0 dominateforex.ml
 0.0.0.0 domination.ml
+0.0.0.0 domini.cat
 0.0.0.0 dominterior.org
 0.0.0.0 domoysshop.ru
 0.0.0.0 domznaniy.ru
@@ -35612,11 +35775,13 @@ fe80::1%lo0 localhost
 0.0.0.0 download-of-the-warez.blogspot.com
 0.0.0.0 downtuptv.gq
 0.0.0.0 doxyporno.com
+0.0.0.0 dpihatinh.gov.vn
 0.0.0.0 drillsaw.ru
 0.0.0.0 driving.kiev.ua
 0.0.0.0 droidlook.net
 0.0.0.0 drugspowerstore.com
 0.0.0.0 drugstoreforyou.com
+0.0.0.0 drunkmoms.net
 0.0.0.0 drupa.com
 0.0.0.0 druzhbany.ru
 0.0.0.0 druzhininevgeniy63.blogspot.com
@@ -35627,7 +35792,9 @@ fe80::1%lo0 localhost
 0.0.0.0 dvr.biz.ua
 0.0.0.0 dvrlists.com
 0.0.0.0 dyshagi.ru
+0.0.0.0 dyt.net
 0.0.0.0 e705.net
+0.0.0.0 eachdayisagift.review
 0.0.0.0 eandsgallery.com
 0.0.0.0 eaplay.ru
 0.0.0.0 earl-brown.info
@@ -35715,6 +35882,8 @@ fe80::1%lo0 localhost
 0.0.0.0 englate.com
 0.0.0.0 englishdictionaryfree.com
 0.0.0.0 englishgamer.com
+0.0.0.0 enhand.se
+0.0.0.0 enskedesquashclub.se
 0.0.0.0 enternet.ee
 0.0.0.0 envaseslotusama.com
 0.0.0.0 enviromusic.net
@@ -35729,7 +35898,10 @@ fe80::1%lo0 localhost
 0.0.0.0 eropornosex.ru
 0.0.0.0 erot.co
 0.0.0.0 erotik0049.com
+0.0.0.0 erotikchat-24.com
 0.0.0.0 erotikstories.ru
+0.0.0.0 erotiktreff24.info
+0.0.0.0 erotische-geschichten-xxl.com
 0.0.0.0 es5.com
 0.0.0.0 escortplius.com
 0.0.0.0 escort-russian.com
@@ -35737,6 +35909,7 @@ fe80::1%lo0 localhost
 0.0.0.0 eshop4u.jp
 0.0.0.0 eshop.md
 0.0.0.0 esnm.ru
+0.0.0.0 espaceinventoristes.com
 0.0.0.0 este-line.com.ua
 0.0.0.0 estibot.com
 0.0.0.0 eu-cookie-law.blogspot.com
@@ -35746,17 +35919,21 @@ fe80::1%lo0 localhost
 0.0.0.0 euromasterclass.ru
 0.0.0.0 euronis-free.com
 0.0.0.0 europages.com.ru
+0.0.0.0 european-torches.ru
 0.0.0.0 europeanwatches.ru
 0.0.0.0 eurosamodelki.ru
 0.0.0.0 euroskat.ru
 0.0.0.0 evaashop.ru
 0.0.0.0 evehemming.blogspot.com.au
+0.0.0.0 evening-dating-club.info
 0.0.0.0 event-tracking.com
 0.0.0.0 everflora.ru
+0.0.0.0 everypony.ru
 0.0.0.0 evrotekhservis.ru
 0.0.0.0 excaliburfilms.com
 0.0.0.0 exchangeit.gq
 0.0.0.0 exchanges-bet.com
+0.0.0.0 exct.net
 0.0.0.0 executehosting.com
 0.0.0.0 exhibitionplus.eu
 0.0.0.0 exmasters.com
@@ -35799,6 +35976,7 @@ fe80::1%lo0 localhost
 0.0.0.0 f0815.de
 0.0.0.0 fable.in.ua
 0.0.0.0 failingmarriege.blogspot.com
+0.0.0.0 fakehandbags.xyz
 0.0.0.0 falcoware.com
 0.0.0.0 family1st.ca
 0.0.0.0 familyholiday.ml
@@ -35835,14 +36013,17 @@ fe80::1%lo0 localhost
 0.0.0.0 ferieboligkbh.dk
 0.0.0.0 fermersovet.ru
 0.0.0.0 ferretsoft.com
+0.0.0.0 fertilitetsradgivningen.se
 0.0.0.0 fetishinside.com
 0.0.0.0 fetroshok.ru
 0.0.0.0 fickblock18.com
 0.0.0.0 fickenprivat.info
+0.0.0.0 fickkontakte.org
 0.0.0.0 fickluder69.com
 0.0.0.0 fidelityfunding.com
 0.0.0.0 fifa-coins.online
 0.0.0.0 figuringmoneyout.com
+0.0.0.0 filerockstar298.weebly.com
 0.0.0.0 filesmonster.porn
 0.0.0.0 filesvine.com
 0.0.0.0 filkhbr.com
@@ -35880,6 +36061,7 @@ fe80::1%lo0 localhost
 0.0.0.0 flavors.me
 0.0.0.0 flex4launch.ru
 0.0.0.0 flipper.top
+0.0.0.0 flirt4free.com
 0.0.0.0 f-loaded.de
 0.0.0.0 floating-share-buttons.com
 0.0.0.0 flooringinstallation-edmonton.com
@@ -35907,6 +36089,7 @@ fe80::1%lo0 localhost
 0.0.0.0 forminecrafters.ru
 0.0.0.0 formseo.com
 0.0.0.0 forms-mtm.ru
+0.0.0.0 forodvd.com
 0.0.0.0 forpackningsutveckling.se
 0.0.0.0 forpostlock.ru
 0.0.0.0 forsex.info
@@ -35921,6 +36104,7 @@ fe80::1%lo0 localhost
 0.0.0.0 foto-telok.net
 0.0.0.0 fototravel.eu
 0.0.0.0 fotoxxxru.com
+0.0.0.0 fotzen-ficken.com
 0.0.0.0 foxinsocks.ru
 0.0.0.0 foxtechfpv.com
 0.0.0.0 foxweber.com
@@ -35931,6 +36115,7 @@ fe80::1%lo0 localhost
 0.0.0.0 free-floating-buttons.com
 0.0.0.0 free-gluten.ru
 0.0.0.0 freejabs.com
+0.0.0.0 freelifetimefuckbook.com
 0.0.0.0 freelotto.com
 0.0.0.0 freemags.cc
 0.0.0.0 freenode.info
@@ -35956,23 +36141,28 @@ fe80::1%lo0 localhost
 0.0.0.0 freza-sverlo.ru
 0.0.0.0 frivgame250.com
 0.0.0.0 fr.netlog.com
+0.0.0.0 froggytube.com
 0.0.0.0 front.ru
 0.0.0.0 front.to
 0.0.0.0 frvo.alptandem.ru
 0.0.0.0 fsakhalin.ru
 0.0.0.0 fsalas.com
 0.0.0.0 ftns.ru
+0.0.0.0 fuckmill.com
 0.0.0.0 fuel-gas.com
 0.0.0.0 fugarif.ga
 0.0.0.0 fullfileaccess.com
+0.0.0.0 funcrushgames.com
 0.0.0.0 fungamelands.com
 0.0.0.0 fungirlsgames.net
 0.0.0.0 funnypica.com
 0.0.0.0 funponsel.com
+0.0.0.0 fuparj.net
 0.0.0.0 futbolkisales.ru
 0.0.0.0 fx-brokers-review.com
 0.0.0.0 fxgallery.com
 0.0.0.0 fxtips.ru
+0.0.0.0 fyh.net.ru
 0.0.0.0 fym.com.ru
 0.0.0.0 g33.org
 0.0.0.0 g7m.pl
@@ -35987,6 +36177,7 @@ fe80::1%lo0 localhost
 0.0.0.0 gallerylisting.com
 0.0.0.0 gallictures.com
 0.0.0.0 gamblingnerd.com
+0.0.0.0 gamedayhouse.com
 0.0.0.0 game-mmorpg.net
 0.0.0.0 gameonasia.com
 0.0.0.0 gameplexcity.com
@@ -35997,6 +36188,7 @@ fe80::1%lo0 localhost
 0.0.0.0 gamevalue7.weebly.com
 0.0.0.0 gamewrath.com
 0.0.0.0 gaming-journal.com
+0.0.0.0 gamingspark.com
 0.0.0.0 gardene.ru
 0.0.0.0 gay.adultgalls.com
 0.0.0.0 gay-file.com
@@ -36013,6 +36205,7 @@ fe80::1%lo0 localhost
 0.0.0.0 ge0ip.net
 0.0.0.0 ge0ip.org
 0.0.0.0 geckoandfly.com
+0.0.0.0 geilehausfrauen.net
 0.0.0.0 geile-lelly.eu
 0.0.0.0 geileweiber.tk
 0.0.0.0 gelezki.com
@@ -36027,6 +36220,7 @@ fe80::1%lo0 localhost
 0.0.0.0 germes-trans.com
 0.0.0.0 germetiki.com.ua
 0.0.0.0 get-free-traffic-now.com
+0.0.0.0 getlaid-xxxhookupdirect.com
 0.0.0.0 getlamborghini.ga
 0.0.0.0 getmiro.com
 0.0.0.0 getoutofdebtfree.org
@@ -36122,6 +36316,7 @@ fe80::1%lo0 localhost
 0.0.0.0 groupmoney.ru
 0.0.0.0 growmyfunds.ca
 0.0.0.0 growshop.es
+0.0.0.0 grtyi.com
 0.0.0.0 grupografico-pilar.com.ar
 0.0.0.0 gsasearchengineranker.pw
 0.0.0.0 gsasearchengineranker.site
@@ -36161,6 +36356,7 @@ fe80::1%lo0 localhost
 0.0.0.0 hasfun.com
 0.0.0.0 hatdc.org
 0.0.0.0 hauleddes.com
+0.0.0.0 hausfrauensex18.com
 0.0.0.0 havepussy.com
 0.0.0.0 hayate.biz
 0.0.0.0 hazardky.net
@@ -36184,6 +36380,7 @@ fe80::1%lo0 localhost
 0.0.0.0 healmytrauma.info
 0.0.0.0 heartofbeijing.blogspot.com
 0.0.0.0 heatpower.ru
+0.0.0.0 hebozqzu.net.ua
 0.0.0.0 hebr.myddns-flir.com
 0.0.0.0 helicalpile.us
 0.0.0.0 hellokittyimg.com
@@ -36192,6 +36389,9 @@ fe80::1%lo0 localhost
 0.0.0.0 hem.passagen.se
 0.0.0.0 herehloadibs.cf
 0.0.0.0 hermesbirkinhandbagoutlets.com
+0.0.0.0 hermesbracelets.xyz
+0.0.0.0 hermesreplica.pw
+0.0.0.0 hermesreplica.win
 0.0.0.0 herokuapp.com
 0.0.0.0 hetmanship.xyz
 0.0.0.0 hidefiles.org
@@ -36199,10 +36399,12 @@ fe80::1%lo0 localhost
 0.0.0.0 hifidesign.ru
 0.0.0.0 highland-homes.com
 0.0.0.0 highstairs-a.akamaihd.net
+0.0.0.0 hildinghr.se
 0.0.0.0 historichometeam.com
 0.0.0.0 hitsbox.info
 0.0.0.0 hiwibyh.bugs3.com
 0.0.0.0 hjaoopoa.top
+0.0.0.0 hjb.net.ru
 0.0.0.0 hkdiiohi.skyrock.com
 0.0.0.0 hledejvshopech.cz
 0.0.0.0 hmmm.cz
@@ -36214,12 +36416,14 @@ fe80::1%lo0 localhost
 0.0.0.0 holidaypics.org
 0.0.0.0 hollywoodactress.info
 0.0.0.0 homeandhealth.ru
+0.0.0.0 homedecoguide.info
 0.0.0.0 homedecorpicture.us
 0.0.0.0 homedo.fabpage.com
 0.0.0.0 homegardenlova.com
 0.0.0.0 homeinns.com
 0.0.0.0 homelygarden.com
 0.0.0.0 homemade.gq
+0.0.0.0 homemature.net
 0.0.0.0 home.myplaycity.com
 0.0.0.0 hoporno.com
 0.0.0.0 horoshieokna.com
@@ -36260,6 +36464,7 @@ fe80::1%lo0 localhost
 0.0.0.0 howopen.ru
 0.0.0.0 hplaserjetpdriver8y.pen.io
 0.0.0.0 hptwaakw.blog.fc2.com
+0.0.0.0 href.li
 0.0.0.0 hscsscotland.com
 0.0.0.0 hspline.com
 0.0.0.0 htmlcorner.com
@@ -36273,6 +36478,7 @@ fe80::1%lo0 localhost
 0.0.0.0 hustoon.over-blog.com
 0.0.0.0 hut1.ru
 0.0.0.0 hvd-store.com
+0.0.0.0 hybrid.ru
 0.0.0.0 hydropump.su
 0.0.0.0 hyiphunter.org
 0.0.0.0 hyipmanager.in
@@ -36326,6 +36532,7 @@ fe80::1%lo0 localhost
 0.0.0.0 increasewwwtraffic.info
 0.0.0.0 indetiske.ya.ru
 0.0.0.0 indiakino.net
+0.0.0.0 indianmedicaltourismshop.com
 0.0.0.0 indiasourcemart.in
 0.0.0.0 indo-export.ru
 0.0.0.0 inductionc2oktop.com
@@ -36397,6 +36604,7 @@ fe80::1%lo0 localhost
 0.0.0.0 itservicesthatworkforyou.com
 0.0.0.0 iusstf.org
 0.0.0.0 ivanstroi.ru
+0.0.0.0 iwanttodeliver.com
 0.0.0.0 ix20.ru
 0.0.0.0 izhevsk.xrus.org
 0.0.0.0 izhevsk.zrus.org
@@ -36405,6 +36613,8 @@ fe80::1%lo0 localhost
 0.0.0.0 j33x.com
 0.0.0.0 jackwolfskinoutlet.online
 0.0.0.0 jamiembrown.com
+0.0.0.0 janavibekken.no
+0.0.0.0 janerikholst.se
 0.0.0.0 janettabridal.com
 0.0.0.0 japan-bearings.ru
 0.0.0.0 japfm.com
@@ -36418,15 +36628,18 @@ fe80::1%lo0 localhost
 0.0.0.0 jerseychinabizwholesale.us
 0.0.0.0 jerseysbizwholesalecheap.com
 0.0.0.0 jerseyschinabizwholesale.us
+0.0.0.0 jerseyssportsshop.com
 0.0.0.0 jerseyswholesalechinalimited.com
 0.0.0.0 jerseywholesalebizchina.com
 0.0.0.0 jerseywholesalechinabiz.com
 0.0.0.0 jerseywholesaleelitestore.com
 0.0.0.0 jetsli.de
+0.0.0.0 jillepille.com
 0.0.0.0 jimmychoosale.online
 0.0.0.0 jjbabskoe.ru
 0.0.0.0 job.icivil.ir
 0.0.0.0 joessmogtestonly.com
+0.0.0.0 johannesburgsingles.co.za
 0.0.0.0 joingames.org
 0.0.0.0 jongose.ninja
 0.0.0.0 journalhome.com
@@ -36469,11 +36682,13 @@ fe80::1%lo0 localhost
 0.0.0.0 keywords-monitoring-your-success.com
 0.0.0.0 keyword-suggestions.com
 0.0.0.0 keywordsuggest.org
+0.0.0.0 keywordsuggests.com
 0.0.0.0 keywordteam.net
 0.0.0.0 kfon.eu
 0.0.0.0 kidd.reunionwatch.com
 0.0.0.0 kiev.ua
 0.0.0.0 kihi.gdn
+0.0.0.0 kimcurlrvsms.com
 0.0.0.0 kinobaks.com
 0.0.0.0 kinocccp.net
 0.0.0.0 kinofak.net
@@ -36502,6 +36717,7 @@ fe80::1%lo0 localhost
 0.0.0.0 kndxbkdx.bloger.index.hr
 0.0.0.0 knigonosha.net
 0.0.0.0 knogg.net
+0.0.0.0 knowyournextmove.com
 0.0.0.0 kochanelli.com
 0.0.0.0 kol-energo.ru
 0.0.0.0 koleso24.com.ua
@@ -36535,6 +36751,7 @@ fe80::1%lo0 localhost
 0.0.0.0 krasnodar.xrus.org
 0.0.0.0 krasnodar.zrus.org
 0.0.0.0 kredit-pod-zalog-krasnodar.ru
+0.0.0.0 kriokomora.info
 0.0.0.0 krynica.info
 0.0.0.0 ks1234.com
 0.0.0.0 ktotut.net
@@ -36551,6 +36768,7 @@ fe80::1%lo0 localhost
 0.0.0.0 kvartiry-remont.ucoz.ru
 0.0.0.0 kw21.org
 0.0.0.0 kwzf.net
+0.0.0.0 labelwater.se
 0.0.0.0 labplus.ru
 0.0.0.0 labvis.host.sk
 0.0.0.0 lacloop.info
@@ -36563,6 +36781,7 @@ fe80::1%lo0 localhost
 0.0.0.0 lanasshop.ru
 0.0.0.0 lancheck.net
 0.0.0.0 landreferat.ru
+0.0.0.0 landscaping.center
 0.0.0.0 languagecode.com
 0.0.0.0 lankarns.com
 0.0.0.0 laparfumotec.com
@@ -36580,6 +36799,7 @@ fe80::1%lo0 localhost
 0.0.0.0 laxdrills.com
 0.0.0.0 layola.biz.tc
 0.0.0.0 lazy-z.com
+0.0.0.0 ldrtrack.com
 0.0.0.0 leadwayau.com
 0.0.0.0 leboard.ru
 0.0.0.0 ledis.top
@@ -36592,6 +36812,7 @@ fe80::1%lo0 localhost
 0.0.0.0 lesbian.xyz
 0.0.0.0 lescinq.com
 0.0.0.0 letolove.ru
+0.0.0.0 letslowbefast.today
 0.0.0.0 letto.by
 0.0.0.0 levaquin750mg.blogspot.com
 0.0.0.0 lexaprogeneric.link
@@ -36606,6 +36827,7 @@ fe80::1%lo0 localhost
 0.0.0.0 life-instyle.com
 0.0.0.0 light.ifmo.ru
 0.0.0.0 lightinghomes.net
+0.0.0.0 lignofix.ua
 0.0.0.0 likesdesign.com
 0.0.0.0 likesuccess.com
 0.0.0.0 liky.co.ua
@@ -36625,20 +36847,25 @@ fe80::1%lo0 localhost
 0.0.0.0 littleberry.ru
 0.0.0.0 liupis.com
 0.0.0.0 livefixer.com
+0.0.0.0 livejasmin.com
 0.0.0.0 liver-chintai.org
 0.0.0.0 liverpool.gsofootball.com
+0.0.0.0 live-sexcam.tk
 0.0.0.0 live-sexchat.ru
 0.0.0.0 liveshoppersmac.com
 0.0.0.0 livetsomudvekslingstudent.bloggersdelight.dk
 0.0.0.0 liveu.infoteka.hu
 0.0.0.0 livingcanarias.com
 0.0.0.0 livingroomdecor.info
+0.0.0.0 ljusihus.se
 0.0.0.0 lkbennettoutlet.online
 0.0.0.0 lkbennettstore.online
 0.0.0.0 llastbuy.ru
 0.0.0.0 lmrauction.com
 0.0.0.0 loadopia.com
 0.0.0.0 lob.com.ru
+0.0.0.0 localflirtbuddies.com
+0.0.0.0 localmatchbook.com
 0.0.0.0 lockerz.com
 0.0.0.0 locksmith.jp
 0.0.0.0 lodki-pvh.dp.ua
@@ -36650,24 +36877,31 @@ fe80::1%lo0 localhost
 0.0.0.0 lombia.co
 0.0.0.0 lombia.com
 0.0.0.0 lomza.info
+0.0.0.0 lonely-mature.com
 0.0.0.0 long-beach-air-conditioning.com
 0.0.0.0 longgreen.info
 0.0.0.0 lost-alpha.ru
 0.0.0.0 lostfilm-online.ru
 0.0.0.0 lotto6888.com
 0.0.0.0 lottospring.com
+0.0.0.0 louboutinbooties.xyz
+0.0.0.0 louboutinreplica.pw
+0.0.0.0 louboutinreplica.xyz
 0.0.0.0 louboutinshoes.xyz
 0.0.0.0 louisvuittonoutletstore.net
 0.0.0.0 love-baby.cz
 0.0.0.0 lowephotos.info
 0.0.0.0 low-format.ru
 0.0.0.0 lsex.xyz
+0.0.0.0 ltvperf.com
 0.0.0.0 lubetube.com
 0.0.0.0 luckyshop.net.ua
 0.0.0.0 lumb.co
 0.0.0.0 lutherstable.org
 0.0.0.0 luxmagazine.cf
+0.0.0.0 lyngdalhudterapi.no
 0.0.0.0 lyrster.com
+0.0.0.0 lyzqp.net.ru
 0.0.0.0 m0r0zk0-krava.ru
 0.0.0.0 m1media.net
 0.0.0.0 m4ever.net
@@ -36701,6 +36935,7 @@ fe80::1%lo0 localhost
 0.0.0.0 manualterap.roleforum.ru
 0.0.0.0 manuscript.su
 0.0.0.0 manve.info
+0.0.0.0 manyresultshub-a.akamaihd.net
 0.0.0.0 mapquestz.us
 0.0.0.0 mararoom.ru
 0.0.0.0 marblestyle.ru
@@ -36726,6 +36961,7 @@ fe80::1%lo0 localhost
 0.0.0.0 matb3aa.com
 0.0.0.0 matchpal-a.akamaihd.net
 0.0.0.0 matematikus.info
+0.0.0.0 mawemik.com
 0.0.0.0 max-eclat.men
 0.0.0.0 maximilitary.ru
 0.0.0.0 maxthon.com
@@ -36757,6 +36993,7 @@ fe80::1%lo0 localhost
 0.0.0.0 meduza-consult.ru
 0.0.0.0 med-zdorovie.com.ua
 0.0.0.0 meendo-free-traffic.ga
+0.0.0.0 meetlocalchicks.com
 0.0.0.0 megaapteka.ru
 0.0.0.0 megaindex.ru
 0.0.0.0 megakino.net
@@ -36793,6 +37030,7 @@ fe80::1%lo0 localhost
 0.0.0.0 microsoftportal.net
 0.0.0.0 migente.com
 0.0.0.0 mikrobiologies.ru
+0.0.0.0 milblueprint.com
 0.0.0.0 millionare.com
 0.0.0.0 mindbox.co.za
 0.0.0.0 minecraft-neo.ru
@@ -36819,18 +37057,22 @@ fe80::1%lo0 localhost
 0.0.0.0 mitrasound.ru
 0.0.0.0 mixed-wrestling.ru
 0.0.0.0 mixtapetorrent.com
+0.0.0.0 mjchamonix.org
+0.0.0.0 mmofreegames.online
 0.0.0.0 mmog-play.ru
 0.0.0.0 mmoguider.ru
 0.0.0.0 mncrftpcs.com
 0.0.0.0 mnogabukaff.net
 0.0.0.0 mnprs.com
 0.0.0.0 mobilemedia.md
+0.0.0.0 mobioffertrck.com
 0.0.0.0 mobot.site
 0.0.0.0 mobplayer.net
 0.0.0.0 mobplayer.ru
 0.0.0.0 mockupui.com
 0.0.0.0 modabutik.ru
 0.0.0.0 modenamebel.ru
+0.0.0.0 moesen-ficken.com
 0.0.0.0 moesonce.com
 0.0.0.0 moi-glazki.ru
 0.0.0.0 moivestiy.biz
@@ -36839,11 +37081,18 @@ fe80::1%lo0 localhost
 0.0.0.0 mole.pluto.ro
 0.0.0.0 monarchfind-a.akamaihd.net
 0.0.0.0 monarhs.info
+0.0.0.0 monclerboots.xyz
+0.0.0.0 monclercheap.xyz
+0.0.0.0 monclerjacketsoutlet.pw
+0.0.0.0 moncleronline.xyz
 0.0.0.0 moncleroutletonline.pw
+0.0.0.0 moncleroutletonline.xyz
+0.0.0.0 monclervests.xyz
 0.0.0.0 monetizationking.net
 0.0.0.0 money-every-day.com
 0.0.0.0 moneymaster.ru
 0.0.0.0 moneytop.ru
+0.0.0.0 moneyviking-a.akamaihd.net
 0.0.0.0 monitorwebsitespeed.com
 0.0.0.0 moomi-daeri.com
 0.0.0.0 more-letom.ru
@@ -36872,6 +37121,7 @@ fe80::1%lo0 localhost
 0.0.0.0 moyaterapiya.ru
 0.0.0.0 mp3films.ru
 0.0.0.0 mp3ringtone.info
+0.0.0.0 mrbitsandbytes.com
 0.0.0.0 mrcsa.com.au
 0.0.0.0 mrinsidesales.com
 0.0.0.0 mriyadh.com
@@ -36886,6 +37136,7 @@ fe80::1%lo0 localhost
 0.0.0.0 muizre.ru
 0.0.0.0 mulberryoutletonlineeu.com
 0.0.0.0 mundoaberrante.com
+0.0.0.0 muschisexbilder.com
 0.0.0.0 muscle-factory.com.ua
 0.0.0.0 musezone.ru
 0.0.0.0 musezone.su
@@ -36912,10 +37163,12 @@ fe80::1%lo0 localhost
 0.0.0.0 mydirtystuff.com
 0.0.0.0 mydownloadengine.com
 0.0.0.0 mydownlodablefiles.com
+0.0.0.0 myfreecams.com
 0.0.0.0 myfreemp3.eu
 0.0.0.0 myfreetutorials.com
 0.0.0.0 myftpupload.com
 0.0.0.0 mygameplus.com
+0.0.0.0 mygameplus.ru
 0.0.0.0 myhealthcare.com
 0.0.0.0 myhitmp3.club
 0.0.0.0 myindospace.com
@@ -36930,6 +37183,7 @@ fe80::1%lo0 localhost
 0.0.0.0 myprintscreen.com
 0.0.0.0 myseoconsultant.com
 0.0.0.0 myshopmatemac.com
+0.0.0.0 mystats.xyz
 0.0.0.0 mywallpaper.top
 0.0.0.0 na15.ru
 0.0.0.0 nacap.ru
@@ -36951,6 +37205,7 @@ fe80::1%lo0 localhost
 0.0.0.0 nastroyke.net
 0.0.0.0 nate.com
 0.0.0.0 na-telefon.biz
+0.0.0.0 naturalbreakthroughsresearch.com
 0.0.0.0 naval.jislaaik.com
 0.0.0.0 nbsproject.ru
 0.0.0.0 negociosdasha.com
@@ -36984,6 +37239,7 @@ fe80::1%lo0 localhost
 0.0.0.0 nibbler.silktide.com
 0.0.0.0 nicefloor.co.uk
 0.0.0.0 nicovideo.jp
+0.0.0.0 nigcongvetua.servepics.com
 0.0.0.0 nightvision746.weebly.com
 0.0.0.0 niki-mlt.ru
 0.0.0.0 nikitsyringedrivelg.pen.io
@@ -37031,6 +37287,7 @@ fe80::1%lo0 localhost
 0.0.0.0 o-dachnik.ru
 0.0.0.0 odesproperty.com
 0.0.0.0 odywpjtw.bloger.index.hr
+0.0.0.0 offergroup.info
 0.0.0.0 offf.info
 0.0.0.0 office-windows.ru
 0.0.0.0 offtime.ru
@@ -37042,6 +37299,7 @@ fe80::1%lo0 localhost
 0.0.0.0 okroshki.ru
 0.0.0.0 oktube.ru
 0.0.0.0 ok-ua.info
+0.0.0.0 old-rock.com
 0.0.0.0 olvanto.ru
 0.0.0.0 olympescort.com
 0.0.0.0 omsk.xrus.org
@@ -37062,6 +37320,7 @@ fe80::1%lo0 localhost
 0.0.0.0 online-hit.info
 0.0.0.0 online.ktc45.ru
 0.0.0.0 onlineku.com
+0.0.0.0 onlinemeetingnow.com
 0.0.0.0 onlinemegax.com
 0.0.0.0 onlineserialy.ru
 0.0.0.0 online-templatestore.com
@@ -37088,6 +37347,7 @@ fe80::1%lo0 localhost
 0.0.0.0 openstat.com
 0.0.0.0 opinionreelle.com
 0.0.0.0 ops.picscout.com
+0.0.0.0 optibuymac.com
 0.0.0.0 optitrade24.com
 0.0.0.0 oralsexfilme.net
 0.0.0.0 oranga.host.sk
@@ -37096,6 +37356,7 @@ fe80::1%lo0 localhost
 0.0.0.0 orenburg-gsm.ru
 0.0.0.0 oren-cats.ru
 0.0.0.0 orgasmus-virtual.com
+0.0.0.0 orhonit.com
 0.0.0.0 origin-my.ru
 0.0.0.0 ororodnik.goodbb.ru
 0.0.0.0 orsonet.ru
@@ -37123,6 +37384,7 @@ fe80::1%lo0 localhost
 0.0.0.0 pammik.ru
 0.0.0.0 panamaforbeginners.com
 0.0.0.0 panchro.co.uk
+0.0.0.0 panchro.xyz
 0.0.0.0 paparazzistudios.com.au
 0.0.0.0 paperics.com
 0.0.0.0 paperwritingservice17.blogspot.ru
@@ -37135,6 +37397,7 @@ fe80::1%lo0 localhost
 0.0.0.0 partner-cdn.men
 0.0.0.0 partner-print.men
 0.0.0.0 partners-ship.pro
+0.0.0.0 partner-stop.men
 0.0.0.0 partybunny.ru
 0.0.0.0 patagoniaoutlet.online
 0.0.0.0 patagoniastore.online
@@ -37144,14 +37407,19 @@ fe80::1%lo0 localhost
 0.0.0.0 paydayonlinecom.com
 0.0.0.0 pb-dv.ru
 0.0.0.0 p-business.ru
+0.0.0.0 pcboa.se
+0.0.0.0 pcgroup.com.uy
 0.0.0.0 pc-services.ru
 0.0.0.0 pc-test.net
 0.0.0.0 pdamods.ru
+0.0.0.0 pdns.cz
+0.0.0.0 pdns.download
 0.0.0.0 pearlisland.ru
 0.0.0.0 pechikamini.ru
 0.0.0.0 peekyou.com
 0.0.0.0 pekori.to
 0.0.0.0 pelfind.me
+0.0.0.0 pendelprognos.se
 0.0.0.0 penisvergrotendepillennl.ovh
 0.0.0.0 pensplan4u.com
 0.0.0.0 pensplan.com
@@ -37217,6 +37485,7 @@ fe80::1%lo0 localhost
 0.0.0.0 pkr1hand.com
 0.0.0.0 pk-services.ru
 0.0.0.0 pladform.ru
+0.0.0.0 plaff-go.ru
 0.0.0.0 plastweb.ru
 0.0.0.0 platesauto.com
 0.0.0.0 platinumdeals.gr
@@ -37249,6 +37518,7 @@ fe80::1%lo0 localhost
 0.0.0.0 popup-hgd.xyz
 0.0.0.0 popup-jdh.xyz
 0.0.0.0 poquoson.org
+0.0.0.0 porn555.com
 0.0.0.0 porndairy.in
 0.0.0.0 porngalleries.top
 0.0.0.0 pornhub-forum.ga
@@ -37284,6 +37554,7 @@ fe80::1%lo0 localhost
 0.0.0.0 portal-eu.ru
 0.0.0.0 portnoff.od.ua
 0.0.0.0 portside.cc
+0.0.0.0 portside.xyz
 0.0.0.0 poshiv-chehol.ru
 0.0.0.0 positive2b.ru
 0.0.0.0 pospr.waw.pl
@@ -37322,6 +37593,7 @@ fe80::1%lo0 localhost
 0.0.0.0 proekt-gaz.ru
 0.0.0.0 proekt-mos.ru
 0.0.0.0 professionalwritingservices15.blogspot.ru
+0.0.0.0 profitfx.online
 0.0.0.0 profitsport.club
 0.0.0.0 proftests.net
 0.0.0.0 progress-upakovka.ru
@@ -37333,6 +37605,7 @@ fe80::1%lo0 localhost
 0.0.0.0 prom23.ru
 0.0.0.0 promalp-universal.ru
 0.0.0.0 prombudpostach.com.ua
+0.0.0.0 promgirldresses.xyz
 0.0.0.0 promodj.com
 0.0.0.0 promoforum.ru
 0.0.0.0 promoheads.com
@@ -37360,12 +37633,16 @@ fe80::1%lo0 localhost
 0.0.0.0 psoriasis-file.trade
 0.0.0.0 pst2017.onlinewebshop.net
 0.0.0.0 psvita.ru
+0.0.0.0 pts163.ru
 0.0.0.0 publiccasinoil.com
 0.0.0.0 pufip.com
 0.0.0.0 pukaporn.com
 0.0.0.0 pulse33.ru
+0.0.0.0 pulseonclick.com
 0.0.0.0 purchasepillsnorx.com
 0.0.0.0 purplesphere.in
+0.0.0.0 pushdata.sendpulse.com
+0.0.0.0 pussyfleet.com
 0.0.0.0 puteshestvennik.com
 0.0.0.0 putevka24.ru
 0.0.0.0 putitin.me
@@ -37432,6 +37709,7 @@ fe80::1%lo0 localhost
 0.0.0.0 recipedays.com
 0.0.0.0 recipedays.ru
 0.0.0.0 recordpage-a.akamaihd.net
+0.0.0.0 redbottomheels.xyz
 0.0.0.0 rednise.com
 0.0.0.0 reelheroes.net
 0.0.0.0 referencemoi.com
@@ -37460,6 +37738,7 @@ fe80::1%lo0 localhost
 0.0.0.0 rentehno.ru
 0.0.0.0 repeatlogo.co.uk
 0.0.0.0 replicaclub.ru
+0.0.0.0 replicalouboutin.xyz
 0.0.0.0 replica-watch.ru
 0.0.0.0 resellerclub.com
 0.0.0.0 responsinator.com
@@ -37550,6 +37829,7 @@ fe80::1%lo0 localhost
 0.0.0.0 sashagreyblog.ga
 0.0.0.0 saugatuck.com
 0.0.0.0 savefrom.com
+0.0.0.0 saveindex.xyz
 0.0.0.0 savememoney.co.za
 0.0.0.0 savetubevideo.com
 0.0.0.0 savingsslider-a.akamaihd.net
@@ -37604,6 +37884,7 @@ fe80::1%lo0 localhost
 0.0.0.0 school-diplomat.ru
 0.0.0.0 scoopquest.com
 0.0.0.0 score-ads.men
+0.0.0.0 scrapy.org
 0.0.0.0 screentoolkit.com
 0.0.0.0 scripted.com
 0.0.0.0 sc-specialhost.com
@@ -37667,12 +37948,15 @@ fe80::1%lo0 localhost
 0.0.0.0 sexad.net
 0.0.0.0 sexblog.pw
 0.0.0.0 sex-dating.co
+0.0.0.0 sexflirtbook.com
 0.0.0.0 sex.hotblog.top
 0.0.0.0 sexkontakteao.info
+0.0.0.0 sexkontakte-seite.com
 0.0.0.0 sexkrasivo.net
 0.0.0.0 sexobzor.info
 0.0.0.0 sexpartygirls.net
 0.0.0.0 sexphoto.site
+0.0.0.0 sex-pr.net
 0.0.0.0 sexreliz.com
 0.0.0.0 sexsaoy.com
 0.0.0.0 sexsearch.com
@@ -37686,6 +37970,7 @@ fe80::1%lo0 localhost
 0.0.0.0 sexyali.com
 0.0.0.0 sexy-pings.com
 0.0.0.0 sexy-screen-savers.com
+0.0.0.0 sexystrippe.info
 0.0.0.0 sexyteens.hol.es
 0.0.0.0 sexytrend.ru
 0.0.0.0 sfd-chess.ru
@@ -37695,9 +37980,11 @@ fe80::1%lo0 localhost
 0.0.0.0 share-buttons-for-free.com
 0.0.0.0 sharebutton.to
 0.0.0.0 shariki-zuma-lines.ru
+0.0.0.0 sharpchallenge.com
 0.0.0.0 shell-pmr.ru
 0.0.0.0 shemalegalls.blogporn.in
 0.0.0.0 shemale-sex.net
+0.0.0.0 sherlock.se
 0.0.0.0 shijian.ac.cn
 0.0.0.0 shiksabd.com
 0.0.0.0 shinikiev.com.ua
@@ -37707,6 +37994,7 @@ fe80::1%lo0 localhost
 0.0.0.0 shlyahten.ru
 0.0.0.0 shmetall.com.ua
 0.0.0.0 shodanhq.com
+0.0.0.0 shoesonlinebuy.xyz
 0.0.0.0 shop.acim.org
 0.0.0.0 shopcheermakeup.info
 0.0.0.0 shop-electron.ru
@@ -37745,8 +38033,10 @@ fe80::1%lo0 localhost
 0.0.0.0 sinel.info
 0.0.0.0 sinestesia.host.sk
 0.0.0.0 sisiynas.ru
+0.0.0.0 sispe.com.br
 0.0.0.0 site3.free-share-buttons.com
 0.0.0.0 site5.com
+0.0.0.0 site-analyzer.com
 0.0.0.0 site-auditor.online
 0.0.0.0 sitebeam.net
 0.0.0.0 siteexpress.co.il
@@ -37757,10 +38047,12 @@ fe80::1%lo0 localhost
 0.0.0.0 sitevalued.com
 0.0.0.0 sitopreferito.it
 0.0.0.0 sivs.ru
+0.0.0.0 s-iwantyou.com
 0.0.0.0 sixcooler.de
 0.0.0.0 sizeplus.work
 0.0.0.0 skachat-besplatno-dlja-mobily.ru
 0.0.0.0 skachat-besplatno-obrazcy.ru
+0.0.0.0 skatestick.bid
 0.0.0.0 sk.golden-praga.ru
 0.0.0.0 skhoolimg.com
 0.0.0.0 sklad-24.ru
@@ -37773,9 +38065,11 @@ fe80::1%lo0 localhost
 0.0.0.0 slavkokacunko.de
 0.0.0.0 slayerlife.com
 0.0.0.0 sledstvie-veli.net
+0.0.0.0 slimcdn.com
 0.0.0.0 slim.sellany.ru
 0.0.0.0 slkrm.ru
 0.0.0.0 slonechka.ru
+0.0.0.0 slowmach.tech
 0.0.0.0 sluganarodu.ru
 0.0.0.0 slujbauborki.ru
 0.0.0.0 smailik.org
@@ -37861,17 +38155,22 @@ fe80::1%lo0 localhost
 0.0.0.0 sports-supplements.us
 0.0.0.0 sport-video-obzor.ru
 0.0.0.0 spravka130.ru
+0.0.0.0 sprttrack.com
 0.0.0.0 sps-shop.com
+0.0.0.0 sptslmtrafms.com
 0.0.0.0 spyfu.com
 0.0.0.0 spymac.net
 0.0.0.0 spy-sts.com
 0.0.0.0 squidoo.com
 0.0.0.0 srdrvp.com
 0.0.0.0 srecorder.com
+0.0.0.0 sr-rekneskap.no
 0.0.0.0 sstroy44.ru
 0.0.0.0 stackthatbucks.com
 0.0.0.0 stairliftsarea.com
 0.0.0.0 stairliftstrue.com
+0.0.0.0 stal-rulon.ru
+0.0.0.0 stanthonyscatholicchurch.org
 0.0.0.0 star61.de
 0.0.0.0 stardevine.com
 0.0.0.0 stariy-baku.com
@@ -37887,6 +38186,7 @@ fe80::1%lo0 localhost
 0.0.0.0 staynplay.net
 0.0.0.0 steame.ru
 0.0.0.0 steelmaster.lv
+0.0.0.0 stefanbakosab.se
 0.0.0.0 stickers-market.ru
 0.0.0.0 stmassage.ru
 0.0.0.0 stockquotes.wooeb.com
@@ -37902,6 +38202,7 @@ fe80::1%lo0 localhost
 0.0.0.0 streetfooduncovered.com
 0.0.0.0 streha-metalko.si
 0.0.0.0 stretchingabuckblog.com
+0.0.0.0 stretchmate.net
 0.0.0.0 strfls.com
 0.0.0.0 strigkaomsk.ru
 0.0.0.0 stroicol.net
@@ -37914,6 +38215,7 @@ fe80::1%lo0 localhost
 0.0.0.0 stroydetali.ru
 0.0.0.0 stroyhelp-dv.ru
 0.0.0.0 stroymonolit.su
+0.0.0.0 strv.se
 0.0.0.0 studiofaca.com
 0.0.0.0 stuff-about-money.com
 0.0.0.0 styro.ru
@@ -37939,12 +38241,16 @@ fe80::1%lo0 localhost
 0.0.0.0 susanholtphotography.com
 0.0.0.0 svarbit.com
 0.0.0.0 svarkagid.com
+0.0.0.0 svbur.ru
 0.0.0.0 svetlotorg.ru
 0.0.0.0 svetodiodoff.ru
 0.0.0.0 svtrd.com
 0.0.0.0 swagbucks.com
+0.0.0.0 swinger-mobil.net
+0.0.0.0 swingerseiten.com
 0.0.0.0 swinginwithme.ru
 0.0.0.0 swiped.su
+0.0.0.0 swsociety.se
 0.0.0.0 sygraem.com
 0.0.0.0 syla.tk
 0.0.0.0 syvertsen-da.no
@@ -37956,6 +38262,7 @@ fe80::1%lo0 localhost
 0.0.0.0 taihouse.ru
 0.0.0.0 takethatad.com
 0.0.0.0 tako3.com
+0.0.0.0 talant-factory.ru
 0.0.0.0 tampabaywatch.org
 0.0.0.0 taqywu51.soup.io
 0.0.0.0 tarad.com
@@ -37979,7 +38286,9 @@ fe80::1%lo0 localhost
 0.0.0.0 teenbbw.yopoint.in
 0.0.0.0 teesdaleflyballclub.co.uk
 0.0.0.0 tehngr.ru
+0.0.0.0 telefonsexi.com
 0.0.0.0 telefonsexkostenlos.tk
+0.0.0.0 telefonsex-ohne0900.net
 0.0.0.0 telefonsexsofort.tk
 0.0.0.0 telegraf.by
 0.0.0.0 telegramdownload10.com
@@ -38002,6 +38311,7 @@ fe80::1%lo0 localhost
 0.0.0.0 thedownloadfromwarez.blogspot.com
 0.0.0.0 thefarmergame.com
 0.0.0.0 thefds.net
+0.0.0.0 thegioixekhach.com
 0.0.0.0 theguardlan.com
 0.0.0.0 theheroes.ru
 0.0.0.0 thejournal.ru
@@ -38011,6 +38321,7 @@ fe80::1%lo0 localhost
 0.0.0.0 thetattoohut.com
 0.0.0.0 thetoiletpaper.com
 0.0.0.0 the-torrent-tracker.blogspot.com
+0.0.0.0 the-trader.net
 0.0.0.0 the-usa-games.blogspot.com
 0.0.0.0 thewomenlife.com
 0.0.0.0 thfox.com
@@ -38018,6 +38329,7 @@ fe80::1%lo0 localhost
 0.0.0.0 thin.me.pn
 0.0.0.0 tiandeural.ru
 0.0.0.0 tiens2010.ru
+0.0.0.0 timdreby.com
 0.0.0.0 timeallnews.ru
 0.0.0.0 timecrimea.ru
 0.0.0.0 time-japan.ru
@@ -38085,6 +38397,8 @@ fe80::1%lo0 localhost
 0.0.0.0 tksn.ru
 0.0.0.0 tmearegion26.com
 0.0.0.0 tmm-kurs.ru
+0.0.0.0 tmtrck.com
+0.0.0.0 tnaionline.org
 0.0.0.0 tnctrx.com
 0.0.0.0 todohr.com
 0.0.0.0 toloka.hurtom.com
@@ -38111,6 +38425,7 @@ fe80::1%lo0 localhost
 0.0.0.0 torrents-tracker.com
 0.0.0.0 torrnada.ru
 0.0.0.0 torture.ml
+0.0.0.0 totu.info
 0.0.0.0 touchmods.fr
 0.0.0.0 tourismvictoria.com
 0.0.0.0 tour-line.net
@@ -38120,6 +38435,7 @@ fe80::1%lo0 localhost
 0.0.0.0 toys.erolove.in
 0.0.0.0 tozup.com
 0.0.0.0 tpu.ru
+0.0.0.0 trackmedia101.com
 0.0.0.0 track-rankings.online
 0.0.0.0 tracksz.co
 0.0.0.0 tradedeals.biz
@@ -38131,6 +38447,7 @@ fe80::1%lo0 localhost
 0.0.0.0 trafficmonetize.org
 0.0.0.0 trafficmp.com
 0.0.0.0 trafficnetzwerk.de
+0.0.0.0 trafficstars.com
 0.0.0.0 traffique.net
 0.0.0.0 traffixer.com
 0.0.0.0 traffmonster.info
@@ -38150,13 +38467,16 @@ fe80::1%lo0 localhost
 0.0.0.0 trucri.me
 0.0.0.0 trudogolik.net
 0.0.0.0 truemfilelj.gq
+0.0.0.0 trumpetedextremes.com
 0.0.0.0 trustedhealthtips.com
 0.0.0.0 try-rx.com
 0.0.0.0 tsan.net
 0.0.0.0 tsstcorpcddvdwshbbdriverfb.aircus.com
+0.0.0.0 tsyndicate.com
 0.0.0.0 ttrraacckkrr.com
 0.0.0.0 ttsq.fr
 0.0.0.0 tube8.com
+0.0.0.0 tubeline.biz
 0.0.0.0 tuberkulezanet.ru
 0.0.0.0 tuberkuleznik.ru
 0.0.0.0 tuckermktg.com
@@ -38206,6 +38526,7 @@ fe80::1%lo0 localhost
 0.0.0.0 uhdtv.website
 0.0.0.0 uhodzalijami.ru
 0.0.0.0 uhod-za-sobakoj.ru
+0.0.0.0 ukkelberg.no
 0.0.0.0 ukrobstep.com
 0.0.0.0 ukrup.com
 0.0.0.0 ultimateclassicrock.com
@@ -38217,6 +38538,8 @@ fe80::1%lo0 localhost
 0.0.0.0 underthesite.com
 0.0.0.0 uni.me
 0.0.0.0 unimodemhalfduplefw.pen.io
+0.0.0.0 unionmarkt.de
+0.0.0.0 unitexindia.com
 0.0.0.0 unitygame3d.com
 0.0.0.0 universals.com.ua
 0.0.0.0 unmaroll.ya.ru
@@ -38252,6 +38575,7 @@ fe80::1%lo0 localhost
 0.0.0.0 vabasa.inwtrade.com
 0.0.0.0 vacuumscleaner.com
 0.0.0.0 vadimkravtcov.ru
+0.0.0.0 validdomain.xyz
 0.0.0.0 valkiria-tk.ru
 0.0.0.0 valoresito.com
 0.0.0.0 vandrie-ict.nl
@@ -38262,7 +38586,6 @@ fe80::1%lo0 localhost
 0.0.0.0 vasileostrovsky-rayon.ru
 0.0.0.0 vavilone.com
 0.0.0.0 vbabule.net
-0.0.0.0 vc.ru
 0.0.0.0 vduplo.ru
 0.0.0.0 vedomstvo.net
 0.0.0.0 veerotech.com
@@ -38270,6 +38593,7 @@ fe80::1%lo0 localhost
 0.0.0.0 vegascosmetics.ru
 0.0.0.0 vektorpress.ru
 0.0.0.0 vekzdorov.ru
+0.0.0.0 vellings.info
 0.0.0.0 velobikestock.com
 0.0.0.0 venta-prom.ru
 0.0.0.0 ventelnos.com
@@ -38287,6 +38611,7 @@ fe80::1%lo0 localhost
 0.0.0.0 video-chat.in
 0.0.0.0 videochat.mx
 0.0.0.0 videochat.tv.br
+0.0.0.0 videochat.world
 0.0.0.0 videochaty.ru
 0.0.0.0 video-hollywood.ru
 0.0.0.0 videojam.tv
@@ -38303,6 +38628,7 @@ fe80::1%lo0 localhost
 0.0.0.0 viktoria-center.ru
 0.0.0.0 vilingstore.net
 0.0.0.0 villacoloniale.com
+0.0.0.0 villakohlanta.nu
 0.0.0.0 vinsit.ru
 0.0.0.0 vinylvault.co.uk
 0.0.0.0 vip2ch.com
@@ -38400,12 +38726,14 @@ fe80::1%lo0 localhost
 0.0.0.0 wechatdownload10.com
 0.0.0.0 weclipart.com
 0.0.0.0 wedding0venues.tk
+0.0.0.0 weddingdresses.xyz
 0.0.0.0 wedding-salon.net
 0.0.0.0 weekes.biz.tc
 0.0.0.0 weightatraining.com
 0.0.0.0 welck.octopis.com
 0.0.0.0 welcomeauto.ru
 0.0.0.0 wellcome2slovenia.ru
+0.0.0.0 wemarketing.se
 0.0.0.0 wenimage.com
 0.0.0.0 weprik.ru
 0.0.0.0 wesharepics.com
@@ -38436,7 +38764,9 @@ fe80::1%lo0 localhost
 0.0.0.0 wholesalenfljerseys.us.com
 0.0.0.0 wholinkstome.com
 0.0.0.0 whosonmyserver.com
+0.0.0.0 wieseversa.no
 0.0.0.0 wikes.20fr.com
+0.0.0.0 wildcattube.com
 0.0.0.0 wildworld.site
 0.0.0.0 windowssearch-exp.com
 0.0.0.0 wineitudes.wordpress.com
@@ -38462,12 +38792,14 @@ fe80::1%lo0 localhost
 0.0.0.0 wordpresscore.com
 0.0.0.0 wordpress-crew.net
 0.0.0.0 word-vorlagen.net
+0.0.0.0 word-vorlagen.xyz
 0.0.0.0 works.if.ua
 0.0.0.0 worldhistory.biz
 0.0.0.0 worldinternetauthority.com
 0.0.0.0 worldis.me
 0.0.0.0 worldlovers.ru
 0.0.0.0 world-mmo.com
+0.0.0.0 worldmusicfests.com
 0.0.0.0 worldoffiles.ru
 0.0.0.0 wormix-cheats.ru
 0.0.0.0 wowas31.ucoz.ru
@@ -38485,8 +38817,10 @@ fe80::1%lo0 localhost
 0.0.0.0 xbaboon.com
 0.0.0.0 xblog.in
 0.0.0.0 xboxster.ru
+0.0.0.0 xchat26.myfreecams.com
 0.0.0.0 xcombear.ru
 0.0.0.0 xdoza.com
+0.0.0.0 xedserver.com
 0.0.0.0 xep.info
 0.0.0.0 xfire.com
 0.0.0.0 xgftnlrt.bloger.index.hr
@@ -38496,6 +38830,7 @@ fe80::1%lo0 localhost
 0.0.0.0 x-lime.net
 0.0.0.0 xlolitka.com
 0.0.0.0 xlovecam.com
+0.0.0.0 xmladserver.com
 0.0.0.0 xmlinde.com
 0.0.0.0 xmronta.com
 0.0.0.0 xn--1-8sbcpb0bdm8k6a.xn--p1ai
@@ -38563,6 +38898,7 @@ fe80::1%lo0 localhost
 0.0.0.0 xtubeporno.net
 0.0.0.0 xuki.us
 0.0.0.0 xvideosbay.com
+0.0.0.0 xvideosporn.biz
 0.0.0.0 xwatt.ru
 0.0.0.0 xxart.ru
 0.0.0.0 xxlargepop.com
@@ -38582,6 +38918,7 @@ fe80::1%lo0 localhost
 0.0.0.0 yebocasino.co.za
 0.0.0.0 ynymnwbm.bloger.index.hr
 0.0.0.0 yogamatsexpert.com
+0.0.0.0 yoopsie.com
 0.0.0.0 yopoint.in
 0.0.0.0 yorkshireccc.com
 0.0.0.0 yorkshire.com
@@ -38598,6 +38935,7 @@ fe80::1%lo0 localhost
 0.0.0.0 youporn-forum.uni.me
 0.0.0.0 youporn-ru.com
 0.0.0.0 youradexchange.com
+0.0.0.0 yourads.website
 0.0.0.0 youradulthosting.com
 0.0.0.0 your-bearings.com
 0.0.0.0 yourdesires.ru
@@ -38605,6 +38943,8 @@ fe80::1%lo0 localhost
 0.0.0.0 yourothersite.com
 0.0.0.0 yoursearch.me
 0.0.0.0 yoursite.com
+0.0.0.0 yourtemplatefinder.com
+0.0.0.0 you-shall-not-pass.is74.ru
 0.0.0.0 youtoner.it
 0.0.0.0 youtubedownload.org
 0.0.0.0 yuantuo.co.jp
@@ -38615,6 +38955,7 @@ fe80::1%lo0 localhost
 0.0.0.0 yunque.pluto.ro
 0.0.0.0 yurgorod.ru
 0.0.0.0 yur-p.ru
+0.0.0.0 za-fun-offer.com
 0.0.0.0 zahvat.ru
 0.0.0.0 zaidia.xhost.ro
 0.0.0.0 zaimhelp.ru
@@ -38627,9 +38968,11 @@ fe80::1%lo0 localhost
 0.0.0.0 zakonobosago.ru
 0.0.0.0 zaloadi.ru
 0.0.0.0 zaloro.com
+0.0.0.0 za-music.mymobiplanet.com
 0.0.0.0 zaobao.com.sg
 0.0.0.0 zarabotat-na-sajte.ru
 0.0.0.0 zarenica.net
+0.0.0.0 zarepta.com
 0.0.0.0 zastenchivosti.net
 0.0.0.0 zastroyka.org
 0.0.0.0 zazagames.org
@@ -38663,6 +39006,7 @@ fe80::1%lo0 localhost
 0.0.0.0 zona-aqua.ru
 0.0.0.0 zone-kev717.info
 0.0.0.0 zonjwag.com
+0.0.0.0 zoolubimets.ru
 0.0.0.0 zoominfo.com
 0.0.0.0 zophim.me
 0.0.0.0 zrizvtrnpale.tk
@@ -38671,6 +39015,7 @@ fe80::1%lo0 localhost
 0.0.0.0 zs2vm.top
 0.0.0.0 zscaler.net
 0.0.0.0 zscalerone.net
+0.0.0.0 zscalertwo.net
 0.0.0.0 zverokruh-shop.cz
 0.0.0.0 zvetki.ru
 0.0.0.0 zx6.ru
@@ -39277,7 +39622,6 @@ fe80::1%lo0 localhost
 0.0.0.0 liqwid.net
 0.0.0.0 litec-fr.com
 0.0.0.0 littlesturgisrally.com
-0.0.0.0 livejasmin.com
 0.0.0.0 livewell.net
 0.0.0.0 llaredlrgn.angelcities.com
 0.0.0.0 localh0st.info
@@ -40920,7 +41264,6 @@ fe80::1%lo0 localhost
 0.0.0.0 www.bet3000.com
 0.0.0.0 bet33.com
 0.0.0.0 www.bet33.com
-0.0.0.0 bet365.com
 0.0.0.0 bet7days.com
 0.0.0.0 www.bet7days.com
 0.0.0.0 bet90.com
