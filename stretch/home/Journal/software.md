@@ -47,6 +47,7 @@ udiskie
 gpick
 blueman
 gnome-disk-utility
+dnsutils
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -60,6 +61,7 @@ ttf-xfree86-nonfree
 ### Office
 zathura-djvu zathura-ps zathura-cb
 mupdf
+mupdf-tools
 gnome-calculator
 simple-scan
 libreoffice-l10n-tr
@@ -95,6 +97,7 @@ haskell-doc
 #### Erlang
 erlang
 erlang-doc
+elixir
 
 #### Docker
 apt-transport-https
