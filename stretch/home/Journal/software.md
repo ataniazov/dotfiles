@@ -48,6 +48,8 @@ gpick
 blueman
 gnome-disk-utility
 dnsutils
+qrencode
+solaar
 
 ### Firmware
 firmware-linux firmware-iwlwifi
