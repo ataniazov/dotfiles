@@ -274,7 +274,7 @@ bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -s /home/delta/Pi
 #exec --no-startup-id redshift-gtk -c /home/delta/.config/redshift.conf
 
 # Java
-#exec --no-startup-id wmname LG3D
+exec --no-startup-id wmname LG3D
 #bindsym $mod+Shift+i exec idea					# Intellij IDEA
 
 # Multi-Monitor settings

@@ -49,7 +49,8 @@ blueman
 gnome-disk-utility
 dnsutils
 qrencode
-solaar
+#solaar
+acpi
 
 ### Firmware
 firmware-linux firmware-iwlwifi
@@ -95,6 +96,7 @@ haskell-platform
 stylish-haskell ghc-mod hasktags hoogle hlint ghc-modi
 haskell-platform-doc haskell-platform-prof haskell-stack
 haskell-doc
+libtinfo-dev
 
 #### Erlang
 erlang
