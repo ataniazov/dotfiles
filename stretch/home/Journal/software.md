@@ -51,6 +51,10 @@ dnsutils
 qrencode
 #solaar
 acpi
+texlive-full
+texstudio
+xvnc4viewer
+whois
 
 ### Firmware
 firmware-linux firmware-iwlwifi
