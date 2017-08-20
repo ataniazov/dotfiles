@@ -53,8 +53,10 @@ qrencode
 acpi
 texlive-full
 texstudio
-xvnc4viewer
+#xvnc4viewer
 whois
+sqlite3
+postgresql-all
 
 ### Firmware
 firmware-linux firmware-iwlwifi
