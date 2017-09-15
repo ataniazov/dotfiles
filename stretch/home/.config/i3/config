@@ -234,6 +234,14 @@ bindsym $mod+m bar mode toggle
 # The middle button with modifier toggles floating
 bindsym --whole-window $mod+button2 floating toggle
 
+# Move the current workspace to the next output
+bindsym $mod+Mod1+$left move workspace to left
+bindsym $mod+Mod1+$right move workspace to right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Mod1+Left move workspace to left
+bindsym $mod+Mod1+Right move workspace to right
+
 # StartUp daemons
 exec --no-startup-id $HOME/.config/i3/startup.sh
 

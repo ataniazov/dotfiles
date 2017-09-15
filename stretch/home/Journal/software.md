@@ -57,6 +57,10 @@ texstudio
 whois
 sqlite3
 postgresql-all
+gdmap
+android-tools-adb
+heimdall-flash
+heimdall-flash-frontend
 
 ### Firmware
 firmware-linux firmware-iwlwifi
