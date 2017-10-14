@@ -112,5 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set PATH so it includes user's private bin directories
-export PATH="$HOME/.local/bin:$PATH"
+# set PATH so it includes user's private local/bin directories
+#export PATH="$HOME/.local/bin:$PATH"
+
+# stack shell auto-completion
+eval "$(stack --bash-completion-script stack)"

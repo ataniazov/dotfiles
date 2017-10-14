@@ -4,7 +4,7 @@ pkill at-spi-bus-launcher
 pkill polkit-gnome-authentication-agent-1
 pkill xfsettingsd
 pkill xfce4-power-manager
-pkill redshift
+#pkill redshift
 #pkill compton
 #pkill conky
 
