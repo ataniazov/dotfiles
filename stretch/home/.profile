@@ -30,3 +30,12 @@ fi
 if [ -d "/snap/bin" ] ; then
     PATH="/snap/bin:$PATH"
 fi
+
+# set PATH so it includes user's private go/bin if it exists
+if [ -d "$HOME/Applications/go" ] ; then
+    export GOROOT="$HOME/Applications/go"
+    PATH="$PATH:$GOROOT/bin"
+    # set PATH so it includes user's private workspace
+    export GOPATH="$HOME/go"
+    PATH="$PATH:$GOPATH/bin"
+fi

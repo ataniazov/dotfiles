@@ -116,4 +116,4 @@ fi
 #export PATH="$HOME/.local/bin:$PATH"
 
 # stack shell auto-completion
-eval "$(stack --bash-completion-script stack)"
+#eval "$(stack --bash-completion-script stack)"

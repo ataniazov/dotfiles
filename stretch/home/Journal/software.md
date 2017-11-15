@@ -173,6 +173,7 @@ thunar
 thunar-archive-plugin
 pulseaudio
 mpv cmus
+vlc
 firefox
 chromium chromium-l10n chromium-widevine
 file-roller
@@ -195,7 +196,7 @@ gufw
 ### Development
 
 #### Virtualization
-virtualbox-5.1
+virtualbox-5.2
 
 #### Docker-CE
 apt-transport-https
@@ -219,3 +220,6 @@ gvfs-bin
 #### RDP
 freerdp-x11
 
+#### Other
+snapd
+hping3

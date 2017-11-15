@@ -254,6 +254,9 @@ bindsym $mod+g exec ~/Applications/firefox/firefox --private-window	# Firefox
 bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
+# Data cleansing to keep your privacy
+bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '~/.config/i3/purify.sh'"
+
 # i3lock
 bindsym $mod+Shift+backslash exec --no-startup-id \
 		i3lock -n -d -c 000000 -f #& systemctl suspend		# i3lock
