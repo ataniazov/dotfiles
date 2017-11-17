@@ -26,16 +26,18 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH so it includes /snap/bin if it exists
-if [ -d "/snap/bin" ] ; then
-    PATH="/snap/bin:$PATH"
-fi
-
 # set PATH so it includes user's private go/bin if it exists
 if [ -d "$HOME/Applications/go" ] ; then
     export GOROOT="$HOME/Applications/go"
     PATH="$PATH:$GOROOT/bin"
-    # set PATH so it includes user's private workspace
+    # set GOROOT_BOOTSTRAP path to go tool chain
+    export GOROOT_BOOTSTRAP=$GOROOT
+    # set GOPATH so it includes user's private go workspace
     export GOPATH="$HOME/go"
     PATH="$PATH:$GOPATH/bin"
+fi
+
+# set PATH so it includes /snap/bin if it exists
+if [ -d "/snap/bin" ] ; then
+    PATH="/snap/bin:$PATH"
 fi
