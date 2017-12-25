@@ -31,7 +31,7 @@ if [ -d "$HOME/Applications/go" ] ; then
     export GOROOT="$HOME/Applications/go"
     PATH="$PATH:$GOROOT/bin"
     # set GOROOT_BOOTSTRAP path to go tool chain
-    export GOROOT_BOOTSTRAP=$GOROOT
+    export GOROOT_BOOTSTRAP="$HOME/gobootstrap"
     # set GOPATH so it includes user's private go workspace
     export GOPATH="$HOME/go"
     PATH="$PATH:$GOPATH/bin"

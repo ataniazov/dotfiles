@@ -190,6 +190,9 @@ ttf-xfree86-nonfree
 #### Theme
 gtk2-engines-murrine
 
+### Multimedia
+inkscape
+
 ### Security
 gufw
 
@@ -197,6 +200,9 @@ gufw
 
 #### Virtualization
 virtualbox-5.2
+
+#### Java
+default-jdk openjdk-8-source openjdk-8-doc
 
 #### Docker-CE
 apt-transport-https
@@ -223,3 +229,15 @@ freerdp-x11
 #### Other
 snapd
 hping3
+cu
+composer
+php-curl
+whois
+dnsutils
+
+#### MC
+avrdude
+avr-libc
+avra
+simulavr
+gdb-avr
