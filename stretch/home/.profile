@@ -10,34 +10,46 @@
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+	# include .bashrc if it exists
+	if [ -f "$HOME/.bashrc" ]; then
+		. "$HOME/.bashrc"
+	fi
 fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+	PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private local/bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+	PATH="$HOME/.local/bin:$PATH"
 fi
 
 # set PATH so it includes user's private go/bin if it exists
 if [ -d "$HOME/Applications/go" ] ; then
-    export GOROOT="$HOME/Applications/go"
-    PATH="$PATH:$GOROOT/bin"
-    # set GOROOT_BOOTSTRAP path to go tool chain
-    export GOROOT_BOOTSTRAP="$HOME/gobootstrap"
-    # set GOPATH so it includes user's private go workspace
-    export GOPATH="$HOME/go"
-    PATH="$PATH:$GOPATH/bin"
+	export GOROOT="$HOME/Applications/go"
+	PATH="$PATH:$GOROOT/bin"
+	# set GOROOT_BOOTSTRAP path to go tool chain
+	export GOROOT_BOOTSTRAP="$HOME/gobootstrap"
+	# set GOPATH so it includes user's private go workspace
+	export GOPATH="$HOME/go"
+	PATH="$PATH:$GOPATH/bin"
+fi
+
+# set PATH so it includes user's private nodejs/bin if it exists
+if [ -d "$HOME/Applications/node" ] ; then
+	export NODEJS="$HOME/Applications/node"
+	PATH="$PATH:$NODEJS/bin"
+fi
+
+# set PATH so it includes user's private yarn/bin if it exists
+if [ -d "$HOME/Applications/yarn" ] ; then
+	export YARN="$HOME/Applications/yarn"
+	PATH="$PATH:$YARN/bin"
 fi
 
 # set PATH so it includes /snap/bin if it exists
 if [ -d "/snap/bin" ] ; then
-    PATH="/snap/bin:$PATH"
+	PATH="/snap/bin:$PATH"
 fi

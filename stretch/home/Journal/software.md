@@ -227,6 +227,7 @@ gvfs-bin
 freerdp-x11
 
 #### Other
+build-essential
 snapd
 hping3
 cu
@@ -234,6 +235,10 @@ composer
 php-curl
 whois
 dnsutils
+make
+libx11-dev libxkbfile-dev libsecret-1-dev
+fakeroot
+rpm
 
 #### MC
 avrdude
@@ -241,3 +246,4 @@ avr-libc
 avra
 simulavr
 gdb-avr
+lm-sensors
