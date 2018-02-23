@@ -53,3 +53,8 @@ fi
 if [ -d "/snap/bin" ] ; then
 	PATH="/snap/bin:$PATH"
 fi
+
+# add shell auto-completion to the haskell tool stack if it exists
+if [ -d "$HOME/Applications/stack" ] ; then
+	eval "$(stack --bash-completion-script stack)"
+fi

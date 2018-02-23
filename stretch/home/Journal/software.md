@@ -239,6 +239,11 @@ make
 libx11-dev libxkbfile-dev libsecret-1-dev
 fakeroot
 rpm
+libappindicator1
+shutter
+numpy
+python3-pip
+arc-theme
 
 #### MC
 avrdude
