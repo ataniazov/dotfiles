@@ -252,3 +252,7 @@ avra
 simulavr
 gdb-avr
 lm-sensors
+
+#### Encryption
+haveged
+rng-tools5
