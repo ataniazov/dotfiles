@@ -187,7 +187,7 @@ bar {
 }
 
 ##############################################################################
-#                                  DELTA                                     #
+#                                USER SETTINGS                               #
 ##############################################################################
 
 # i3wm
@@ -229,13 +229,13 @@ bindsym $mod+Mod1+Right move workspace to right
 # AUTOSTART
 
 ## Set the wallpaper
-exec_always --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/background.png
+exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
 
 ## Set caps-lock as a modifier and dvorak as keyboard layout
 exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
 
 ## StartUp daemons
-exec --no-startup-id ~/.config/i3/startup.sh
+exec --no-startup-id $HOME/.config/i3/startup.sh
 
 # Pulse Audio controls
 
@@ -250,12 +250,12 @@ bindsym Print exec --no-startup-id pactl set-sink-volume 0 -5% 		# decrease soun
 bindsym Pause exec --no-startup-id pactl set-sink-mute 0 toggle		# mute sound
 
 # Application lunch hot-keys
-bindsym $mod+g exec ~/Applications/firefox/firefox --private-window	# Firefox
+bindsym $mod+g exec $HOME/Applications/firefox/firefox --private-window	# Firefox
 bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '~/.config/i3/purify.sh'"
+bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
 
 # Force kill focused window
 bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
@@ -270,14 +270,14 @@ bindsym $mod+Shift+backslash exec --no-startup-id \
 bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
 # Fast ScreenShot
-bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s ~/Pictures/
+bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/
 
 # Java
 #exec --no-startup-id wmname LG3D
 #bindsym $mod+Shift+i exec idea					# Intellij IDEA
 
 # Multi-Monitor settings
-#bindsym $mod+x exec --no-startup-id sh /home/delta/.screenlayout/multihead.sh | i3-msg restart
+#bindsym $mod+x exec --no-startup-id sh $HOME/.screenlayout/multihead.sh | i3-msg restart
 
 
 # TESTING CONFIGURATIONS
@@ -294,7 +294,7 @@ bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s ~/Pi
 #bindsym $mod+Tab container next
 
 # QT Creator
-#bindsym $mod+Shift+q exec --no-startup-id /home/delta/Qt/Tools/QtCreator/bin/qtcreator
+#bindsym $mod+Shift+q exec --no-startup-id $HOME/Qt/Tools/QtCreator/bin/qtcreator
 
 # Start Spotify
 #bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
