@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2017-09-20)
+# i3 config file (v4-2018-07-07)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -147,30 +147,30 @@ bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        #bindsym j resize shrink width 10 px or 10 ppt
-        bindsym $left resize shrink width 10 px or 10 ppt
-        #bindsym k resize grow height 10 px or 10 ppt
-        bindsym $down resize grow height 10 px or 10 ppt
-        #bindsym l resize shrink height 10 px or 10 ppt
-        bindsym $up resize shrink height 10 px or 10 ppt
-        #bindsym semicolon resize grow width 10 px or 10 ppt
-        bindsym $right resize grow width 10 px or 10 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	#bindsym j resize shrink width 10 px or 10 ppt
+	bindsym $left resize shrink width 10 px or 10 ppt
+	#bindsym k resize grow height 10 px or 10 ppt
+	bindsym $down resize grow height 10 px or 10 ppt
+	#bindsym l resize shrink height 10 px or 10 ppt
+	bindsym $up resize shrink height 10 px or 10 ppt
+	#bindsym semicolon resize grow width 10 px or 10 ppt
+	bindsym $right resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -180,14 +180,23 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
 	tray_output primary
-        status_command i3status
+	status_command i3status
 
 	colors {
+		#background #222222
+		#statusline #ffffff
+		#separator #666666
+		## colorclass	   border  backgr. text
+		#focused_workspace  #E7E8EB #E7E8EB #222222
+		#active_workspace   #E7E8EB #222222 #ffffff
+		#inactive_workspace #E7E8EB #222222 #E7E8EB
+		#urgent_workspace   #2f343a #900000 #ffffff
+		#binding_mode       #2f343a #900000 #ffffff
 	}
 }
 
 ##############################################################################
-#                                USER SETTINGS                               #
+#                               USER SETTINGS                                #
 ##############################################################################
 
 # i3wm
@@ -239,15 +248,34 @@ exec --no-startup-id $HOME/.config/i3/startup.sh
 
 # Pulse Audio controls
 
+## Get active sink number
+set $sink `pactl list short sinks | cut -f1`
+
 ## Multimedia keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% 		# increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% 		# decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle			# mute sound
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5%		# decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +5%		# increase sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle			# mute sound
 
 ## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
-bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume 0 +5% 	# increase sound volume
-bindsym Print exec --no-startup-id pactl set-sink-volume 0 -5% 		# decrease sound volume
-bindsym Pause exec --no-startup-id pactl set-sink-mute 0 toggle		# mute sound
+bindsym Print exec --no-startup-id pactl set-sink-volume $sink -5%				# decrease sound volume
+bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume $sink +5%			# increase sound volume
+bindsym Pause exec --no-startup-id pactl set-sink-mute $sink toggle				# mute sound
+
+# Alsa Audio controls
+
+## Multimedia keys
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-			# decrease sound volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+			# increase sound volume
+#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle				# mute sound
+
+## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
+#bindsym Scroll_Lock exec --no-startup-id amixer -q set Master 5%+ unmute			# decrease sound volume
+#bindsym Print exec --no-startup-id amixer -q set Master 5%- unmute				# increase sound volume
+#bindsym Pause exec --no-startup-id amixer set Master toggle					# mute sound
+
+# Sreen brightness controls
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Application lunch hot-keys
 bindsym $mod+g exec $HOME/Applications/firefox/firefox --private-window	# Firefox
@@ -261,8 +289,7 @@ bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed 
 bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
 
 # i3lock
-bindsym $mod+Shift+backslash exec --no-startup-id \
-		i3lock -n -d -c 000000 -f #& systemctl suspend		# i3lock
+bindsym $mod+Shift+backslash exec --no-startup-id i3lock -n -d -c 000000 -f #& systemctl suspend	# i3lock
 
 # Set ratpoison-like behaviour hot-keys
 #bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
@@ -304,3 +331,20 @@ bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOM
 #exec --no-startup-id i3-msg 'workspace $workspace0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
+
+## Changing colors
+## class                 border  backgr. text    indicator child_border
+#client.focused          #E7E8EB #E7E8EB #000000 #2e9ef4   #E7E8EB #285577
+#client.focused_inactive #333333 #494949 #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+#client.background       #ffffff
+
+## window and border settings
+#new_window normal 0 px
+#new_window none
+#new_window 1pixel
+#new_float normal 1 px
+#hide_edge_borders none
