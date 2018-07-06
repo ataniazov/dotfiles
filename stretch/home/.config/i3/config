@@ -257,6 +257,9 @@ bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 # Data cleansing to keep your privacy
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '~/.config/i3/purify.sh'"
 
+# Force kill focused window
+bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
+
 # i3lock
 bindsym $mod+Shift+backslash exec --no-startup-id \
 		i3lock -n -d -c 000000 -f #& systemctl suspend		# i3lock
@@ -264,7 +267,7 @@ bindsym $mod+Shift+backslash exec --no-startup-id \
 # Set ratpoison-like behaviour hot-keys
 #bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
 #bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
-bindsym $mod+b exec --no-startup-id xdotool mousemove 1600 900
+bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
 # Fast ScreenShot
 bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s ~/Pictures/

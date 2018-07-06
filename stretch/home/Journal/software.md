@@ -195,6 +195,7 @@ inkscape
 
 ### Security
 gufw
+diceware
 
 ### Development
 
@@ -243,7 +244,14 @@ libappindicator1
 shutter
 numpy
 python3-pip
+python-pip
 arc-theme
+gkbd-capplet
+tkgate
+kazam
+xfburn
+python3-tk
+debootstrap
 
 #### MC
 avrdude
@@ -253,6 +261,11 @@ simulavr
 gdb-avr
 lm-sensors
 
+#### Security
+clamav
+libclamunrar7
+
 #### Encryption
 haveged
 rng-tools5
+signify-openbsd

@@ -12,7 +12,7 @@ sleep 1
 echo "Swaping with clean one..."
 
 # Swap with clean data
-tar -xvJf ~/Backup/.mozilla.tar.xz -C ~/ 
+tar -xvjf ~/Backup/.mozilla.tar.bz2 -C ~/ 
 
 # Wait 1 second
 sleep 1
