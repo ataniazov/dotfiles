@@ -277,7 +277,7 @@ workspace_auto_back_and_forth yes
 
 ## Delaying urgency hint reset on workspace change
 ## Syntax: force_display_urgency_hint <timeout> ms
-force_display_urgency_hint 500 ms
+#force_display_urgency_hint 500 ms
 
 ## Focus on window activation
 ## Syntax: focus_on_window_activation smart|urgent|focus|none
@@ -327,8 +327,8 @@ bar {
 
         # Binding Mode indicator
         ## Syntax: binding_mode_indicator yes|no
+
         # Colors
-        #
         colors {
                 ## Syntax: background <color>
                 background #000000
@@ -354,7 +354,6 @@ bar {
         bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
 } 
 
-
 ## Toggle between dock mode and hide mode
 bindsym $mod+m bar mode toggle
 
@@ -366,7 +365,7 @@ bindsym --whole-window $mod+button2 floating toggle
 
 ## Sticky floating windows
 ## Syntax: sticky enable|disable|toggle
-bindsym --release button2 sticky toggle
+bindsym --release $mod+Shift+button2 sticky toggle
 
 ## Set alternative modifier
 set $altmod Mod1
@@ -396,7 +395,7 @@ exec --no-startup-id $HOME/.config/i3/startup.sh
 
 ## Get active sink number
 #set $sink `pactl list short sinks | cut -f1`
-set $sink `pactl list short sinks | grep -i $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | cut -f1`
+set $sink $(pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1)
 
 ## Multimedia keys
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5%		# decrease sound volume
@@ -425,7 +424,7 @@ bindsym Pause exec --no-startup-id pactl set-sink-mute $sink toggle				# mute so
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Application lunch hot-keys
-bindsym $mod+g exec firefox --private-window	# Firefox
+bindsym $mod+g exec firefox --private-window			# Firefox
 bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
@@ -448,12 +447,11 @@ bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -f -s $HOM
 bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/	# region
 
 # Java
-#exec --no-startup-id wmname LG3D
+exec --no-startup-id wmname LG3D
 #bindsym $mod+Shift+i exec idea					# Intellij IDEA
 
 # Multi-Monitor settings
 #bindsym $mod+x exec --no-startup-id sh $HOME/.screenlayout/multihead.sh | i3-msg restart
-
 
 # TESTING CONFIGURATIONS
 
@@ -465,9 +463,6 @@ bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -
 #    bindsym m exec --no-startup-id mousepad
 #}
 
-#bindsym $mod+Tab exec --no-startup-id $HOME/.config/i3/i3FocusNext.sh
-#bindsym $mod+Tab container next
-
 # Start Spotify
 #bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
 
@@ -476,4 +471,3 @@ bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -
 #exec --no-startup-id i3-msg 'workspace $workspace0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
-

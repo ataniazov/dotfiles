@@ -40,7 +40,7 @@ volume master {
 
 wireless _first_ {
         #format_up = "W: (%quality at %essid, %bitrate / %frequency) %ip"
-        format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 
 }
@@ -106,6 +106,6 @@ disk "/" {
         format = "%avail"
         #prefix_type = "custom"
         low_threshold = 5
-	threshold_type = "percentage_avail"
-	format_below_threshold = "Warning: %percentage_avail %avail"
+        threshold_type = "percentage_avail"
+        format_below_threshold = "Warning: %percentage_avail %avail"
 }
