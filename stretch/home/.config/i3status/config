@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        #output_format = "i3bar"
-        #separator = " "
+        output_format = "i3bar"
+        separator = ""
         colors = true
         interval = 5
 }
@@ -79,19 +79,19 @@ path_exists VPN {
 
 tztime local {
         #format = "%Y-%m-%d %H:%M:%S %Z"
-        format = "%Y-%m-%d %H:%M"
+        format = "%a, %d %b %H:%M"
         #timezone = "Europe/Istanbul"
 }
 
 cpu_usage {
-        format = %usage
+        format = "%usage"
 }
 
 cpu_temperature all {
         #path = "/sys/devices/platform/coretemp.0/temp1_input"
         #path = "/sys/devices/virtual/thermal/thermal_zone0/temp"
         path = "/sys/class/thermal/thermal_zone0/temp"
-        format = "T: %degrees °C"
+        format = "%degrees °C"
         max_threshold = 70
 }
 

@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2018-08-08)
+# i3 config file (v4-2018-08-14)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -174,7 +174,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -340,7 +339,7 @@ bar {
                 #focused_background #000000
                 #focused_statusline #ffffff
                 #focused_separator  #666666
-                
+
                 ## Syntax: <colorclass> <border> <background> <text>
                 ## class           border  backgr. text
                 focused_workspace  #4c7899 #285577 #ffffff
@@ -385,27 +384,32 @@ bindsym $mod+$altmod+Right move workspace to right
 ## Set the wallpaper
 exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
 
-## Set caps-lock as a modifier and dvorak as keyboard layout
-exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
+## Set dvorak as keyboard layout
+exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+## Set caps-lock as a modifier
+exec_always --no-startup-id xmodmap -e "clear Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Hyper_L"
+exec_always --no-startup-id xmodmap -e "add mod4 = Hyper_L"
 
 ## StartUp daemons
 exec --no-startup-id $HOME/.config/i3/startup.sh
 
-# Pulse Audio controls
+# PulseAudio controls
 
 ## Get active sink number
-#set $sink `pactl list short sinks | cut -f1`
-set $sink $(pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1)
+#set $sink $(pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1)
 
 ## Multimedia keys
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5%		# decrease sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +5%		# increase sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle			# mute sound
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%		# decrease sound volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%		# increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "[ `pactl list sinks | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle			# mute sound
 
 ## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
-bindsym Print exec --no-startup-id pactl set-sink-volume $sink -5%				# decrease sound volume
-bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume $sink +5%			# increase sound volume
-bindsym Pause exec --no-startup-id pactl set-sink-mute $sink toggle				# mute sound
+bindsym Print exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%				# decrease sound volume
+#bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%			# increase sound volume
+bindsym Scroll_Lock exec --no-startup-id sh -c "[ `pactl list sinks | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym Pause exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle				# mute sound
 
 # Alsa Audio controls
 
@@ -419,7 +423,7 @@ bindsym Pause exec --no-startup-id pactl set-sink-mute $sink toggle				# mute so
 #bindsym Print exec --no-startup-id amixer -q set Master 5%- unmute				# increase sound volume
 #bindsym Pause exec --no-startup-id amixer set Master toggle					# mute sound
 
-# Sreen brightness controls
+# Screen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
@@ -431,11 +435,14 @@ bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 # Data cleansing to keep your privacy
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
 
-# Force kill focused window
-bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
+# exit i3 (Shut Down, Restart, Log Out of your X session)
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff'"
 
 # i3lock
 bindsym $mod+Shift+backslash exec --no-startup-id i3lock -n -d -c 000000 -f #& systemctl suspend	# i3lock
+
+# Force kill focused window
+bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
 
 # Set ratpoison-like behaviour hot-keys
 #bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
