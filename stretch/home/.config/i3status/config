@@ -91,13 +91,13 @@ cpu_temperature all {
         #path = "/sys/devices/platform/coretemp.0/temp1_input"
         #path = "/sys/devices/virtual/thermal/thermal_zone0/temp"
         path = "/sys/class/thermal/thermal_zone0/temp"
-        format = "%degrees °C"
+        format = "T: %degrees °C"
         max_threshold = 70
 }
 
 load {
         #format = "%5min"
-        format = "%1min %5min %15min"
+        format = "[%1min %5min %15min]"
 }
 
 disk "/" {
