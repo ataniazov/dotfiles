@@ -350,7 +350,7 @@ bar {
         }
 
         # Take a screenshot by middle clicking on the bar
-        bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
+        #bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
 } 
 
 ## Toggle between dock mode and hide mode
@@ -435,11 +435,14 @@ bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 # Data cleansing to keep your privacy
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
 
-# exit i3 (Shut Down, Restart, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff'"
+# Set default Locker
+set $Locker i3lock -n -d -c 000000 -f
 
-# i3lock
-bindsym $mod+Shift+backslash exec --no-startup-id i3lock -n -d -c 000000 -f #& systemctl suspend	# i3lock
+# Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Lock' '$Locker' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff -i'"
+
+# Lock hot-key
+bindsym $mod+Shift+backslash exec --no-startup-id $Locker #& systemctl suspend	# i3lock
 
 # Force kill focused window
 bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
@@ -450,8 +453,9 @@ bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus window
 bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
 # Take a screenshot
-bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/		# window
-bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/	# region
+bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
+bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/	# full screen
+#bindsym --release $mod+$altmod+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/	# region
 
 # Java
 exec --no-startup-id wmname LG3D
