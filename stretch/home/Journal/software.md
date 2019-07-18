@@ -164,7 +164,7 @@ firmware-linux firmware-iwlwifi firmware-realtek
 
 ### Window Manager
 i3 lightdm lightdm-gtk-greeter-settings
-feh xdotools
+feh xdotools xautolock
 #network-manager-gnome
 wicd
 xfce4-settings
