@@ -400,11 +400,9 @@ bindsym $mod+$altmod+Right move workspace to right
 exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
 
 ## Set dvorak as keyboard layout
-exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
 ## Set caps-lock as a modifier
-exec_always --no-startup-id xmodmap -e "clear Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Hyper_L"
-exec_always --no-startup-id xmodmap -e "add mod4 = Hyper_L"
+exec_always --no-startup-id xmodmap -e "clear Lock" ; xmodmap -e "keycode 66 = Hyper_L" ; xmodmap -e "add mod4 = Hyper_L"
 
 # PulseAudio controls
 
@@ -414,15 +412,13 @@ exec_always --no-startup-id xmodmap -e "add mod4 = Hyper_L"
 ## Multimedia keys
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%		# decrease sound volume
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%		# increase sound volume
-#bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "[ `pactl list sinks | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -A10 -e RUNNING -e SUSPENDED | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -m1 -A9 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/ |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle			# mute sound
 
 ## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
 bindsym Print exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%				# decrease sound volume
 #bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%			# increase sound volume
-#bindsym Scroll_Lock exec --no-startup-id sh -c "[ `pactl list sinks | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym Scroll_Lock exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -A10 -e RUNNING -e SUSPENDED | grep '^[[:space:]]Volume:' | awk -F"  |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym Scroll_Lock exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -m1 -A9 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/ |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bindsym Pause exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle				# mute sound
 
 # Alsa Audio controls
@@ -447,17 +443,18 @@ bindsym $mod+Shift+g exec chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -b 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
+bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -B 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
 
 # Set default Locker
 set $Locker i3lock -n -d -c 000000 -f
 #set $Locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
-
-# Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Lock' '$Locker' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff -i'"
+exec xautolock -detectsleep -time 5 -locker $Locker
 
 # Lock hot-key
 bindsym $mod+Shift+backslash exec --no-startup-id $Locker
+
+# Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' '$Locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
 
 ## Set ratpoison-like behaviour hot-keys
 # Force kill focused window

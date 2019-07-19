@@ -23,7 +23,6 @@ xfsettingsd &
 xfce4-power-manager &
 xdg-user-dirs-update &
 compton -CGb --shadow-opacity=1.0 --fade-delta=3 --menu-opacity=1.0 --inactive-opacity=1.0 --inactive-dim 0.0 --dbus --detect-rounded-corners --detect-client-opacity --vsync opengl --shadow-exclude fullscreen --frame-opacity=1.0 --no-dnd-shadow --backend glx &
-xautolock -detectsleep -time 5 -locker "i3lock -n -d -c 000000 -f" &
 
 sleep 1
 
