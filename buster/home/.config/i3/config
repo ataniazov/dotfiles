@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2019-07-12)
+# i3 config file (v4-2019-07-20)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -258,7 +258,7 @@ bindsym $mod+r mode "resize"
 ## Syntax:
 ## <colorclass> <border> <background> <text> <indicator> <child_border>
 ## Colors are in HTML hex format (#rrggbb)
-## class                border  backgr. text    indicator child_border
+### class                border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
@@ -266,6 +266,18 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+######################################################################
+## class                border  backgr. text    indicator child_border
+#client.focused          #00ff00 #00ff00 #000000 #ff0000   #00ff00
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+#client.background       #000000
+#default_border pixel 2
+######################################################################
 
 ## Focus follows mouse
 ## Syntax: focus_follows_mouse yes|no
@@ -362,6 +374,15 @@ bar {
                 inactive_workspace #333333 #222222 #888888
                 urgent_workspace   #2f343a #900000 #ffffff
                 binding_mode       #2f343a #900000 #ffffff
+
+		###########################################
+                ### class           border  backgr. text
+                #focused_workspace  #00ff00 #00ff00 #000000
+                #active_workspace   #5f676a #5f676a #000000
+                #inactive_workspace #00ff00 #000000 #00ff00
+                #urgent_workspace   #2f343a #900000 #ffffff
+                #binding_mode       #2f343a #900000 #ffffff
+		###########################################
         }
 
         # Take a screenshot by middle clicking on the bar
@@ -448,7 +469,7 @@ bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed 
 # Set default Locker
 set $Locker i3lock -n -d -c 000000 -f
 #set $Locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
-exec xautolock -detectsleep -time 5 -locker $Locker
+exec --no-startup-id xautolock -detectsleep -time 5 -locker "$Locker" &
 
 # Lock hot-key
 bindsym $mod+Shift+backslash exec --no-startup-id $Locker
