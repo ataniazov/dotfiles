@@ -4,7 +4,7 @@
 #pkill redshift
 #pkill conky
 #pkill light-locker
-pkill xautolock
+#pkill xautolock
 pkill compton
 pkill xdg-user-dirs-update
 pkill xfce4-power-manager

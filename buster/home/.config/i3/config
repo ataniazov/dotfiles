@@ -469,7 +469,7 @@ bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed 
 # Set default Locker
 set $Locker i3lock -n -d -c 000000 -f
 #set $Locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
-exec --no-startup-id xautolock -detectsleep -time 5 -locker "$Locker" &
+exec --no-startup-id xautolock -detectsleep -time 5 -locker "$Locker"
 
 # Lock hot-key
 bindsym $mod+Shift+backslash exec --no-startup-id $Locker
