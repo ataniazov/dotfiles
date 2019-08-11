@@ -164,6 +164,8 @@ diceware
 gpg gnupg2
 seahorse
 veracrypt
+wipe
+secure-delete
 clamav
 libclamunrar7
 
