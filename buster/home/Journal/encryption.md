@@ -1,8 +1,18 @@
 # Encryption
 
+## Partitioning
+
+sudo fdisk <device>
+sudo mkfs.ext4 -m 0 <device>
+sudo mkfs.ext4 -L storage -m 1 <device>
+
 ## Volume encryption
 
 cryptsetup -v --type luks2 --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 2000 --use-random --verify-passphrase luksFormat <device>
+
+sudo cryptsetup --verbose --type luks2 --label=<label> --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 1000 --verify-passphrase luksFormat <device>
+
+sudo cryptsetup --verbose --cipher aes-xts-plain64 --key-size 256 --hash sha256 --use-urandom --iter-time 1000 --verify-passphrase luksFormat <device>
 
 cryptsetup luksDump <device>
 
@@ -71,11 +81,15 @@ chmod 600 /path/to/<keyfile>
 
 shred --remove --zero /path/to/<keyfile>
 
+
 ## Benchmark
 
 cryptsetup benchmark
 
-## LUKS volume detection
+## LUKS info & volume detection
+sudo cryptsetup status <container>
+sudo cryptsetup 
+
 hexdump -C -n 100 /dev/sdxX
 grep -rnw /dev/sdxX -e "LUKS"
 
