@@ -100,6 +100,7 @@ signify-openbsd
 ### Office
 mousepad
 gedit
+gedit-plugins
 evince
 mupdf
 mupdf-tools
@@ -193,6 +194,7 @@ build-essential
 snapd
 hping3
 cu
+minicom
 composer
 php-curl
 whois
