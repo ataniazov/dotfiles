@@ -428,18 +428,18 @@ bindsym Pause exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle				
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Application lunch hot-keys
-bindsym $mod+g exec firefox --private-window			# Firefox
-bindsym $mod+Shift+g exec chromium --incognito			# Chromium
+bindsym $mod+g exec --no-startup-id firefox --private-window			# Firefox
+bindsym $mod+Shift+g exec --no-startup-id chromium --incognito			# Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' '$HOME/.config/i3/purify.sh'"
+bindsym $mod+Shift+x exec --no-startup-id i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes delete it!' '~/.config/i3/purify.sh'
 
 # Set default Locker
 set $Locker i3lock -n -d -c 000000 -f
 
 # Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Lock' '$Locker' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff -i'"
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Lock' '$Locker' -b 'Log Out' 'i3-msg exit' -b 'Restart' 'systemctl reboot' -b 'Shut Down' 'systemctl poweroff -i'
 
 # Lock hot-key
 bindsym $mod+Shift+backslash exec --no-startup-id $Locker #& systemctl suspend	# i3lock
