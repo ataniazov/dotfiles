@@ -136,6 +136,8 @@ postgresql-all
 android-tools-adb
 heimdall-flash
 heimdall-flash-frontend
+firejail
+wxhexeditor
 
 ### Development
 
