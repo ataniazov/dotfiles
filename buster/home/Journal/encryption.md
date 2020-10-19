@@ -36,6 +36,10 @@ df -Th temp_storage/
 cd temp_storage/
 dd if=/dev/zero of=enrypted_container bs=1M count=50
 
+fallocate -l 1G enrypted_container
+
+sudo cryptsetup --verbose --type luks2 --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 1000 --use-random --verify-passphrase luksFormat enrypted_container
+
 cryptsetup luksFormat -h whirlpool -i 5555 enrypted_container
 
 cryptsetup open enrypted_container my_stuff

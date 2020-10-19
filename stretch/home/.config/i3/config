@@ -305,7 +305,7 @@ bar {
 
         # Tray output
         ## Syntax: tray_output none|primary|<output>
-        tray_output primary
+        #tray_output primary
 
         # Tray padding
         ## Syntax: tray_padding <px> [px]
