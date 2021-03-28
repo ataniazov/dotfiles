@@ -84,6 +84,7 @@ seahorse
 veracrypt
 wipe
 secure-delete
+mat2
 clamav
 libclamunrar7
 apparmor
@@ -138,6 +139,7 @@ heimdall-flash
 heimdall-flash-frontend
 firejail
 wxhexeditor
+macchanger
 
 ### Development
 
@@ -223,6 +225,7 @@ redshift-gtk
 ftp
 gigolo
 mc
+wireshark
 
 ## Remove
 
