@@ -28,6 +28,7 @@ i3
 lightdm lightdm-gtk-greeter-settings
 feh xdotools xautolock
 network-manager-gnome
+alsa-utils
 pulseaudio
 xfce4-settings
 xfce4-terminal
@@ -54,6 +55,7 @@ ttf-mscorefonts-installer
 ### Internet
 firefox-esr
 chromium chromium-l10n
+webext-ublock-origin webext-privacy-badger webext-https-everywhere
 transmission
 transmission-gtk
 
@@ -158,12 +160,6 @@ cppcheck-gui
 software-properties-common
 dirmngr
 
-#### Docker
-apt-transport-https
-ca-certificates
-curl
-software-properties-common
-
 #### Archive
 p7zip-rar rar unrar
 unzip
@@ -183,7 +179,7 @@ libgtk-3-dev
 
 ### Development
 
-#### Docker-CE
+#### Docker
 apt-transport-https
 ca-certificates
 curl
@@ -226,6 +222,14 @@ ftp
 gigolo
 mc
 wireshark
+nmap zenmap
+netcat
+dconf-editor
+
+### jp
+ibus-mozc
+mozc-utils-gui
+ibus-anthy
 
 ## Remove
 

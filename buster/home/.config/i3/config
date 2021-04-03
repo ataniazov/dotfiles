@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2019-07-20)
+# i3 config file (v4-2021-04-04)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -16,7 +16,8 @@
 # layout, use the i3-config-wizard
 #
 
-set $mod Mod4
+#set $mod mod4
+set $mod mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -25,7 +26,6 @@ set $mod Mod4
 # Syntax:
 # font <X core font description>
 # font pango:<family list> [<style options>] <size>
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
@@ -35,11 +35,11 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+# font, it doesn't scale on retina/hidpi displays.
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -48,10 +48,9 @@ set $up l
 set $down slash
 set $left j
 #set $right semicolon
-set $right semicolon
 set $right k
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
@@ -66,11 +65,14 @@ bindsym $mod+minus kill
 #bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec --no-startup-id dmenu_run -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222 
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
+# A more modern dmenu replacement is rofi:
+# bindsym $mod+d exec "rofi -modi drun,run -show drun"
+
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu_run -i -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222' 
+bindsym $mod+d exec i3-dmenu-desktop --dmenu='dmenu_run -i -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222'
+## TODO: Do we need "--no-startup-id" ?
 
 # change focus
 #bindsym $mod+j focus left
@@ -157,30 +159,30 @@ set $ws9 "9"
 set $ws0 "0"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-#bindsym $mod+0 workspace $ws10
-bindsym $mod+0 workspace $ws0
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+#bindsym $mod+0 workspace number $ws10
+bindsym $mod+0 workspace number $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-#bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+0 move container to workspace $ws0
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+#bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+0 move container to workspace number $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -197,20 +199,20 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        #bindsym j resize shrink width 10 px or 10 ppt
-        bindsym $left resize shrink width 10 px or 10 ppt
-        #bindsym k resize grow height 10 px or 10 ppt
-        bindsym $down resize grow height 10 px or 10 ppt
-        #bindsym l resize shrink height 10 px or 10 ppt
-        bindsym $up resize shrink height 10 px or 10 ppt
-        #bindsym semicolon resize grow width 10 px or 10 ppt
-        bindsym $right resize grow width 10 px or 10 ppt
+        #bindsym j          resize shrink width 10 px or 10 ppt
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        #bindsym k          resize grow height 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        #bindsym l          resize shrink height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        #bindsym semicolon  resize grow width 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -231,7 +233,8 @@ bindsym $mod+r mode "resize"
 # keysym-based config which used their favorite modifier (alt or windows)
 #
 # i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
+# in ~/.config/i3/config (or $XDG_CONFIG_HOME/i3/config if set) or
+# ~/.i3/config.
 #
 # Please remove the following exec line:
 #######################################################################
@@ -258,7 +261,7 @@ bindsym $mod+r mode "resize"
 ## Syntax:
 ## <colorclass> <border> <background> <text> <indicator> <child_border>
 ## Colors are in HTML hex format (#rrggbb)
-### class                border  backgr. text    indicator child_border
+## class                border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
@@ -268,7 +271,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 ######################################################################
-## class                border  backgr. text    indicator child_border
+### class                border  backgr. text    indicator child_border
 #client.focused          #00ff00 #00ff00 #000000 #ff0000   #00ff00
 #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 #client.unfocused        #333333 #222222 #888888 #292d2e   #222222
@@ -332,7 +335,7 @@ bar {
 
         # Tray output
         ## Syntax: tray_output none|primary|<output>
-        tray_output primary
+        #tray_output primary
 
         # Tray padding
         ## Syntax: tray_padding <px> [px]
@@ -375,18 +378,18 @@ bar {
                 urgent_workspace   #2f343a #900000 #ffffff
                 binding_mode       #2f343a #900000 #ffffff
 
-		###########################################
+                ###########################################
                 ### class           border  backgr. text
                 #focused_workspace  #00ff00 #00ff00 #000000
                 #active_workspace   #5f676a #5f676a #000000
                 #inactive_workspace #00ff00 #000000 #00ff00
                 #urgent_workspace   #2f343a #900000 #ffffff
                 #binding_mode       #2f343a #900000 #ffffff
-		###########################################
+                ###########################################
         }
 
         # Take a screenshot by middle clicking on the bar
-        #bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
+        #bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/     # window
 } 
 
 ## Toggle between dock mode and hide mode
@@ -403,7 +406,7 @@ bindsym --whole-window $mod+button2 floating toggle
 bindsym --release $mod+Shift+button2 sticky toggle
 
 ## Set alternative modifier
-set $altmod Mod1
+set $altmod mod1
 ## Move the current workspace to the next output
 bindsym $mod+$altmod+$left move workspace to left
 bindsym $mod+$altmod+$down move workspace to down
@@ -421,81 +424,88 @@ bindsym $mod+$altmod+Right move workspace to right
 exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
 
 ## Set dvorak as keyboard layout
-exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+#exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+
 ## Set caps-lock as a modifier
-exec_always --no-startup-id xmodmap -e "clear Lock" ; xmodmap -e "keycode 66 = Hyper_L" ; xmodmap -e "add mod4 = Hyper_L"
+#exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Super_L" ; xmodmap -e "add mod4 = Super_L"
+#exec_always --no-startup-id xmodmap -e "keycode 192 = Super_L"
+#exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "clear mod3" ; xmodmap -e "add mod3 = XF86Launch5"
 
-# PulseAudio controls
+## Startup daemons
+exec --no-startup-id $HOME/.config/i3/startup.sh
 
-## Get active sink number
-#set $sink $(pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1)
+# Sound controls
+set $refresh_i3status killall -SIGUSR1 i3status
 
-## Multimedia keys
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%		# decrease sound volume
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%		# increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -m1 -A9 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/ |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle			# mute sound
+## PulseAudio get active sink number
+#set $sink pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1
 
-## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
-bindsym Print exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%				# decrease sound volume
-#bindsym Scroll_Lock exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%			# increase sound volume
-bindsym Scroll_Lock exec --no-startup-id sh -c "[ `pactl list sinks | grep -F -m1 -A9 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/ |%" '{print $2}'` -lt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym Pause exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle				# mute sound
+## PulseAudio sound volume controls
+set $decrease_sound pactl set-sink-volume @DEFAULT_SINK@ -5%            # decrease sound volume
+#set $increase_sound pactl set-sink-volume @DEFAULT_SINK@ +5%           # increase sound volume
+set $increase_sound sh -c "pactl set-sink-volume @DEFAULT_SINK@ $([ $((`pactl list sinks | grep -A10 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/|%" '{print $2}'` + 5)) -lt 100 ] && echo +5 || echo 100)%"
+set $mute_unmute_sound pactl set-sink-mute @DEFAULT_SINK@ toggle        # mute sound
+#set $mute_unmute_mic pactl set-source-mute @DEFAULT_SOURCE@ toggle      # mute microphone
 
-# Alsa Audio controls
+## Alsa Audio sound volume controls
+#set $decrease_sound amixer set Master 5%-                              # decrease sound volume
+#set $increase_sound amixer set Master 5%+                              # increase sound volume
+#set $mute_unmute_sound amixer set Master toggle                        # mute sound
+#set $mute_unmute_mic                                                   # mute microphone
 
-## Multimedia keys
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-			# decrease sound volume
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+			# increase sound volume
-#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle				# mute sound
+## Sound volume controls with Multimedia keys
+bindsym XF86AudioLowerVolume exec --no-startup-id $decrease_sound && $refresh_i3status  # decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id $increase_sound && $refresh_i3status  # increase sound volume
+bindsym XF86AudioMute exec --no-startup-id $mute_unmute_sound && $refresh_i3status      # mute sound
+#bindsym XF86AudioMicMute exec --no-startup-id $mute_unmute_mic && $refresh_i3status    # mute microphone
 
-## Sound Controls with PRINT, SCROLL-LOCK & PAUSE keys
-#bindsym Scroll_Lock exec --no-startup-id amixer -q set Master 5%+ unmute			# decrease sound volume
-#bindsym Print exec --no-startup-id amixer -q set Master 5%- unmute				# increase sound volume
-#bindsym Pause exec --no-startup-id amixer set Master toggle					# mute sound
+## Sound volume controls with PRINT, SCROLL-LOCK & PAUSE keys
+bindsym Print exec --no-startup-id $decrease_sound && $refresh_i3status                 # decrease sound volume
+bindsym Scroll_Lock exec --no-startup-id $increase_sound && $refresh_i3status           # increase sound volume
+bindsym Pause exec --no-startup-id $mute_unmute_sound && $refresh_i3status              # mute sound
 
 # Screen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20                # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20              # decrease screen brightness
 
 # Application lunch hot-keys
-bindsym $mod+g exec firefox --private-window			# Firefox
-bindsym $mod+Shift+g exec chromium --incognito			# Chromium
+## TODO: Do we need "--no-startup-id" ?
+bindsym $mod+g exec firefox --private-window        # Firefox
+bindsym $mod+Shift+g exec chromium --incognito      # Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the purify shortcut. Do you really want to delete your data?' -B 'Yes, purify me!' '$HOME/.config/i3/purify.sh'"
+bindsym $mod+Shift+x exec --no-startup-id i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes delete it!' '$HOME/.config/i3/cleanup.sh'
 
 # Set default Locker
-set $Locker i3lock -n -d -c 000000 -f
-#set $Locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
-exec --no-startup-id xautolock -detectsleep -time 5 -locker "$Locker"
+set $locker i3lock -n -d -c 000000 -f
+#set $locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
+#exec --no-startup-id xautolock -detectsleep -time 5 -locker "$locker"
 
 # Lock hot-key
-bindsym $mod+Shift+backslash exec --no-startup-id $Locker
+bindsym $mod+Shift+backslash exec --no-startup-id $locker #& systemctl suspend      # i3lock
 
 # Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' '$Locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' '$locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'
 
-## Set ratpoison-like behaviour hot-keys
-# Force kill focused window
-#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
-#bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
-bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ]  && xdotool getwindowfocus windowkill"
+# Set ratpoison-like behaviour hot-keys
 #bindsym $mod+b exec --no-startup-id xdotool mousemove 0 0
 bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
+## Force kill focused window
+#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
+#bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
+#bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
+bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ]  && xdotool getwindowfocus windowkill"
+
 # Take a screenshot
-bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/		# window
-bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/	# full screen
-#bindsym --release $mod+$altmod+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/	# region
+bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/             # window
+bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/       # full screen
+#bindsym --release $mod+$altmod+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/    # region
 
 # Java
 exec --no-startup-id wmname LG3D
-#bindsym $mod+Shift+i exec idea					# Intellij IDEA
-
-## StartUp daemons
-exec --no-startup-id $HOME/.config/i3/startup.sh
+#bindsym $mod+Shift+i exec idea         # Intellij IDEA
 
 # Multi-Monitor settings
 #bindsym $mod+x exec --no-startup-id sh $HOME/.screenlayout/multihead.sh | i3-msg restart
@@ -513,8 +523,19 @@ exec --no-startup-id $HOME/.config/i3/startup.sh
 # Start Spotify
 #bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
 
-#assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $workspace0
+#assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $ws0
 #exec --no-startup-id i3-msg 'workspace 0; exec chromium --kiosk --disable-extensions https://play.spotify.com/browse'
-#exec --no-startup-id i3-msg 'workspace $workspace0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
+#exec --no-startup-id i3-msg 'workspace $ws0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+#exec --no-startup-id nm-applet
