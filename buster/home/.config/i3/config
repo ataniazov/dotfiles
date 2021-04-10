@@ -16,8 +16,8 @@
 # layout, use the i3-config-wizard
 #
 
-#set $mod mod4
-set $mod mod3
+set $mod mod4
+#set $mod mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -55,7 +55,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+c exec i3-sensible-terminal
+#bindsym $mod+c exec i3-sensible-terminal
+bindsym $mod+c exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 #bindsym $mod+Shift+q kill
@@ -71,8 +72,7 @@ bindsym $mod+minus kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec i3-dmenu-desktop --dmenu='dmenu_run -i -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222'
-## TODO: Do we need "--no-startup-id" ?
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu_run -i -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222'
 
 # change focus
 #bindsym $mod+j focus left
@@ -318,7 +318,8 @@ workspace_auto_back_and_forth yes
 ## Start i3bar to display a workspace bar (plus the system information i3status
 ## finds out, if available)
 bar {
-        status_command i3status
+        #status_command i3status
+        status_command exec $HOME/.config/i3/netspeed.sh
 
         # Display mode
         ## Syntax:
@@ -434,24 +435,27 @@ exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.p
 ## Startup daemons
 exec --no-startup-id $HOME/.config/i3/startup.sh
 
+## Set WM_NAME as "LG3D" (Looking Glass 3D) to fix Java GUI
+exec_always --no-startup-id wmname LG3D
+
 # Sound controls
-set $refresh_i3status killall -SIGUSR1 i3status
+#set $refresh_i3status killall -SIGUSR1 i3status
 
 ## PulseAudio get active sink number
 #set $sink pactl list short sinks | grep -i `pactl info | grep -i 'Default Sink' | awk '{print $3}'` | cut -f1
 
 ## PulseAudio sound volume controls
-set $decrease_sound pactl set-sink-volume @DEFAULT_SINK@ -5%            # decrease sound volume
-#set $increase_sound pactl set-sink-volume @DEFAULT_SINK@ +5%           # increase sound volume
+set $decrease_sound pactl set-sink-volume @DEFAULT_SINK@ -5%                            # decrease sound volume
+#set $increase_sound pactl set-sink-volume @DEFAULT_SINK@ +5%                           # increase sound volume
 set $increase_sound sh -c "pactl set-sink-volume @DEFAULT_SINK@ $([ $((`pactl list sinks | grep -A10 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/|%" '{print $2}'` + 5)) -lt 100 ] && echo +5 || echo 100)%"
-set $mute_unmute_sound pactl set-sink-mute @DEFAULT_SINK@ toggle        # mute sound
-#set $mute_unmute_mic pactl set-source-mute @DEFAULT_SOURCE@ toggle      # mute microphone
+set $mute_unmute_sound pactl set-sink-mute @DEFAULT_SINK@ toggle                        # mute sound
+#set $mute_unmute_mic pactl set-source-mute @DEFAULT_SOURCE@ toggle                     # mute microphone
 
-## Alsa Audio sound volume controls
-#set $decrease_sound amixer set Master 5%-                              # decrease sound volume
-#set $increase_sound amixer set Master 5%+                              # increase sound volume
-#set $mute_unmute_sound amixer set Master toggle                        # mute sound
-#set $mute_unmute_mic                                                   # mute microphone
+## ALSA Audio sound volume controls
+#set $decrease_sound amixer set Master 5%-                                              # decrease sound volume
+#set $increase_sound amixer set Master 5%+                                              # increase sound volume
+#set $mute_unmute_sound amixer set Master toggle                                        # mute sound
+#set $mute_unmute_mic amixer set Capture toggle                                         # mute microphone
 
 ## Sound volume controls with Multimedia keys
 bindsym XF86AudioLowerVolume exec --no-startup-id $decrease_sound && $refresh_i3status  # decrease sound volume
@@ -465,17 +469,27 @@ bindsym Scroll_Lock exec --no-startup-id $increase_sound && $refresh_i3status   
 bindsym Pause exec --no-startup-id $mute_unmute_sound && $refresh_i3status              # mute sound
 
 # Screen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20                # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20              # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20                    # increase screen brightness
+#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20                  # decrease screen brightness
+
+# Media player controls
+set $player_next cmus-remote --next
+set $player_prev cmus-remote --prev
+set $player_play cmus-remote --pause
+set $player_stop cmus-remote --stop
+
+bindsym XF86AudioNext exec --no-startup-id $player_next
+bindsym XF86AudioPrev exec --no-startup-id $player_prev
+bindsym XF86AudioPlay exec --no-startup-id $player_play
+bindsym XF86AudioStop exec --no-startup-id $player_stop
 
 # Application lunch hot-keys
-## TODO: Do we need "--no-startup-id" ?
-bindsym $mod+g exec firefox --private-window        # Firefox
-bindsym $mod+Shift+g exec chromium --incognito      # Chromium
+bindsym $mod+g exec --no-startup-id firefox --private-window                            # Firefox
+bindsym $mod+Shift+g exec --no-startup-id chromium --incognito                          # Chromium
 #bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes delete it!' '$HOME/.config/i3/cleanup.sh'
+bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh'"
 
 # Set default Locker
 set $locker i3lock -n -d -c 000000 -f
@@ -483,17 +497,17 @@ set $locker i3lock -n -d -c 000000 -f
 #exec --no-startup-id xautolock -detectsleep -time 5 -locker "$locker"
 
 # Lock hot-key
-bindsym $mod+Shift+backslash exec --no-startup-id $locker #& systemctl suspend      # i3lock
+bindsym $mod+Shift+backslash exec --no-startup-id $locker #& systemctl suspend          # i3lock
 
 # Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' '$locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' 'pkill i3-nagbar ; $locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
 
 # Set ratpoison-like behaviour hot-keys
 #bindsym $mod+b exec --no-startup-id xdotool mousemove 0 0
 bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
 ## Force kill focused window
-#bindsym $mod+z exec xkill -id $(xdotool getwindowfocus)
+#bindsym $mod+z exec --no-startup-id xkill -id $(xdotool getwindowfocus)
 #bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
 #bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
 bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ]  && xdotool getwindowfocus windowkill"
@@ -504,11 +518,10 @@ bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -
 #bindsym --release $mod+$altmod+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/    # region
 
 # Java
-exec --no-startup-id wmname LG3D
-#bindsym $mod+Shift+i exec idea         # Intellij IDEA
+#bindsym $mod+Shift+i exec --no-startup-id idea         # Intellij IDEA
 
 # Multi-Monitor settings
-#bindsym $mod+x exec --no-startup-id sh $HOME/.screenlayout/multihead.sh | i3-msg restart
+#bindsym $mod+x exec --no-startup-id sh -c "$HOME/.screenlayout/multihead.sh ; i3-msg restart"
 
 # TESTING CONFIGURATIONS
 
@@ -524,8 +537,8 @@ exec --no-startup-id wmname LG3D
 #bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
 
 #assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $ws0
-#exec --no-startup-id i3-msg 'workspace 0; exec chromium --kiosk --disable-extensions https://play.spotify.com/browse'
-#exec --no-startup-id i3-msg 'workspace $ws0; exec chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
+#exec --no-startup-id i3-msg 'workspace 0; exec --no-startup-id chromium --kiosk --disable-extensions https://play.spotify.com/browse'
+#exec --no-startup-id i3-msg 'workspace $ws0; exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
 

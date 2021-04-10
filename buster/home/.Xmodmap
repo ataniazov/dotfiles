@@ -1,7 +1,8 @@
 !Set caps-lock as a modifier
+keycode 66 = Eisu_toggle Caps_Lock
 clear lock
-clear mod3
+!clear mod3
 !keycode 66 = Super_L
 !keycode 192 = Super_L
 !add mod4 = Super_L
-add mod3 = XF86Launch5
+!add mod3 = XF86Launch5

@@ -10,7 +10,8 @@ general {
         output_format = "i3bar"
         separator = ""
         colors = true
-        interval = 5
+        #interval = 5
+        interval = 1
 }
 
 #order += "ipv6"

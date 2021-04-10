@@ -1,4 +1,0 @@
-evdev:atkbd:dmi:bvn*:bvr*:bd*:svn*:pn*:pvr*
-evdev:input:b0003v*p*
- KEYBOARD_KEY_3a=f14
- KEYBOARD_KEY_0x70039=f14
