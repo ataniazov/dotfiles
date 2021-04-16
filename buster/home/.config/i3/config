@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2021-04-04)
+# i3 config file (v4-2021-04-16)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -64,15 +64,15 @@ bindsym $mod+minus kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id dmenu_run -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222 
+#bindsym $mod+d exec --no-startup-id dmenu_run -nb \#222222 -nf \#e7e8eb -sb \#e7e8eb -sf \#222222
 
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu_run -i -nb \#222222 -nf \#E7E8EB -sb \#E7E8EB -sf \#222222'
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000"
 
 # change focus
 #bindsym $mod+j focus left
@@ -394,7 +394,10 @@ bar {
 } 
 
 ## Toggle between dock mode and hide mode
-bindsym $mod+m bar mode toggle
+bindsym $mod+b bar mode toggle
+
+## Toggle the different border styles
+bindsym $mod+Shift+b border toggle
 
 ## Enter global fullscreen mode
 bindsym $mod+Shift+f fullscreen toggle global
@@ -404,7 +407,8 @@ bindsym --whole-window $mod+button2 floating toggle
 
 ## Sticky floating windows
 ## Syntax: sticky enable|disable|toggle
-bindsym --release $mod+Shift+button2 sticky toggle
+#bindsym --release $mod+Shift+button2 sticky toggle
+bindsym --whole-window $mod+Shift+button2 sticky toggle
 
 ## Set alternative modifier
 set $altmod mod1
@@ -413,7 +417,7 @@ bindsym $mod+$altmod+$left move workspace to left
 bindsym $mod+$altmod+$down move workspace to down
 bindsym $mod+$altmod+$up move workspace to up
 bindsym $mod+$altmod+$right move workspace to right
-## alternatively, you can use the cursor keys:
+## alternatively, you can use the cursor keys
 bindsym $mod+$altmod+Left move workspace to left
 bindsym $mod+$altmod+Down move workspace to down
 bindsym $mod+$altmod+Up move workspace to up
@@ -472,12 +476,13 @@ bindsym Pause exec --no-startup-id $mute_unmute_sound && $refresh_i3status      
 #bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20                    # increase screen brightness
 #bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20                  # decrease screen brightness
 
-# Media player controls
+# cmus music player controls
 set $player_next cmus-remote --next
 set $player_prev cmus-remote --prev
 set $player_play cmus-remote --pause
 set $player_stop cmus-remote --stop
 
+# Media player controls
 bindsym XF86AudioNext exec --no-startup-id $player_next
 bindsym XF86AudioPrev exec --no-startup-id $player_prev
 bindsym XF86AudioPlay exec --no-startup-id $player_play
@@ -503,8 +508,9 @@ bindsym $mod+Shift+backslash exec --no-startup-id $locker #& systemctl suspend  
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' 'pkill i3-nagbar ; $locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
 
 # Set ratpoison-like behaviour hot-keys
-#bindsym $mod+b exec --no-startup-id xdotool mousemove 0 0
-bindsym $mod+b exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
+## Send the mouse cursor to the lower right corner of the screen
+#bindsym $mod+m exec --no-startup-id xdotool mousemove 0 0
+bindsym $mod+m exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeometry)
 
 ## Force kill focused window
 #bindsym $mod+z exec --no-startup-id xkill -id $(xdotool getwindowfocus)
@@ -537,8 +543,8 @@ bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -
 #bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
 
 #assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $ws0
-#exec --no-startup-id i3-msg 'workspace 0; exec --no-startup-id chromium --kiosk --disable-extensions https://play.spotify.com/browse'
-#exec --no-startup-id i3-msg 'workspace $ws0; exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo'
+#exec --no-startup-id i3-msg "workspace 0; exec --no-startup-id chromium --kiosk --disable-extensions https://play.spotify.com/browse"
+#exec --no-startup-id i3-msg "workspace $ws0; exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo"
 
 #exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
 

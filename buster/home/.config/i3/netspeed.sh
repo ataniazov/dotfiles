@@ -82,7 +82,7 @@ else
         if [ $interval -gt 0 ]; then
             rate="$(readable $(( (rx - last_rx) / interval )) true) $(readable $(( (tx - last_tx) / interval )) false)"
         else
-            rate=""
+            rate="0↓ 0↑"
         fi
 
         last_time=$time
