@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# set PATH so it includes /snap/bin if it exists
+if [ -d "/snap/bin" ] ; then
+    PATH="/snap/bin:$PATH"
+fi
+
 # set PATH so it includes user's private go/bin if it exists
 if [ -d "$HOME/Applications/go" ] ; then
     export GOROOT="$HOME/Applications/go"
@@ -47,11 +52,6 @@ fi
 if [ -d "$HOME/Applications/yarn" ] ; then
     export YARN="$HOME/Applications/yarn"
     PATH="$PATH:$YARN/bin"
-fi
-
-# set PATH so it includes /snap/bin if it exists
-if [ -d "/snap/bin" ] ; then
-    PATH="/snap/bin:$PATH"
 fi
 
 # add shell auto-completion to the haskell tool stack if it exists

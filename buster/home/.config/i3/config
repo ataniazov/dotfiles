@@ -55,7 +55,6 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+c exec i3-sensible-terminal
 bindsym $mod+c exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
@@ -64,7 +63,6 @@ bindsym $mod+minus kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id dmenu_run -nb \#222222 -nf \#e7e8eb -sb \#e7e8eb -sf \#222222
 
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
@@ -365,11 +363,11 @@ bar {
                 ## Syntax: statusline <color>
                 statusline #ffffff
                 ## Syntax: separator <color>
-                separator #666666
+                separator  #ffffff
 
                 #focused_background #000000
                 #focused_statusline #ffffff
-                #focused_separator  #666666
+                #focused_separator  #ffffff
 
                 ## Syntax: <colorclass> <border> <background> <text>
                 ## class           border  backgr. text
@@ -417,7 +415,8 @@ bindsym $mod+$altmod+$left move workspace to left
 bindsym $mod+$altmod+$down move workspace to down
 bindsym $mod+$altmod+$up move workspace to up
 bindsym $mod+$altmod+$right move workspace to right
-## alternatively, you can use the cursor keys
+
+## alternatively, you can use the cursor keys:
 bindsym $mod+$altmod+Left move workspace to left
 bindsym $mod+$altmod+Down move workspace to down
 bindsym $mod+$altmod+Up move workspace to up
@@ -497,12 +496,13 @@ bindsym $mod+Shift+g exec --no-startup-id chromium --incognito                  
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh'"
 
 # Set default Locker
-set $locker i3lock -n -d -c 000000 -f
-#set $locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -d -c 000000 -f ; revert"
+set $locker i3lock -n -c 000000 -f
+#set $locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -c 000000 -f ; revert"
+#set $locker sh -c "trap 'xset dpms 0 0 0' HUP INT TERM && xset +dpms dpms 5 5 5 && i3lock -n -c 000000 -f && xset dpms 0 0 0" # i3lock
 #exec --no-startup-id xautolock -detectsleep -time 5 -locker "$locker"
 
 # Lock hot-key
-bindsym $mod+Shift+backslash exec --no-startup-id $locker #& systemctl suspend          # i3lock
+bindsym $mod+backslash exec --no-startup-id $locker
 
 # Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' 'pkill i3-nagbar ; $locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
@@ -514,9 +514,8 @@ bindsym $mod+m exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeomet
 
 ## Force kill focused window
 #bindsym $mod+z exec --no-startup-id xkill -id $(xdotool getwindowfocus)
-#bindsym $mod+Shift+minus exec --no-startup-id xdotool getwindowfocus windowkill
 #bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
-bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ]  && xdotool getwindowfocus windowkill"
+bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ] && xdotool getwindowfocus windowkill"
 
 # Take a screenshot
 bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/             # window

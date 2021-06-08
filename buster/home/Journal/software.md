@@ -119,7 +119,8 @@ libreoffice-style-breeze
 ### Tools
 vim-nox
 htop
-ranger
+//ranger
+nnn
 trash-cli
 gnome-terminal
 gpick
