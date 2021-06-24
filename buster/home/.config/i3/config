@@ -26,6 +26,7 @@ set $mod mod4
 # Syntax:
 # font <X core font description>
 # font pango:<family list> [<style options>] <size>
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
@@ -82,7 +83,7 @@ bindsym $mod+$up focus up
 #bindsym $mod+semicolon focus right
 bindsym $mod+$right focus right
 
-# alternatively, you can use the cursor keys:
+# alternatively, you can use the cursor keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -98,7 +99,7 @@ bindsym $mod+Shift+$up move up
 #bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+$right move right
 
-# alternatively, you can use the cursor keys:
+# alternatively, you can use the cursor keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -293,7 +294,7 @@ focus_follows_mouse no
 popup_during_fullscreen smart
 
 ## Focus wrapping
-## Syntax: focus_wrapping yes|no|force
+## Syntax: focus_wrapping yes|no|force|workspace
 
 ## Forcing Xinerama
 ## Syntax: force_xinerama yes|no
@@ -330,7 +331,7 @@ bar {
         position top
 
         # Output(s)
-        ## Syntax: output primary|<output>
+        ## Syntax: output primary|nonprimary|<output>
 
         # Tray output
         ## Syntax: tray_output none|primary|<output>
@@ -350,8 +351,13 @@ bar {
         # Workspace buttons
         ## Syntax: workspace_buttons yes|no
 
-        # Strip workspace numbers
-        ## Syntax: strip_workspace_numbers yes|no
+        # Minimal width for workspace buttons
+        ## Syntax: workspace_min_width <px> [px]
+
+        # Strip workspace numbers/name
+        ## Syntax:
+        ##strip_workspace_numbers yes|no
+        ##strip_workspace_name yes|no
 
         # Binding Mode indicator
         ## Syntax: binding_mode_indicator yes|no
@@ -394,6 +400,9 @@ bar {
 ## Toggle between dock mode and hide mode
 bindsym $mod+b bar mode toggle
 
+## Toggle between hide state and show state
+#bindsym $mod+Shift+b bar hidden_state toggle
+
 ## Toggle the different border styles
 bindsym $mod+Shift+b border toggle
 
@@ -411,16 +420,16 @@ bindsym --whole-window $mod+Shift+button2 sticky toggle
 ## Set alternative modifier
 set $altmod mod1
 ## Move the current workspace to the next output
-bindsym $mod+$altmod+$left move workspace to left
-bindsym $mod+$altmod+$down move workspace to down
-bindsym $mod+$altmod+$up move workspace to up
-bindsym $mod+$altmod+$right move workspace to right
+bindsym $mod+$altmod+$left move workspace to output left
+bindsym $mod+$altmod+$down move workspace to output down
+bindsym $mod+$altmod+$up move workspace to output up
+bindsym $mod+$altmod+$right move workspace to output right
 
-## alternatively, you can use the cursor keys:
-bindsym $mod+$altmod+Left move workspace to left
-bindsym $mod+$altmod+Down move workspace to down
-bindsym $mod+$altmod+Up move workspace to up
-bindsym $mod+$altmod+Right move workspace to right
+## alternatively, you can use the cursor keys
+bindsym $mod+$altmod+Left move workspace to output left
+bindsym $mod+$altmod+Down move workspace to output down
+bindsym $mod+$altmod+Up move workspace to output up
+bindsym $mod+$altmod+Right move workspace to output right
 
 # AUTOSTART
 
@@ -527,6 +536,11 @@ bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -
 
 # Multi-Monitor settings
 #bindsym $mod+x exec --no-startup-id sh -c "$HOME/.screenlayout/multihead.sh ; i3-msg restart"
+
+# Arbitrary commands for specific windows (for_window)
+## Syntax: for_window <criteria> <command>
+for_window [class="(?i)chromium"] border none
+for_window [class="(?i)firefox"] border none
 
 # TESTING CONFIGURATIONS
 
