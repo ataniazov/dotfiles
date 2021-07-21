@@ -1,0 +1,104 @@
+// Dvorak, intl., with additions
+// Ata Niyazov (ataniazov)
+//
+// ~-  !-  @-  #-  $-  %-  ^-  &-  *-  (-  )-  {-  }-
+// O-  1¹  2-  3-  4-  5-  6-  7-  8∞  9-  0-  [-  ]-
+//                                                   
+//     "¨  <-  >-  P∏  YÝ  F-  GĞ  CÇ  R©  L-  ?-  +-
+//     '´  ,-  .-  p-  yý  f-  gğ  cç  r®  l-  /-  =-
+//                                                   
+//     AÄ  OÖ  E∑  UÜ  Iİ  D-  H-  T-  NŇ  SŞ  _-  |-
+//     aä  oö  e-  uü  iı  d-  h-  t™  nň  sş  --  \-
+//                                                   
+//     >¦  :Â  QÔ  JÛ  KÎ  X-  B-  M-  W-  V-  ZŽ
+//     <|  ;â  qô  jû  kî  x-  b-  m-  w-  v-  zž
+//
+// ┌─────┐
+// │ 2 4 │   2 = Shift,  4 = Level3 + Shift
+// │ 1 3 │   1 = Normal, 3 = Level3
+// └─────┘
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+// │ ~ ¶ │ !   │ @   │ #   │ $ ¢ │ %   │ ^   │ &   │ * × │ (   │ )   │ {   │ }   ┃ ⌫ Back-   ┃
+// │ ` § │ 1 ¹ │ 2 ² │ 3 ³ │ 4 € │ 5   │ 6   │ 7   │ 8 ∞ │ 9   │ 0 ° │ [   │ ]   ┃   space   ┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+// ┃       ┃ "   │ < « │ > » │ P ∏ │ Y Ý │ F   │ G Ğ │ C Ç │ R © │ L   │ ? ¿ │ + ± ┃ Enter ⏎ ┃
+// ┃Tab ↹  ┃ '   │ , ≤ │ . ≥ │ p π │ y ý │ f ƒ │ g ğ │ c ç │ r ® │ l   │ / ÷ │ = ≠ ┃         ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓        ┃
+// ┃        ┃ A Ä │ O Ö │ E ∑ │ U Ü │ I İ │ D ð │ H   │ T   │ N Ň │ S Ş │ _   │ |   ┃        ┃
+// ┃Caps ⇬  ┃ a ä │ o ö │ e ∫ │ u ü │ i ı │ d ∂ │ h   │ t ™ │ n ň │ s ş │ -   │ \   ┃        ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━━━┫
+// ┃       ┃ > ¦ │ : Â │ Q Ô │ J Û │ K Î │ X Ø │ B ∆ │ M   │ W   │ V   │ Z Ž ┃               ┃
+// ┃Shift ⇧┃ < | │ ; â │ q ô │ j û │ k î │ x ø │ b ß │ m µ │ w Ω │ v   │ z ž ┃Shift ⇧        ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
+// ┃       ┃       ┃       ┃ ␣                             ⍽ ┃       ┃       ┃       ┃       ┃
+// ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣           Space             ⍽ ┃AltGr ⇮┃Meta   ┃Menu   ┃Ctrl   ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹─────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+//
+partial alphanumeric_keys
+xkb_symbols "dvorak-add" {
+
+    include "us(dvorak)"
+    name[Group1]= "English (Dvorak, intl., with additions)";
+
+    key <TLDE> { [dead_grave, dead_tilde,         grave,       asciitilde ] };
+
+    key <AE01> { [	   1,     exclam,    exclamdown,      onesuperior ] };
+    key <AE02> { [	   2,         at,   twosuperior, dead_doubleacute ] };
+    key <AE03> { [	   3, numbersign, threesuperior,      dead_macron ] };
+    key <AE04> { [	   4,     dollar,      currency,         sterling ] };
+    key <AE05> { [	   5,    percent,      EuroSign,     dead_cedilla ] };
+    key <AE06> { [    6, dead_circumflex,    onequarter,      asciicircum ] };
+    key <AE07> { [	   7,  ampersand,       onehalf,	dead_horn ] };
+    key <AE08> { [	   8,   asterisk, threequarters,      dead_ogonek ] };
+    key <AE09> { [	   9,  parenleft, leftsinglequotemark, dead_breve ] };
+    key <AE10> { [	   0, parenright, rightsinglequotemark, dead_abovering ] };
+    key <AE11> { [ bracketleft,  braceleft,  guillemotleft, leftdoublequotemark ] };
+    key <AE12> { [bracketright, braceright, guillemotright, rightdoublequotemark ] };
+
+    // key <AD01> { [dead_acute, dead_diaeresis, apostrophe,        quotedbl ] };
+    key <AD01> { [ apostrophe,  quotedbl,    dead_acute,   dead_diaeresis ] };
+    key <AD02> { [     comma,       less,      ccedilla,         Ccedilla ] };
+    key <AD03> { [    period,    greater, dead_abovedot,       dead_caron ] };
+    key <AD04> { [	   p,          P,    odiaeresis,       Odiaeresis ] };
+    key <AD05> { [	   y,          Y,    udiaeresis,       Udiaeresis ] };
+    // key <AD06> { [	   f,	F		]	};
+    // key <AD07> { [	   g,	G		]	};
+    key <AD07> { [         g,          G,        gbreve,           Gbreve ] };
+    // key <AD08> { [	   c,          C,     copyright,             cent ] };
+    key <AD08> { [         c,          C,      ccedilla,         Ccedilla ] };
+    key <AD09> { [	   r,          R,    registered,       registered ] };
+    key <AD10> { [	   l,          L,        oslash,         Ooblique ] };
+    key <AD11> { [     slash,   question,  questiondown,        dead_hook ] };
+    // key <AD12> { [     equal,       plus,      multiply,         division ] };
+
+    key <AC01> { [	   a,          A,        aacute,           Aacute ] };
+    // key <AC02> { [	   o,          O,        oacute,           Oacute ] };
+    key <AC02> { [         o,          O,    odiaeresis,       Odiaeresis ] };
+    key <AC03> { [	   e,          E,        eacute,           Eacute ] };
+    // key <AC04> { [	   u,          U,        uacute,           Uacute ] };
+    key <AC04> { [         u,          U,    udiaeresis,       Udiaeresis ] };
+    // key <AC05> { [	   i,          I,        iacute,           Iacute ] };
+    key <AC05> { [         i,          I,      idotless,        Iabovedot ] };
+    key <AC06> { [	   d,          D,           eth,              ETH ] };
+    // key <AC07> { [	   h,	H		]	};
+    key <AC08> { [	   t,          T,         thorn,            THORN ] };
+    key <AC09> { [	   n,          N,        ntilde,           Ntilde ] };
+    // key <AC10> { [	   s,          S,        ssharp,          section ] };
+    key <AC10> { [         s,          S,      scedilla,         Scedilla ] };
+    // key <AC11> { [     minus, underscore,           yen,    dead_belowdot ] };
+
+    key <AB01> { [ semicolon,      colon,     paragraph,           degree ] };
+    key <AB02> { [	   q,          Q,    adiaeresis,       Adiaeresis ] };
+    // key <AB03> { [	   j,	J		]	};
+    key <AB04> { [	   k,          K,            oe,               OE ] };
+    // key <AB05> { [	   x,	X		]	};
+    // key <AB06> { [	   b,	B		]	};
+    key <AB07> { [	   m,          M,            mu,               mu ] };
+    key <AB08> { [	   w,          W,         aring,            Aring ] };
+    // key <AB09> { [	   v,	V		]	};
+    key <AB10> { [	   z,          Z,            ae,               AE ] };
+
+    key <BKSL> { [ backslash,        bar,       notsign,        brokenbar ] };
+
+    include "level3(ralt_switch)"
+};
