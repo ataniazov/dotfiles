@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2021-06-25)
+# i3 config file (v4-2021-08-02)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -56,7 +56,7 @@ set $left j
 #set $right semicolon
 set $right k
 
-# use Mouse+$mod to drag floating windows to their wanted position
+# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
@@ -69,14 +69,15 @@ bindsym $mod+minus kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000"
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000"
 
 # Focusing containers
 ## Syntax:
@@ -481,8 +482,10 @@ exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.p
 
 ## Set dvorak as keyboard layout
 #exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+exec_always --no-startup-id setxkbmap -layout "custom(dvorak-add),ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
 
 ## Set caps-lock as a modifier
+exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Caps_Lock"
 #exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Super_L" ; xmodmap -e "add mod4 = Super_L"
 #exec_always --no-startup-id xmodmap -e "keycode 192 = Super_L"
 #exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "clear mod3" ; xmodmap -e "add mod3 = XF86Launch5"
@@ -542,7 +545,6 @@ bindsym XF86AudioStop exec --no-startup-id $player_stop
 # Application lunch hot-keys
 bindsym $mod+g exec --no-startup-id firefox --private-window                            # Firefox
 bindsym $mod+Shift+g exec --no-startup-id chromium --incognito                          # Chromium
-#bindsym $mod+Shift+g exec --no-startup-id chromium --profile-directory="Default" --incognito
 
 # Data cleansing to keep your privacy
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh'"
@@ -587,15 +589,15 @@ for_window [class="(?i)firefox"] border none
 
 # TESTING CONFIGURATIONS
 
-# Press $mod+w or control+w followed by either f, t, Escape or Return to launch firefox,
-# thunderbird or return to the default mode, respectively.
-#set $mode_launcher Launch: [f]irefox [t]hunderbird
+# Press $mod+w or control+w followed by either f, c, Escape or Return to launch firefox,
+# chromium or return to the default mode, respectively.
+#set $mode_launcher Launch: [f]irefox [c]hromium
 #bindsym $mod+w mode "$mode_launcher"
 #bindsym control+w mode "$mode_launcher"
 
 #mode "$mode_launcher" {
-#        bindsym f exec --no-startup-id firefox
-#        bindsym t exec --no-startup-id thunderbird
+#        bindsym f exec --no-startup-id firefox, mode "default"
+#        bindsym c exec --no-startup-id chromium, mode "default"
 #
 #        # back to normal: Enter, Escape, $mod+w or control+w
 #        bindsym Return mode "default"
@@ -604,14 +606,8 @@ for_window [class="(?i)firefox"] border none
 #        bindsym control+w mode "default"
 #}
 
-# Start Spotify
-#bindsym $mod+Shift+m exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
-
-#assign [class="^chromium$" instance="^crx_kfbnhhcmmpmjfkkakaplojljcodkmobo$"] → $ws0
-#exec --no-startup-id i3-msg "workspace 0; exec --no-startup-id chromium --kiosk --disable-extensions https://play.spotify.com/browse"
-#exec --no-startup-id i3-msg "workspace $ws0; exec --no-startup-id chromium --profile-directory="Profile 2" --start-fullscreen --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo"
-
-#exec --no-startup-id sleep 0.5 && (/usr/lib/policykit-1/polkitd & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & xfsettingsd & xfce4-power-manager & light-locker & /usr/lib/i386-linux-gnu/indicator-power/indicator-power-service & start-pulseaudio-x11 & )
+# startup daemons
+#exec --no-startup-id sleep 0.5 && (/usr/libexec/at-spi-bus-launcher --launch-immediately & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & start-pulseaudio-x11 & xfsettingsd & xfce4-power-manager & )
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
