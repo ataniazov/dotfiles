@@ -485,7 +485,6 @@ exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.p
 exec_always --no-startup-id setxkbmap -layout "custom(dvorak-add),ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
 
 ## Set caps-lock as a modifier
-exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Caps_Lock"
 #exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Super_L" ; xmodmap -e "add mod4 = Super_L"
 #exec_always --no-startup-id xmodmap -e "keycode 192 = Super_L"
 #exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "clear mod3" ; xmodmap -e "add mod3 = XF86Launch5"
