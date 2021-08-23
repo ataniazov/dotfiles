@@ -33,23 +33,23 @@ i3
 feh xdotools
 network-manager-gnome
 pulseaudio
-//pavucontrol
 xfce4-settings
 xfce4-terminal
-xfce4-screenshooter
+xfce4-power-manager
 xfce4-notifyd
+xfce4-screenshooter
 thunar
-//thunar-volman
-//thunar-archive-plugin
-//thunar-media-tags-plugin
-//thunar-gtkhash
-engrampa
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-gtkhash
 ristretto
-//catfish
+catfish
 
 ### Fonts
-xfonts-terminus
-ttf-mscorefonts-installer
+fonts-terminus
+fonts-terminus-otb
+xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
+//ttf-mscorefonts-installer
 
 ### Internet
 firefox-esr
@@ -61,19 +61,18 @@ mpv
 vlc
 
 #### Hardware Video Acceleration
-libva-glx2
-vdpau-driver-all
-mesa-va-drivers
-nvidia-legacy-390xx-vdpau-driver
-libnvidia-legacy-390xx-nvcuvid1
-libnvidia-legacy-390xx-encode1
+//libva-glx2
+//vdpau-driver-all
+//mesa-va-drivers
+//nvidia-legacy-390xx-vdpau-driver
+//libnvidia-legacy-390xx-nvcuvid1
+//libnvidia-legacy-390xx-encode1
 //vainfo
 //vdpauinfo
 
 ### Theme
 greybird-gtk-theme
 elementary-xfce-icon-theme
-arc-theme
 breeze-cursor-theme
 
 #### MTP
@@ -82,68 +81,81 @@ gvfs-backends
 gvfs-bin
 gvfs-fuse
 
+### Archive
+rar unrar
+p7zip-rar
+
 ### Security
 ufw gufw
-cryptsetup
-diceware
-gpg gnupg2
-wipe
-secure-delete
-mat2
-apparmor
-apparmor-profiles
-apparmor-profiles-extra
-apparmor-notify
-apparmor-utils
-macchanger
+//cryptsetup
+//diceware
+//gpg gnupg2
+//wipe
+//secure-delete
+//mat2
+//apparmor
+//apparmor-profiles
+//apparmor-profiles-extra
+//apparmor-notify
+//apparmor-utils
+//macchanger
 
 ### Office
-mousepad
+file-roller
+//engrampa
 gedit
-gedit-plugins
-evince
-atril
-mupdf
-mupdf-tools
+//gedit-plugins
+//mousepad
 gnome-calculator
-mate-calc
-zathura zathura-pdf-poppler zathura-djvu zathura-ps zathura-cb
+//mate-calc
+evince
+//atril
+//mupdf
+//mupdf-tools
+//zathura zathura-pdf-poppler zathura-djvu zathura-ps zathura-cb
+gimp
+inkscape
 
 ### Tools
-htop
-nnn
-trash-cli
+vim
 gnome-disk-utility
-gparted
-udiskie
-testdisk
-gdmap
-net-tools
-dnsutils
-whois
-qrencode
-acpi
+htop
 lm-sensors
+//nnn
+//trash-cli
+//gparted
+//udiskie
+//testdisk
+//gdmap
+//net-tools
+//dnsutils
+//whois
+//qrencode
+//acpi
 
 ### Development
 
 #### Git
-git gitg
+git
+//gitg
 
 ### Misc.
 curl
-rsync
+//rsync
 
 #### Other
-build-essential
-snapd
-kazam
-xfburn
-filezilla
 meld
-redshift-gtk
-gigolo
-dconf-editor
+sqlitebrowser
+jq
+//build-essential
+//snapd
+//kazam
+//xfburn
+//filezilla
+//redshift-gtk
+//gigolo
+//dconf-editor
+astyle
 
 ## Remove
 
@@ -152,4 +164,8 @@ $ sudo apt remove --autoremove --purge <package-name>
 ```
 
 avahi-daemon
-avahi-autoipd
+
+dunst
+os-prober
+tasksel
+vim-tiny

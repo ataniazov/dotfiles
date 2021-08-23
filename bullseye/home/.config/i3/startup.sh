@@ -36,7 +36,7 @@ xfce4-power-manager &
 # gsettings schema
 # gsettings set org.freedesktop.ibus.general use-system-keyboard-layout 'true'
 # gsettings set org.freedesktop.ibus.general use-xmodmap 'true'
-gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#00ff00' 
+#gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#00ff00' 
 # gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>space']"
-gsettings set org.freedesktop.ibus.general.hotkey triggers "['<Alt>space']"
-gsettings set org.freedesktop.ibus.general switcher-delay-time '-1'
+#gsettings set org.freedesktop.ibus.general.hotkey triggers "['<Alt>space']"
+#gsettings set org.freedesktop.ibus.general switcher-delay-time '-1'

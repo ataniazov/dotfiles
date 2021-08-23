@@ -4,7 +4,6 @@
 #   info -f grub -n 'Simple configuration'
 
 GRUB_DEFAULT=0
-#GRUB_TIMEOUT_STYLE=hidden
 #GRUB_TIMEOUT=5
 GRUB_TIMEOUT=3
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`

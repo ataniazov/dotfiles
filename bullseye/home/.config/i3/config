@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# i3 config file (v4-2021-08-02)
+# i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -16,12 +16,17 @@
 # layout, use the i3-config-wizard
 #
 
-set $mod mod4
-#set $mod mod3
+# Modifiers
+## Available Modifiers:
+## Mod1-Mod5, Shift, Control
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font pango:monospace 8
+## Set main modifier
+## Windows (Mod4)
+set $mod mod4
+
+## Set alternative modifier
+## Alt (Mod1)
+set $altmod mod1
 
 # Fonts
 ## Syntax:
@@ -31,6 +36,10 @@ set $mod mod4
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -46,6 +55,15 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 #exec --no-startup-id dex --autostart --environment i3
+
+# Keyboard bindings
+## Syntax:
+## bindsym [--release] [<Group>+][<Modifiers>+]<keysym> command
+## bindcode [--release] [<Group>+][<Modifiers>+]<keycode> command
+
+# Mouse bindings
+## Syntax:
+## bindsym [--release] [--border] [--whole-window] [--exclude-titlebar] [<Modifiers>+]button<n> command
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -359,7 +377,7 @@ workspace_auto_back_and_forth yes
 ## finds out, if available)
 bar {
         #status_command i3status
-        status_command exec $HOME/.config/i3/netspeed.sh
+        status_command exec $HOME/.config/i3/net-speed.sh
 
         # Display mode
         ## Syntax:
@@ -453,7 +471,10 @@ bindsym $mod+Shift+b border toggle
 ## Enter global fullscreen mode
 bindsym $mod+Shift+f fullscreen toggle global
 
-## The middle button with modifier toggles floating
+## The middle button and modifers over a titlebar kills the window
+bindsym --release $mod+$altmod+button2 kill
+
+## The middle button and a modifer over any part of the window toggles floating
 bindsym --whole-window $mod+button2 floating toggle
 
 ## Sticky floating windows
@@ -461,9 +482,7 @@ bindsym --whole-window $mod+button2 floating toggle
 #bindsym --release $mod+Shift+button2 sticky toggle
 bindsym --whole-window $mod+Shift+button2 sticky toggle
 
-## Set alternative modifier
-set $altmod mod1
-## Move the current workspace to the next output
+# Move the current workspace to the next output
 bindsym $mod+$altmod+$left move workspace to output left
 bindsym $mod+$altmod+$down move workspace to output down
 bindsym $mod+$altmod+$up move workspace to output up
@@ -568,12 +587,12 @@ bindsym $mod+m exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeomet
 ## Force kill focused window
 #bindsym $mod+z exec --no-startup-id xkill -id $(xdotool getwindowfocus)
 #bindsym $mod+Shift+underscore exec --no-startup-id xdotool getwindowfocus windowkill
-bindsym $mod+Shift+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ] && xdotool getwindowfocus windowkill"
+bindsym $mod+$altmod+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ] && xdotool getwindowfocus windowkill"
 
 # Take a screenshot
 bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/             # window
 bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/       # full screen
-#bindsym --release $mod+$altmod+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/    # region
+bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/     # region
 
 # Java
 #bindsym $mod+Shift+i exec --no-startup-id idea         # Intellij IDEA
