@@ -74,6 +74,9 @@ set $left j
 #set $right semicolon
 set $right k
 
+# The floating modifier
+## Syntax: floating_modifier <Modifier>
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -457,7 +460,7 @@ bar {
 
         # Take a screenshot by middle clicking on the bar
         #bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/     # window
-} 
+}
 
 ## Toggle between dock mode and hide mode
 bindsym $mod+b bar mode toggle
@@ -602,10 +605,18 @@ bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r
 
 # Arbitrary commands for specific windows (for_window)
 ## Syntax: for_window <criteria> <command>
+# make the current container borderless
 for_window [class="(?i)chromium"] border none
 for_window [class="(?i)firefox"] border none
 
 # TESTING CONFIGURATIONS
+
+# Binding modes
+## Syntax:
+##  config directive
+## mode [--pango_markup] <name>
+##  command
+## mode <name>
 
 # Press $mod+w or control+w followed by either f, c, Escape or Return to launch firefox,
 # chromium or return to the default mode, respectively.
