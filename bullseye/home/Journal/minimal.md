@@ -169,3 +169,4 @@ dunst
 os-prober
 tasksel
 vim-tiny
+pipewire

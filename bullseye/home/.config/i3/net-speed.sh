@@ -75,7 +75,9 @@ else
 
 #    update_rate() {
 #        local time=$(date +%s)
-#        local rx=0 tx=0 tmp_rx tmp_tx
+#        local rx tx tmp_rx tmp_tx
+#        rx=0
+#        tx=0
 #
 #        for iface in $ifaces; do
 #            read tmp_rx < "/sys/class/net/${iface}/statistics/rx_bytes"
@@ -96,12 +98,12 @@ else
 #        last_tx=$tx
 #    }
 
+    iface=$(echo $ifaces | cut -d ' ' -f1)
     update_rate() {
         local time=$(date +%s)
-        local rx
-        local tx
-        read rx < "/sys/class/net/${ifaces}/statistics/rx_bytes"
-        read tx < "/sys/class/net/${ifaces}/statistics/tx_bytes"
+        local rx tx
+        read rx < "/sys/class/net/${iface}/statistics/rx_bytes"
+        read tx < "/sys/class/net/${iface}/statistics/tx_bytes"
         local interval=$(( $time - $last_time ))
         if [ $interval -gt 0 ]; then
             rate="$(readable $(( (rx - last_rx) / interval )) true) $(readable $(( (tx - last_tx) / interval )) false)"

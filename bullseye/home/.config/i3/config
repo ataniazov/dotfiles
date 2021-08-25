@@ -52,10 +52,6 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn't scale on retina/hidpi displays.
 
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
-#exec --no-startup-id dex --autostart --environment i3
-
 # Keyboard bindings
 ## Syntax:
 ## bindsym [--release] [<Group>+][<Modifiers>+]<keysym> command
@@ -98,7 +94,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus:style=Regular -nb 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000"
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000"
 
 # Focusing containers
 ## Syntax:
@@ -323,14 +319,14 @@ bindsym $mod+r mode "resize"
 ## Syntax:
 ## <colorclass> <border> <background> <text> <indicator> <child_border>
 ## Colors are in HTML hex format (#rrggbb)
-## class                border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+### class                border  backgr. text    indicator child_border
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+#client.background       #ffffff
 
 ######################################################################
 ### class                border  backgr. text    indicator child_border
@@ -341,7 +337,6 @@ client.background       #ffffff
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 #client.background       #000000
-#default_border pixel 2
 ######################################################################
 
 ## Focus follows mouse
@@ -427,23 +422,23 @@ bar {
         # Colors
         colors {
                 ## Syntax: background <color>
-                background #000000
+                #background #000000
                 ## Syntax: statusline <color>
-                statusline #ffffff
+                #statusline #ffffff
                 ## Syntax: separator <color>
-                separator  #ffffff
+                #separator  #ffffff
 
                 #focused_background #000000
                 #focused_statusline #ffffff
                 #focused_separator  #ffffff
 
                 ## Syntax: <colorclass> <border> <background> <text>
-                ## class           border  backgr. text
-                focused_workspace  #4c7899 #285577 #ffffff
-                active_workspace   #333333 #5f676a #ffffff
-                inactive_workspace #333333 #222222 #888888
-                urgent_workspace   #2f343a #900000 #ffffff
-                binding_mode       #2f343a #900000 #ffffff
+                ### class           border  backgr. text
+                #focused_workspace  #4c7899 #285577 #ffffff
+                #active_workspace   #333333 #5f676a #ffffff
+                #inactive_workspace #333333 #222222 #888888
+                #urgent_workspace   #2f343a #900000 #ffffff
+                #binding_mode       #2f343a #900000 #ffffff
 
                 ###########################################
                 ### class           border  backgr. text
@@ -611,6 +606,20 @@ for_window [class="(?i)firefox"] border none
 
 # TESTING CONFIGURATIONS
 
+# Don’t focus window upon opening
+## Syntax: no_focus <criteria>
+
+# Variables
+## Syntax: set $<name> <value>
+
+# X resources
+## Syntax: set_from_resource $<name> <resource_name> <fallback>
+
+# Automatically putting clients on specific workspaces
+## Syntax:
+## assign <criteria> [→] [workspace] [number] <workspace>
+## assign <criteria> [→] output left|right|up|down|primary|<output>
+
 # Binding modes
 ## Syntax:
 ##  config directive
@@ -637,6 +646,10 @@ for_window [class="(?i)firefox"] border none
 
 # startup daemons
 #exec --no-startup-id sleep 0.5 && (/usr/libexec/at-spi-bus-launcher --launch-immediately & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & start-pulseaudio-x11 & xfsettingsd & xfce4-power-manager & )
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+#exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
