@@ -256,6 +256,8 @@ wireshark
 nmap zenmap
 netcat
 dconf-editor
+geo-bin
+rofi
 
 ### jp
 ibus-mozc

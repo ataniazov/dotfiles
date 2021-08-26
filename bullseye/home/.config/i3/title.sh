@@ -1,21 +1,26 @@
 #!/bin/sh
-# shell script to prepend i3status with more stuff
+# shell script to show window title on i3bar
 
-update_title() {
-    title="$(xdotool getactivewindow getwindowname 2>/dev/null || \
-        echo Workspace `i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2`)"
-}
+# i3 config should contain:
+# bar {
+#     status_command exec title.sh
+# }
+
+title="$(xdotool getactivewindow getwindowname 2>/dev/null)"
 
 echo "{\"version\":1}"
 echo "["
+echo "[{\"full_text\":\"$title\",\"separator\":false}]"
 
-#echo -n "[{\"name\":\"title\",\"markup\":\"none\",\"full_text\":\"$title\",\"separator\":false}]," || exit 1
-
-#i3status | (read line && echo "$line" && read line && echo "$line" && update_title && while :
-while :
+i3-msg -t subscribe -m '[ "window", "workspace" ]' | (while :
 do
-    update_title
-    echo -n "[{\"full_text\":\"${title}\",\"separator\":false}]\n," || exit 1
-    sleep 1
-done
-#done)
+    read line
+    title=$(echo $line | jq 'select(.change=="focus").container | .name')
+    if [ -n "$title" ]; then
+        if [ "$title" = "null" ]; then
+            title="\"\""
+        fi
+        echo ",[{\"full_text\":$title,\"separator\":false}]" || exit 1
+        #echo ",[{\"name\":\"title\",\"markup\":\"none\",\"full_text\":\"$title\",\"separator\":false}]" || exit 1
+    fi
+done)

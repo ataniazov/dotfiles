@@ -318,7 +318,8 @@ bindsym $mod+r mode "resize"
 ## You can change all colors which i3 uses to draw the window decorations
 ## Syntax:
 ## <colorclass> <border> <background> <text> <indicator> <child_border>
-## Colors are in HTML hex format (#rrggbb)
+## Colors are in HTML hex format (#rrggbb), see the following example:
+## Examples (default colors):
 ### class                border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -493,6 +494,9 @@ bindsym $mod+$altmod+Up move workspace to output up
 bindsym $mod+$altmod+Right move workspace to output right
 
 # Automatically starting applications on i3 startup
+## Syntax:
+## exec [--no-startup-id] <command>
+## exec_always [--no-startup-id] <command>
 
 ## Set the wallpaper
 exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
@@ -619,6 +623,9 @@ for_window [class="(?i)firefox"] border none
 ## Syntax:
 ## assign <criteria> [→] [workspace] [number] <workspace>
 ## assign <criteria> [→] output left|right|up|down|primary|<output>
+
+# Automatically putting workspaces on specific screens
+## Syntax: workspace <workspace> output <output1> [output2]…
 
 # Binding modes
 ## Syntax:
