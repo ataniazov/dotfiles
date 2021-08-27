@@ -31,6 +31,8 @@ set showcmd                 " Show already typed keys when more are expected.
 
 set incsearch               " Highlight while searching with / or ?.
 set hlsearch                " Keep matches highlighted.
+set ignorecase              " Ignore case when searching...
+set smartcase               " ...unless we type a capital
 
 set ttyfast                 " Faster redrawing.
 set lazyredraw              " Only redraw when necessary.
@@ -61,3 +63,25 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" Not used settings
+"set autoread                "Reload files changed outside vim
+"set smartindent
+"set nowrap                  "Don't wrap lines
+"set linebreak               "Wrap lines at convenient points
+
+"set scrolloff=8             "Start scrolling when we're 8 lines away from margins
+"set sidescrolloff=15
+"set sidescroll=1
+
+"set autowrite               "Automatically save before commands like :next and :make
+
+"nnoremap Q <nop>
+"set exrc
+"set secure
+
+"set cpoptions+=$

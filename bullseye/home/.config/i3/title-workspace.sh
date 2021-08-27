@@ -11,7 +11,7 @@ title=$(xdotool getactivewindow getwindowname 2>/dev/null || \
 
 echo "{\"version\":1}"
 echo "["
-echo "[{\"full_text\":\"${title}\",\"separator\":false}]"
+echo "[{\"full_text\":\"$title\",\"separator\":false}]"
 
 i3-msg -t subscribe -m '[ "window", "workspace" ]' | (while :
 do
@@ -22,7 +22,12 @@ do
         if [ -z "$title" ]; then
             title=$(echo \"Workspace `echo $message | jq '.current | .name' | cut -d"\"" -f2`\")
         fi
-        echo ",[{\"full_text\":${title},\"separator\":false}]" || exit 1
+        echo ",[{\"full_text\":$title,\"separator\":false}]" || exit 1
         #echo ",[{\"name\":\"title\",\"markup\":\"none\",\"full_text\":\"$title\",\"separator\":false}]" || exit 1
+    else
+        title=$(echo $line | jq 'select(.change=="title").container | .name')
+        if [ -n "$title" ]; then
+            echo ",[{\"full_text\":$title,\"separator\":false}]" || exit 1
+        fi
     fi
 done)
