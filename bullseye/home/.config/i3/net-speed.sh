@@ -102,14 +102,17 @@ else
     update_rate() {
         local time=$(date +%s)
         local rx tx
+
         read rx < "/sys/class/net/${iface}/statistics/rx_bytes"
         read tx < "/sys/class/net/${iface}/statistics/tx_bytes"
+
         local interval=$(( $time - $last_time ))
         if [ $interval -gt 0 ]; then
             rate="$(readable $(( (rx - last_rx) / interval )) true) $(readable $(( (tx - last_tx) / interval )) false)"
         else
             rate="0↓ 0↑"
         fi
+
         last_time=$time
         last_rx=$rx
         last_tx=$tx

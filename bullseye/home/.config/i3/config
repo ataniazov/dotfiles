@@ -375,7 +375,13 @@ workspace_auto_back_and_forth yes
 ## Start i3bar to display a workspace bar (plus the system information i3status
 ## finds out, if available)
 bar {
+        # i3bar command
+        ## Syntax: i3bar_command <command>
+
+        # Statusline command
+        ## Syntax: status_command <command>
         #status_command i3status
+        #status_command i3status --config $HOME/.config/i3status/config
         status_command exec $HOME/.config/i3/net-speed.sh
 
         # Display mode
@@ -383,6 +389,19 @@ bar {
         ## mode dock|hide|invisible
         ## hidden_state hide|show
         ## modifier <Modifier>|none
+
+        # Mouse button commands
+        ## Syntax: bindsym [--release] button<n> <command>
+        # disable clicking on workspace buttons
+        #bindsym button1 nop
+        # disable mouse wheel scrolling change workspace
+        #bindsym button4 nop
+        #bindsym button5 nop
+        # Take a screenshot by middle clicking on the bar
+        #bindsym button2 exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/ # entire screen
+
+        # Bar ID
+        ## Syntax: id <bar_id>
 
         # Position
         ## Syntax: position top|bottom
@@ -397,6 +416,8 @@ bar {
 
         # Tray padding
         ## Syntax: tray_padding <px> [px]
+        # Obey Fitts's law
+        #tray_padding 0
 
         # Font
         ## Syntax: font <font>
@@ -453,9 +474,6 @@ bar {
 
         # Transparency
         ## Syntax: i3bar_command i3bar --transparency
-
-        # Take a screenshot by middle clicking on the bar
-        #bindsym button2 exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/     # window
 }
 
 ## Toggle between dock mode and hide mode
@@ -592,9 +610,9 @@ bindsym $mod+m exec --no-startup-id xdotool mousemove $(xdotool getdisplaygeomet
 bindsym $mod+$altmod+underscore exec --no-startup-id sh -c "[ ! -z `xdotool getwindowfocus getwindowpid 2> /dev/null` ] && xdotool getwindowfocus windowkill"
 
 # Take a screenshot
-bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/             # window
-bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/       # full screen
-bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/     # region
+bindsym --release $mod+Print exec --no-startup-id xfce4-screenshooter -w -s $HOME/Pictures/             # active window
+bindsym --release $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/       # entire screen
+bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r -s $HOME/Pictures/     # select a region
 
 # Java
 #bindsym $mod+Shift+i exec --no-startup-id idea         # Intellij IDEA
@@ -607,6 +625,21 @@ bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r
 # make the current container borderless
 for_window [class="(?i)chromium"] border none
 for_window [class="(?i)firefox"] border none
+
+# VIM-like marks (mark/goto)
+## Syntax:
+## mark [--add|--replace] [--toggle] <identifier>
+## [con_mark="identifier"] focus
+## unmark <identifier>
+#bindsym $mod+Shift+dead_grave exec --no-startup-id i3-input -F 'mark --toggle %s' -l 1 -P 'Mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#bindsym $mod+dead_grave exec --no-startup-id i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Go to: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+set $marker "MARK"
+bindsym $mod+Shift+dead_grave mark --toggle $marker
+bindsym $mod+dead_grave [con_mark=$marker] focus
+
+# disable mouse wheel scrolling change focus
+#bindsym button4 nop
+#bindsym button5 nop
 
 # TESTING CONFIGURATIONS
 
@@ -653,15 +686,6 @@ for_window [class="(?i)firefox"] border none
 
 # Interprocess communication
 ## Examples: ipc-socket ~/.i3/i3-ipc.sock
-
-# VIM-like marks (mark/goto)
-## Syntax:
-## mark [--add|--replace] [--toggle] <identifier>
-## [con_mark="identifier"] focus
-## unmark <identifier>
-set $marker "MARK"
-bindsym $mod+Shift+dead_grave mark --toggle $marker
-bindsym $mod+dead_grave [con_mark=$marker] focus
 
 # startup daemons
 #exec --no-startup-id sleep 0.5 && (/usr/libexec/at-spi-bus-launcher --launch-immediately & /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & start-pulseaudio-x11 & xfsettingsd & xfce4-power-manager & )
