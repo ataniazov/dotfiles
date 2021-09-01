@@ -157,7 +157,7 @@ bindsym $mod+f fullscreen toggle
 ## Syntax:
 ## layout default|tabbed|stacking|splitv|splith
 ## layout toggle [split|all]
-## layout toggle [split|tabbed|stacking|splitv|splith] [split|tabbed|stacking|splitv|splith]
+## layout toggle [split|tabbed|stacking|splitv|splith] [split|tabbed|stacking|splitv|splith]…
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -448,11 +448,11 @@ bar {
                 ## Syntax: statusline <color>
                 #statusline #ffffff
                 ## Syntax: separator <color>
-                #separator  #ffffff
+                #separator  #666666
 
                 #focused_background #000000
                 #focused_statusline #ffffff
-                #focused_separator  #ffffff
+                #focused_separator  #666666
 
                 ## Syntax: <colorclass> <border> <background> <text>
                 ### class           border  backgr. text
@@ -485,8 +485,11 @@ bindsym $mod+b bar mode toggle
 ## Toggle the different border styles
 bindsym $mod+Shift+b border toggle
 
-## Enter global fullscreen mode
+## Toggle global fullscreen mode
 bindsym $mod+Shift+f fullscreen toggle global
+
+## Toggle between stacking/tabbed/splith/splitv
+bindsym $mod+Shift+n layout toggle all
 
 ## The middle button and modifers over a titlebar kills the window
 bindsym --release $mod+$altmod+button2 kill
@@ -588,9 +591,11 @@ bindsym $mod+Shift+g exec --no-startup-id chromium --incognito                  
 bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh'"
 
 # Set default Locker
-set $locker i3lock -n -c 000000 -f
-#set $locker "revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 1 1 1 ; i3lock -n -c 000000 -f ; revert"
-#set $locker sh -c "trap 'xset dpms 0 0 0' HUP INT TERM && xset +dpms dpms 5 5 5 && i3lock -n -c 000000 -f && xset dpms 0 0 0" # i3lock
+## i3lock
+#set $locker i3lock -n -c 000000 -f
+## i3lock with DPMS power saving
+#set $locker sh -c \\"revert() { xset dpms 0 0 0 ; } ; trap revert HUP INT TERM ; xset +dpms dpms 5 5 5 ; i3lock -n -c 000000 -f ; revert\\"
+set $locker sh -c \\"trap \\\\"xset dpms 0 0 0\\\\" HUP INT TERM && xset +dpms dpms 5 5 5 && i3lock -n -c 000000 -f && xset dpms 0 0 0\\"
 #exec --no-startup-id xautolock -detectsleep -time 5 -locker "$locker"
 
 # Lock hot-key
