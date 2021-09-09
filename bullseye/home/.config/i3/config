@@ -120,6 +120,13 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# Moving containers
+## Syntax:
+## move <left|right|down|up> [<amount> [px|ppt]]
+## move position <pos_x> [px|ppt] <pos_y> [px|ppt]
+## move [absolute] position center
+## move position mouse
+
 # move focused window
 #bindsym $mod+Shift+j move left
 bindsym $mod+Shift+$left move left
@@ -179,6 +186,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 bindsym $mod+o focus child
 
+# Scratchpad
+## Syntax:
+## move scratchpad
+## scratchpad show
+
 # move the currently focused window to the scratchpad
 #bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+z move scratchpad
@@ -187,6 +199,17 @@ bindsym $mod+Shift+z move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 #bindsym $mod+minus scratchpad show
 bindsym $mod+z scratchpad show
+
+# Changing (named) workspaces/moving to workspaces
+## Syntax:
+## workspace next|prev|next_on_output|prev_on_output
+## workspace back_and_forth
+## workspace [--no-auto-back-and-forth] <name>
+## workspace [--no-auto-back-and-forth] number <name>
+##
+## move [--no-auto-back-and-forth] [window|container] [to] workspace <name>
+## move [--no-auto-back-and-forth] [window|container] [to] workspace number <name>
+## move [window|container] [to] workspace prev|next|current
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -228,12 +251,24 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 #bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+0 move container to workspace number $ws0
 
+# Renaming workspaces
+## rename workspace <old_name> to <new_name>
+## rename workspace to <new_name>
+bindsym $mod+Shift+w exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Resizing containers/windows
+## Syntax:
+## resize grow|shrink <direction> [<px> px [or <ppt> ppt]]
+## resize set [width] <width> [px | ppt]
+## resize set height <height> [px | ppt]
+## resize set [width] <width> [px | ppt] [height] <height> [px | ppt]
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -395,8 +430,8 @@ bar {
         # disable clicking on workspace buttons
         #bindsym button1 nop
         # disable mouse wheel scrolling change workspace
-        #bindsym button4 nop
-        #bindsym button5 nop
+        bindsym button4 nop
+        bindsym button5 nop
         # Take a screenshot by middle clicking on the bar
         #bindsym button2 exec --no-startup-id xfce4-screenshooter -f -s $HOME/Pictures/ # entire screen
 
@@ -482,6 +517,11 @@ bindsym $mod+b bar mode toggle
 ## Toggle between hide state and show state
 #bindsym $mod+Shift+b bar hidden_state toggle
 
+## Changing border style
+## Syntax:
+## border normal|pixel|toggle [<n>]
+## border none
+
 ## Toggle the different border styles
 bindsym $mod+Shift+b border toggle
 
@@ -501,6 +541,11 @@ bindsym --whole-window $mod+button2 floating toggle
 ## Syntax: sticky enable|disable|toggle
 #bindsym --release $mod+Shift+button2 sticky toggle
 bindsym --whole-window $mod+Shift+button2 sticky toggle
+
+# Moving containers/workspaces to RandR outputs
+## Syntax:
+## move container to output left|right|down|up|current|primary|<output>
+## move workspace to output left|right|down|up|current|primary|<output>
 
 # Move the current workspace to the next output
 bindsym $mod+$altmod+$left move workspace to output left
@@ -642,6 +687,20 @@ set $marker "MARK"
 bindsym $mod+Shift+dead_grave mark --toggle $marker
 bindsym $mod+dead_grave [con_mark=$marker] focus
 
+# Swapping containers
+## Syntax: swap container with id|con_id|mark <arg>
+# Swaps the focused container with the marked container
+#bindsym $mod+$altmod+dead_grave exec --no-startup-id i3-input -F 'swap container with mark %s' -l 1 -P 'Swap mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+bindsym $mod+$altmod+dead_grave swap container with mark $marker
+
+# Moving containers/windows to marks
+## move window|container to mark <mark>
+# Move the focused container to another container with a specific mark
+#bindsym $mod+Control+dead_grave exec --no-startup-id i3-input -F 'move container to mark %s' -l 1 -P 'Move mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+bindsym $mod+Control+dead_grave move container to mark $marker
+
+# Nop
+## Syntax: nop [<comment>]
 # disable mouse wheel scrolling change focus
 #bindsym button4 nop
 #bindsym button5 nop

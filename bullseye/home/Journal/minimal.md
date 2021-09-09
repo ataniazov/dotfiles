@@ -156,6 +156,7 @@ jq
 //gigolo
 //dconf-editor
 astyle
+scrcpy
 
 ## Remove
 
