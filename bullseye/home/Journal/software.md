@@ -63,8 +63,10 @@ ttf-mscorefonts-installer
 firefox-esr
 chromium chromium-l10n
 //webext-ublock-origin webext-privacy-badger webext-https-everywhere
+qbittorrent
 transmission
 transmission-gtk
+aria2
 uget
 
 ### Multimedia
@@ -125,6 +127,10 @@ macchanger
 haveged
 rng-tools5
 signify-openbsd
+minisign
+age
+gocryptfs
+magic-wormhole
 
 ### Office
 mousepad
@@ -157,6 +163,7 @@ gnome-disk-utility
 gparted
 udiskie
 testdisk
+photorec
 gdmap
 net-tools
 dnsutils

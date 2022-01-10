@@ -32,7 +32,7 @@ else
 #        local kib=$(( bytes >> 10 ))
 #        local result
 #        if [ $kib -lt 1 ]; then
-#            if $2; then
+#            if [ "$2" = true ]; then
 #                result="0↓"
 #            else
 #                result="0↑"
@@ -55,7 +55,7 @@ else
         local kbits=$(( bytes * 8 / 1000 ))
         local result
         if [ $kbits -lt 1 ]; then
-            if $2; then
+            if [ "$2" = true ]; then
                 result="0↓"
             else
                 result="0↑"

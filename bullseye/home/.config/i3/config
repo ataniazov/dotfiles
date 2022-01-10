@@ -591,7 +591,7 @@ exec_always --no-startup-id wmname LG3D
 ## PulseAudio sound volume controls
 set $decrease_sound pactl set-sink-volume @DEFAULT_SINK@ -5%                            # decrease sound volume
 #set $increase_sound pactl set-sink-volume @DEFAULT_SINK@ +5%                           # increase sound volume
-set $increase_sound sh -c "pactl set-sink-volume @DEFAULT_SINK@ $([ $((`pactl list sinks | grep -A10 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/|%" '{print $2}'` + 5)) -lt 100 ] && echo +5 || echo 100)%"
+set $increase_sound sh -c "pactl set-sink-volume @DEFAULT_SINK@ $([ $((`pactl list sinks | grep -A10 $(pactl info | grep -i 'Default Sink' | awk '{print $3}') | grep '^[[:space:]]Volume:' | awk -F"/|%" '{print $2}'` + 5)) -lt 100 ] && printf "+5" || printf "100")%"
 set $mute_unmute_sound pactl set-sink-mute @DEFAULT_SINK@ toggle                        # mute sound
 #set $mute_unmute_mic pactl set-source-mute @DEFAULT_SOURCE@ toggle                     # mute microphone
 
@@ -675,6 +675,7 @@ bindsym --release $mod+Control+Print exec --no-startup-id xfce4-screenshooter -r
 # make the current container borderless
 for_window [class="(?i)chromium"] border none
 for_window [class="(?i)firefox"] border none
+for_window [class="(?i)librewolf"] border none
 
 # VIM-like marks (mark/goto)
 ## Syntax:

@@ -54,7 +54,8 @@ xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
 ### Internet
 firefox-esr
 chromium
-uget
+aria2
+//uget
 
 ### Multimedia
 mpv
@@ -62,7 +63,7 @@ vlc
 
 #### Hardware Video Acceleration
 //libva-glx2
-//vdpau-driver-all
+vdpau-driver-all
 //mesa-va-drivers
 //nvidia-legacy-390xx-vdpau-driver
 //libnvidia-legacy-390xx-nvcuvid1
