@@ -1,18 +1,17 @@
-# Dvorak international with turkish-turkmen keys
+# Dvorak, intl., with additions
 
 ```
-~-  !-  @-  #-  $-  %-  ^-  &-  *-  (-  )-  {-  }-
-O-  1¹  2-  3-  4-  5-  6-  7-  8∞  9-  0-  [-  ]-
-                                                  
-    "¨  <-  >-  P∏ YÝ  F-  GĞ  CÇ  R©  L-  ?-  +-
-    '´  ,-  .-  p-  yý  f-  gğ  cç  r®  l-  /-  =-
-                                                  
-    AÄ  OÖ  E∑  UÜ  Iİ  D-  H-  T-  NŇ  SŞ  _-  |-
-    aä  oö  e-  uü  iı  d-  h-  t™  nň  sş  --  \-
-                                                  
-    >¦  :Â  QÔ  JÛ  KÎ  X-  B-  M-  W-  V-  ZŽ
-    <|  ;â  qô  jû  kî  x-  b-  m-  w-  v-  zž
+~§  !¡  @-  #№  $£  %¢  ^-  &-  *×  (•  )°  {“  }”
+`¶  1¹  2²  3³  4¤  5€  6-  7-  8∞  9‘  0’  [«  ]»
 
+    "¨  <≤  >≥  P∏  YÝ  F-  GĞ  CÇ  R®  LØ  ?¿  +±
+    '´  ,-  .…  pπ  yý  fƒ  gğ  cç  r©  lø  /÷  =≠
+
+    AÄ  OÖ  E∑  UÜ  Iİ  D∆  H-  T-  NŇ  SŞ  _¥  |-
+    aä  oö  e√  uü  iı  dδ  h-  t™  nň  sş  -≈  \-
+
+    >¦  :Â  QÔ  JÛ  KÎ  X∫  B-  M-  W-  VÅ  ZŽ
+    <|  ;â  qô  jû  kî  x∂  b-  mµ  wΩ  vå  zž
 ```
 
 ```
@@ -21,23 +20,22 @@ O-  1¹  2-  3-  4-  5-  6-  7-  8∞  9-  0-  [-  ]-
 │ 1 3 │   1 = Normal, 3 = Level3
 └─────┘
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
-│ ~ ¶ │ !   │ @   │ #   │ $ ¢ │ %   │ ^   │ &   │ * × │ (   │ )   │ {   │ }   ┃ ⌫ Back-   ┃
-│ ` § │ 1 ¹ │ 2 ² │ 3 ³ │ 4 € │ 5   │ 6   │ 7   │ 8 ∞ │ 9   │ 0 ° │ [   │ ]   ┃   space   ┃
+│ ~ § │ ! ¡ │ @   │ # № │ $ £ │ % ¢ │ ^   │ & ¾ │ * × │ ( • │ ) ° │ { “ │ } ” ┃ Backspace ┃
+│ ` ¶ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¤ │ 5 € │ 6 ¼ │ 7 ½ │ 8 ∞ │ 9 ‘ │ 0 ’ │ [ « │ ] » ┃ ⌫         ┃
 ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
-┃       ┃ "   │ < « │ > » │ P ∏ │ Y Ý │ F   │ G Ğ │ C Ç │ R © │ L   │ ? ¿ │ + ± ┃ Enter ⏎ ┃
-┃Tab ↹  ┃ '   │ , ≤ │ . ≥ │ p π │ y ý │ f ƒ │ g ğ │ c ç │ r ® │ l   │ / ÷ │ = ≠ ┃         ┃
+┃       ┃ " ¨ │ < ≤ │ > ≥ │ P ∏ │ Y Ý │ F   │ G Ğ │ C Ç │ R ® │ L Ø │ ? ¿ │ + ± ┃ Enter ⏎ ┃
+┃Tab ↹  ┃ ' ´ │ ,   │ . … │ p π │ y ý │ f ƒ │ g ğ │ c ç │ r © │ l ø │ / ÷ │ = ≠ ┃         ┃
 ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓        ┃
-┃        ┃ A Ä │ O Ö │ E ∑ │ U Ü │ I İ │ D ð │ H   │ T   │ N Ň │ S Ş │ _   │ |   ┃        ┃
-┃Caps ⇬  ┃ a ä │ o ö │ e ∫ │ u ü │ i ı │ d ∂ │ h   │ t ™ │ n ň │ s ş │ -   │ \   ┃        ┃
+┃ Caps   ┃ A Ä │ O Ö │ E ∑ │ U Ü │ I İ │ D ∆ │ H   │ T   │ N Ň │ S Ş │ _ ¥ │ | ¦ ┃        ┃
+┃ Lock ⇬ ┃ a ä │ o ö │ e √ │ u ü │ i ı │ d δ │ h   │ t ™ │ n ň │ s ş │ - ≈ │ \ ¬ ┃        ┃
 ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━━━┫
-┃       ┃ > ¦ │ : Â │ Q Ô │ J Û │ K Î │ X Ø │ B ∆ │ M   │ W   │ V   │ Z Ž ┃               ┃
-┃Shift ⇧┃ < | │ ; â │ q ô │ j û │ k î │ x ø │ b ß │ m µ │ w Ω │ v   │ z ž ┃Shift ⇧        ┃
+┃       ┃ > ¦ │ : Â │ Q Ô │ J Û │ K Î │ X ∫ │ B   │ M   │ W   │ V Å │ Z Ž ┃               ┃
+┃Shift ⇧┃ < | │ ; â │ q ô │ j û │ k î │ x ∂ │ b   │ m µ │ w Ω │ v å │ z ž ┃Shift ⇧        ┃
 ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
 ┃       ┃       ┃       ┃ ␣                             ⍽ ┃       ┃       ┃       ┃       ┃
-┃Ctrl   ┃Meta   ┃Alt    ┃ ␣           Space             ⍽ ┃AltGr ⇮┃Meta   ┃Menu   ┃Ctrl   ┃
+┃Ctrl   ┃Super  ┃Alt    ┃ ␣           Space             ⍽ ┃AltGr ⇮┃Super  ┃Menu   ┃Ctrl   ┃
 ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹─────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 ```
-
 
 Added:
 tr:
@@ -58,6 +56,9 @@ tm:
 Ňň
 Ýý
 Žž
+
+ru:
+№
 
 us-altgr-intl:
 ¹
@@ -260,9 +261,19 @@ Other:
 
 localectl list-x11-keymap-layouts
 localectl list-x11-keymap-variants us
+
+sudo apt install gkbd-capplet
 gkbd-keyboard-display -l $'us\tdvorak-intl'
+
 xkbprint :0 -fit -color -eps -o keyboard-layout.eps
 
-setxkbmap -layout us -variant dvorak -option caps:hyper -option shift:both_capslock
+setxkbmap us -print | xkbcomp - - | xkbprint - - | ps2pdf - > us.pdf
+xkbcomp /usr/share/X11/xkb/symbols/us - tmp/us.xkm
+xkbprint -color tmp/us.xkm
+xkbcomp /usr/share/X11/xkb/symbols/us - | xkbprint -color -o - - | ps2pdf - > us.pdf
 
-setxkbmap -layout "us(dvorak-intl),tr" -option "grp:alt_space_toggle,grp_led:scroll" -option caps:hyper -option shift:both_capslock
+setxkbmap -layout us -variant dvorak -option -option "shift:both_capslock,caps:hyper"
+
+setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+
+setxkbmap -layout "custom(dvorak-add),ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
