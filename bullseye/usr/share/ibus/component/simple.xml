@@ -105,18 +105,6 @@
             <rank>1</rank>
         </engine>
         <engine>
-            <name>xkb:us:dvorak-add:eng</name>
-	    <language>en</language>
-            <license>GPL</license>
-            <author>Ata Niyazov &lt;ataniazov&gt;</author>
-            <layout>custom</layout>
-            <layout_variant>dvorak-add</layout_variant>
-            <longname>English (Dvorak, intl., with additions)</longname>
-            <description>English (Dvorak, intl., with additions)</description>
-            <icon>ibus-keyboard</icon>
-            <rank>1</rank>
-        </engine>
-        <engine>
             <name>xkb:us:dvorak-intl:eng</name>
             <language>en</language>
             <license>GPL</license>
@@ -9626,6 +9614,17 @@
             <description>Malay (Jawi, phonetic)</description>
             <icon>ibus-keyboard</icon>
             <rank>1</rank>
+        </engine>
+        <engine>
+            <name>xkb:custom::eng</name>
+            <language>en</language>
+            <license>GPL</license>
+            <author>Peng Huang &lt;shawn.p.huang@gmail.com&gt;</author>
+            <layout>custom</layout>
+            <longname>Custom</longname>
+            <description>Custom</description>
+            <icon>ibus-keyboard</icon>
+            <rank>50</rank>
         </engine>
     </engines>
 </component>

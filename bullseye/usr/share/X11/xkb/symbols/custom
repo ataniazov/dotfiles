@@ -34,10 +34,10 @@
 // ┃Ctrl   ┃Super  ┃Alt    ┃ ␣           Space             ⍽ ┃AltGr ⇮┃Super  ┃Menu   ┃Ctrl   ┃
 // ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹─────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 
-default partial alphanumeric_keys
-xkb_symbols "dvorak-add" {
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
 
-    name[Group1]= "English (Dvorak, intl., with additions)";
+    name[Group1]= "Custom";
 
 //  key <LABL> { [         G1L1,            G1L2,               G1L3,             G1L4 ] };
 
