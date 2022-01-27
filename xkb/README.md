@@ -1,7 +1,7 @@
 # Dvorak, intl., with additions
 
 ```
-~§  !¡  @-  #№  $£  %¢  ^-  &-  *×  (•  )°  {“  }”
+~§  !¡  @-  #№  $£  %¢  ^-  &-  *×  (-  )°  {“  }”
 `¶  1¹  2²  3³  4¤  5€  6-  7-  8∞  9‘  0’  [«  ]»
 
     "¨  <≤  >≥  P∏  YÝ  F-  GĞ  CÇ  R®  LØ  ?¿  +±
@@ -20,7 +20,7 @@
 │ 1 3 │   1 = Normal, 3 = Level3
 └─────┘
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
-│ ~ § │ ! ¡ │ @   │ # № │ $ £ │ % ¢ │ ^   │ & ¾ │ * × │ ( • │ ) ° │ { “ │ } ” ┃ Backspace ┃
+│ ~ § │ ! ¡ │ @   │ # № │ $ £ │ % ¢ │ ^   │ & ¾ │ * × │ (   │ ) ° │ { “ │ } ” ┃ Backspace ┃
 │ ` ¶ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¤ │ 5 € │ 6 ¼ │ 7 ½ │ 8 ∞ │ 9 ‘ │ 0 ’ │ [ « │ ] » ┃ ⌫         ┃
 ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
 ┃       ┃ " ¨ │ < ≤ │ > ≥ │ P ∏ │ Y Ý │ F   │ G Ğ │ C Ç │ R ® │ L Ø │ ? ¿ │ + ± ┃ Enter ⏎ ┃
@@ -276,4 +276,4 @@ setxkbmap -layout us -variant dvorak -option -option "shift:both_capslock,caps:h
 
 setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
 
-setxkbmap -layout "custom(dvorak-add),ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
+setxkbmap -layout "custom,ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
