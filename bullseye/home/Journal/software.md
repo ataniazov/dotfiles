@@ -56,9 +56,9 @@ catfish
 //fonts-liberation fonts-liberation2 ttf-bitstream-vera
 fonts-terminus fonts-terminus-otb
 xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
+fonts-ubuntu fonts-ubuntu-console
 ttf-xfree86-nonfree
 //ttf-mscorefonts-installer
-fonts-ubuntu fonts-ubuntu-console
 
 ### Internet
 firefox-esr
@@ -268,11 +268,10 @@ geo-bin
 rofi
 
 ### jp
-ibus-mozc
-mozc-utils-gui
-ibus-anthy
+#ibus-mozc
+#mozc-utils-gui
+#ibus-anthy
 fcitx5-mozc
-fcitx5-material-color
 fonts-noto fonts-noto-hinted fonts-noto-mono
 
 ## Remove

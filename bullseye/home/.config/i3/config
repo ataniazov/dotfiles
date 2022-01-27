@@ -682,23 +682,23 @@ for_window [class="(?i)librewolf"] border none
 ## mark [--add|--replace] [--toggle] <identifier>
 ## [con_mark="identifier"] focus
 ## unmark <identifier>
-#bindsym $mod+Shift+dead_grave exec --no-startup-id i3-input -F 'mark --toggle %s' -l 1 -P 'Mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#bindsym $mod+dead_grave exec --no-startup-id i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Go to: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#bindsym $mod+Shift+grave exec --no-startup-id i3-input -F 'mark --toggle %s' -l 1 -P 'Mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#bindsym $mod+grave exec --no-startup-id i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Go to: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 set $marker "MARK"
-bindsym $mod+Shift+dead_grave mark --toggle $marker
-bindsym $mod+dead_grave [con_mark=$marker] focus
+bindsym $mod+Shift+grave mark --toggle $marker
+bindsym $mod+grave [con_mark=$marker] focus
 
 # Swapping containers
 ## Syntax: swap container with id|con_id|mark <arg>
 # Swaps the focused container with the marked container
-#bindsym $mod+$altmod+dead_grave exec --no-startup-id i3-input -F 'swap container with mark %s' -l 1 -P 'Swap mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-bindsym $mod+$altmod+dead_grave swap container with mark $marker
+#bindsym $mod+$altmod+grave exec --no-startup-id i3-input -F 'swap container with mark %s' -l 1 -P 'Swap mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+bindsym $mod+$altmod+grave swap container with mark $marker
 
 # Moving containers/windows to marks
 ## move window|container to mark <mark>
 # Move the focused container to another container with a specific mark
-#bindsym $mod+Control+dead_grave exec --no-startup-id i3-input -F 'move container to mark %s' -l 1 -P 'Move mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-bindsym $mod+Control+dead_grave move container to mark $marker
+#bindsym $mod+Control+grave exec --no-startup-id i3-input -F 'move container to mark %s' -l 1 -P 'Move mark: ' -f -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+bindsym $mod+Control+grave move container to mark $marker
 
 # Nop
 ## Syntax: nop [<comment>]
