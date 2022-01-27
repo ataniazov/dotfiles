@@ -49,7 +49,8 @@ catfish
 fonts-terminus
 fonts-terminus-otb
 xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
-//ttf-mscorefonts-installer
+fonts-ubuntu fonts-ubuntu-console
+ttf-xfree86-nonfree
 
 ### Internet
 firefox-esr

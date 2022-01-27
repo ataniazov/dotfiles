@@ -57,7 +57,8 @@ catfish
 fonts-terminus fonts-terminus-otb
 xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique
 ttf-xfree86-nonfree
-ttf-mscorefonts-installer
+//ttf-mscorefonts-installer
+fonts-ubuntu fonts-ubuntu-console
 
 ### Internet
 firefox-esr
@@ -270,6 +271,9 @@ rofi
 ibus-mozc
 mozc-utils-gui
 ibus-anthy
+fcitx5-mozc
+fcitx5-material-color
+fonts-noto fonts-noto-hinted fonts-noto-mono
 
 ## Remove
 
