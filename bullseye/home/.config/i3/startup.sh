@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # kill startup daemons
 #pkill conky
@@ -9,20 +9,22 @@
 #pkill xfce4-notifyd
 #pkill xdg-user-dirs-update
 #pkill xiccd
-pkill xfce4-power-manager
-pkill xfsettingsd
+#pkill fcitx5 mozc_server
+#pkill xfce4-power-manager
+#pkill xfsettingsd
 #pkill start-pulseaudio-x11
-pkill polkit-gnome-authentication-agent-1
-pkill at-spi-bus-launcher
+#pkill polkit-gnome-authentication-agent-1
+#pkill at-spi-bus-launcher
 
-sleep 1
+#sleep 1
 
 # startup daemons
-/usr/libexec/at-spi-bus-launcher --launch-immediately &
+#/usr/libexec/at-spi-bus-launcher --launch-immediately &
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 #start-pulseaudio-x11 &
-xfsettingsd &
-xfce4-power-manager &
+xfsettingsd --daemon
+xfce4-power-manager --daemon
+fcitx5 -d
 #xiccd &
 #xdg-user-dirs-update &
 #/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &

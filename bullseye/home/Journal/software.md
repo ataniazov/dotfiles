@@ -272,7 +272,7 @@ rofi
 #mozc-utils-gui
 #ibus-anthy
 fcitx5-mozc
-fonts-noto fonts-noto-hinted fonts-noto-mono
+fonts-noto fonts-noto-mono
 
 ## Remove
 

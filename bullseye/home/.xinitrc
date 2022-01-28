@@ -8,8 +8,8 @@
 . /etc/X11/Xsession
 
 # fcitx5
+export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
 
 exec i3
