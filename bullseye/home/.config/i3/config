@@ -355,7 +355,17 @@ bindsym $mod+r mode "resize"
 ## <colorclass> <border> <background> <text> <indicator> <child_border>
 ## Colors are in HTML hex format (#rrggbb), see the following example:
 ## Examples (default colors):
-### class                border  backgr. text    indicator child_border
+## class                  border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+# client.background       #ffffff
+
+#######################################################################
+## class                 border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 #client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 #client.unfocused        #333333 #222222 #888888 #292d2e   #222222
@@ -363,17 +373,7 @@ bindsym $mod+r mode "resize"
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 #client.background       #ffffff
-
-######################################################################
-### class                border  backgr. text    indicator child_border
-#client.focused          #00ff00 #00ff00 #000000 #ff0000   #00ff00
-#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-#client.background       #000000
-######################################################################
+#######################################################################
 
 ## Focus follows mouse
 ## Syntax: focus_follows_mouse yes|no
@@ -479,29 +479,29 @@ bar {
         # Colors
         colors {
                 ## Syntax: background <color>
-                #background #000000
+                # background #000000
                 ## Syntax: statusline <color>
-                #statusline #ffffff
+                # statusline #ffffff
                 ## Syntax: separator <color>
-                #separator  #666666
+                # separator  #666666
 
-                #focused_background #000000
-                #focused_statusline #ffffff
-                #focused_separator  #666666
+                # focused_background #000000
+                # focused_statusline #ffffff
+                # focused_separator  #666666
 
                 ## Syntax: <colorclass> <border> <background> <text>
-                ### class           border  backgr. text
+                ## class             border  backgr. text
+                # focused_workspace  #4c7899 #285577 #ffffff
+                # active_workspace   #333333 #5f676a #ffffff
+                # inactive_workspace #333333 #222222 #888888
+                # urgent_workspace   #2f343a #900000 #ffffff
+                # binding_mode       #2f343a #900000 #ffffff
+
+                ###########################################
+                ## class            border  backgr. text
                 #focused_workspace  #4c7899 #285577 #ffffff
                 #active_workspace   #333333 #5f676a #ffffff
                 #inactive_workspace #333333 #222222 #888888
-                #urgent_workspace   #2f343a #900000 #ffffff
-                #binding_mode       #2f343a #900000 #ffffff
-
-                ###########################################
-                ### class           border  backgr. text
-                #focused_workspace  #00ff00 #00ff00 #000000
-                #active_workspace   #5f676a #5f676a #000000
-                #inactive_workspace #00ff00 #000000 #00ff00
                 #urgent_workspace   #2f343a #900000 #ffffff
                 #binding_mode       #2f343a #900000 #ffffff
                 ###########################################
