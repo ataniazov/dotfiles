@@ -39,6 +39,7 @@ fcitx5 -d
 # gsettings set org.freedesktop.ibus.general use-system-keyboard-layout 'true'
 # gsettings set org.freedesktop.ibus.general use-xmodmap 'true'
 #gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#00ff00'
-# gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>space']"
+# gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['Shift_L']"
+# gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['Alt_L']"
 #gsettings set org.freedesktop.ibus.general.hotkey triggers "['<Alt>space']"
 #gsettings set org.freedesktop.ibus.general switcher-delay-time '-1'

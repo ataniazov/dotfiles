@@ -93,6 +93,9 @@ xkb_symbols "basic" {
     key <AB10> { [            z,               Z,             zcaron,           Zcaron ] };
 
     key <BKSL> { [    backslash,             bar,            notsign,        brokenbar ] };
+    key <LSGT> { [         less,         greater,                bar,        brokenbar ] };
+
+//  key <CAPS> { [  Eisu_toggle,       Caps_Lock                                       ] };
 
     include "level3(ralt_switch)"
 };
