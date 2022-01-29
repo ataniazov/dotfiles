@@ -634,7 +634,17 @@ bindsym $mod+g exec --no-startup-id firefox --private-window                    
 bindsym $mod+Shift+g exec --no-startup-id chromium --incognito                          # Chromium
 
 # Data cleansing to keep your privacy
-bindsym $mod+Shift+x exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b 'Yes, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh'"
+set $mode_cleanup cleanup
+mode "$mode_cleanup" {
+        bindsym Shift+y exec --no-startup-id "pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh", mode "default"
+
+        # back to normal: Enter, Escape, $mod+Shift+x
+        bindsym Return exec --no-startup-id pkill i3-nagbar, mode "default"
+        bindsym Escape exec --no-startup-id pkill i3-nagbar, mode "default"
+        bindsym $mod+Shift+x exec --no-startup-id pkill i3-nagbar, mode "default"
+}
+
+bindsym $mod+Shift+x mode "$mode_cleanup" ; exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to delete your session data?' -b '[Y]es, delete it!' 'pkill i3-nagbar ; $HOME/.config/i3/cleanup.sh' ; i3-msg mode \\"default\\""
 
 # Set default Locker
 ## i3lock
@@ -648,7 +658,20 @@ set $locker sh -c \\"trap \\\\"xset dpms 0 0 0\\\\" HUP INT TERM && xset +dpms d
 bindsym $mod+backslash exec --no-startup-id $locker
 
 # Session control shortcut (Shut Down, Restart, Lock, Log Out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Lock' 'pkill i3-nagbar ; $locker' -B 'Log Out' 'i3-msg exit' -B 'Restart' 'systemctl reboot' -B 'Shut Down' 'systemctl poweroff -i'"
+set $mode_session Session: [S]hut Down, [R]estart, [L]og Out, [l]ock
+mode "$mode_session" {
+        bindsym Shift+S exec --no-startup-id systemctl poweroff -i, mode "default"
+        bindsym Shift+R exec --no-startup-id systemctl reboot, mode "default"
+        bindsym Shift+L exec --no-startup-id i3-msg exit, mode "default"
+        bindsym l exec --no-startup-id "pkill i3-nagbar ; $locker", mode "default"
+
+        # back to normal: Enter, Escape, $mod+Shift+e
+        bindsym Return exec --no-startup-id pkill i3-nagbar, mode "default"
+        bindsym Escape exec --no-startup-id pkill i3-nagbar, mode "default"
+        bindsym $mod+Shift+e exec --no-startup-id pkill i3-nagbar, mode "default"
+}
+
+bindsym $mod+Shift+e mode "$mode_session" ; exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the session exit shortcut. Do you really want to exit i3? This will end your X session.' -B '[l]ock' 'pkill i3-nagbar ; $locker' -B '[L]og Out' 'i3-msg exit' -B '[R]estart' 'systemctl reboot' -B '[S]hut Down' 'systemctl poweroff -i' ; i3-msg mode \\"default\\""
 
 # Set ratpoison-like behaviour hot-keys
 ## Send the mouse cursor to the lower right corner of the screen
