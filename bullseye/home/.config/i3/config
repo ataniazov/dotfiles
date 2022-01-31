@@ -565,7 +565,7 @@ bindsym $mod+$altmod+Right move workspace to output right
 ## exec_always [--no-startup-id] <command>
 
 ## Set the wallpaper
-#exec_always --no-startup-id xsetroot -solid "#000000"
+#exec_always --no-startup-id xsetroot -solid black
 exec_always --no-startup-id feh --no-fehbg --bg-fill $HOME/Pictures/background.png
 
 ## Set dvorak as keyboard layout

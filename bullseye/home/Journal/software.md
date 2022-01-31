@@ -273,6 +273,7 @@ rofi
 #ibus-anthy
 fcitx5-mozc
 fonts-noto fonts-noto-mono
+fonts-ipafont fonts-vlgothic
 
 ## Remove
 

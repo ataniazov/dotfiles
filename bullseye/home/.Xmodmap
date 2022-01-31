@@ -1,7 +1,7 @@
 !Set caps-lock as a modifier
 !Zenkaku_Hankaku Muhenkan Henkan Hiragana_Katakana Romaji Kanji Eisu_toggle Mode_switch
-keycode 66 = Eisu_toggle Caps_Lock
-clear lock
+!keycode 66 = Eisu_toggle Caps_Lock
+!clear lock
 !clear mod3
 !keycode 66 = Super_L
 !keycode 192 = Super_L
