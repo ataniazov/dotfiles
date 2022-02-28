@@ -123,6 +123,9 @@ apparmor-profiles-extra
 apparmor-notify
 apparmor-utils
 macchanger
+dnscrypt-proxy
+stubby
+unbound
 
 #### Encryption
 haveged

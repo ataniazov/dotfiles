@@ -112,7 +112,7 @@ gnome-calculator
 //mate-calc
 evince
 //atril
-//mupdf
+mupdf
 //mupdf-tools
 //zathura zathura-pdf-poppler zathura-djvu zathura-ps zathura-cb
 gimp

@@ -7,4 +7,4 @@
 # invoke global X session script
 . /etc/X11/Xsession
 
-exec i3
+exec i3 --shmlog-size 0
