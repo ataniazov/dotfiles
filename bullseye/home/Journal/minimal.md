@@ -157,8 +157,8 @@ jq
 //redshift-gtk
 //gigolo
 //dconf-editor
-astyle
-scrcpy
+//astyle
+//scrcpy
 
 ## Remove
 

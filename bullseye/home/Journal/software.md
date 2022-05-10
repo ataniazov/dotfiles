@@ -269,6 +269,7 @@ netcat
 dconf-editor
 geo-bin
 rofi
+shellcheck
 
 ### jp
 #ibus-mozc
