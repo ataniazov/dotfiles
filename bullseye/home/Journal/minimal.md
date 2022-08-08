@@ -30,7 +30,7 @@ firmware-linux
 ### Window Manager
 xinit
 i3
-feh xdotools
+feh xdotool
 network-manager-gnome
 pulseaudio
 xfce4-settings
