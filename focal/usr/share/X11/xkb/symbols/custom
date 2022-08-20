@@ -1,0 +1,101 @@
+// Dvorak, intl., with additions
+// Ata Niyazov (ataniazov)
+//
+// ~§  !¡  @-  #№  $£  %¢  ^-  &-  *×  (-  )°  {“  }”
+// `¶  1¹  2²  3³  4¤  5€  6-  7-  8∞  9‘  0’  [«  ]»
+//
+//     "¨  <≤  >≥  P∏  YÝ  F-  GĞ  CÇ  R®  LØ  ?¿  +±
+//     '´  ,-  .…  pπ  yý  fƒ  gğ  cç  r©  lø  /÷  =≠
+//
+//     AÄ  OÖ  E∑  UÜ  Iİ  D∆  H-  T-  NŇ  SŞ  _¥  |-
+//     aä  oö  e√  uü  iı  dδ  h-  t™  nň  sş  -≈  \-
+//
+//     >¦  :Â  QÔ  JÛ  KÎ  X∫  B-  M-  W-  VÅ  ZŽ
+//     <|  ;â  qô  jû  kî  x∂  b-  mµ  wΩ  vå  zž
+//
+// ┌─────┐
+// │ 2 4 │   2 = Shift,  4 = Level3 + Shift
+// │ 1 3 │   1 = Normal, 3 = Level3
+// └─────┘
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
+// │ ~ § │ ! ¡ │ @   │ # № │ $ £ │ % ¢ │ ^   │ & ¾ │ * × │ (   │ ) ° │ { “ │ } ” ┃ Backspace ┃
+// │ ` ¶ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¤ │ 5 € │ 6 ¼ │ 7 ½ │ 8 ∞ │ 9 ‘ │ 0 ’ │ [ « │ ] » ┃ ⌫         ┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
+// ┃       ┃ " ¨ │ < ≤ │ > ≥ │ P ∏ │ Y Ý │ F   │ G Ğ │ C Ç │ R ® │ L Ø │ ? ¿ │ + ± ┃ Enter ⏎ ┃
+// ┃Tab ↹  ┃ ' ´ │ ,   │ . … │ p π │ y ý │ f ƒ │ g ğ │ c ç │ r © │ l ø │ / ÷ │ = ≠ ┃         ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓        ┃
+// ┃ Caps   ┃ A Ä │ O Ö │ E ∑ │ U Ü │ I İ │ D ∆ │ H   │ T   │ N Ň │ S Ş │ _ ¥ │ | ¦ ┃        ┃
+// ┃ Lock ⇬ ┃ a ä │ o ö │ e √ │ u ü │ i ı │ d δ │ h   │ t ™ │ n ň │ s ş │ - ≈ │ \ ¬ ┃        ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━━━┫
+// ┃       ┃ > ¦ │ : Â │ Q Ô │ J Û │ K Î │ X ∫ │ B   │ M   │ W   │ V Å │ Z Ž ┃               ┃
+// ┃Shift ⇧┃ < | │ ; â │ q ô │ j û │ k î │ x ∂ │ b   │ m µ │ w Ω │ v å │ z ž ┃Shift ⇧        ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
+// ┃       ┃       ┃       ┃ ␣                             ⍽ ┃       ┃       ┃       ┃       ┃
+// ┃Ctrl   ┃Super  ┃Alt    ┃ ␣           Space             ⍽ ┃AltGr ⇮┃Super  ┃Menu   ┃Ctrl   ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹─────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    name[Group1]= "Custom";
+
+//  key <LABL> { [         G1L1,            G1L2,               G1L3,             G1L4 ] };
+
+    key <TLDE> { [        grave,      asciitilde,          paragraph,          section ] };
+
+    key <AE01> { [            1,          exclam,        onesuperior,       exclamdown ] };
+    key <AE02> { [            2,              at,        twosuperior, dead_doubleacute ] };
+    key <AE03> { [            3,      numbersign,      threesuperior,       numerosign ] };
+    key <AE04> { [            4,          dollar,           currency,         sterling ] };
+    key <AE05> { [            5,         percent,           EuroSign,             cent ] };
+    key <AE06> { [            6,     asciicircum,         onequarter,            U2030 ] };
+    key <AE07> { [            7,       ampersand,            onehalf,    threequarters ] };
+    key <AE08> { [            8,        asterisk,           infinity,         multiply ] };
+    key <AE09> { [            9,       parenleft,  leftsinglequotemark,     dead_breve ] };
+    key <AE10> { [            0,      parenright, rightsinglequotemark,         degree ] };
+    key <AE11> { [  bracketleft,       braceleft,  guillemotleft,  leftdoublequotemark ] };
+    key <AE12> { [ bracketright,      braceright, guillemotright, rightdoublequotemark ] };
+
+    key <AD01> { [   apostrophe,        quotedbl,         dead_acute,   dead_diaeresis ] };
+    key <AD02> { [        comma,            less,      dead_abovedot,    lessthanequal ] };
+    key <AD03> { [       period,         greater,           ellipsis, greaterthanequal ] };
+    key <AD04> { [            p,               P,           Greek_pi,            U220F ] };
+    key <AD05> { [            y,               Y,             yacute,           Yacute ] };
+    key <AD06> { [            f,               F,           function,        Greek_phi ] };
+    key <AD07> { [            g,               G,             gbreve,           Gbreve ] };
+    key <AD08> { [            c,               C,           ccedilla,         Ccedilla ] };
+    key <AD09> { [            r,               R,          copyright,       registered ] };
+    key <AD10> { [            l,               L,             oslash,         Ooblique ] };
+    key <AD11> { [        slash,        question,           division,     questiondown ] };
+    key <AD12> { [        equal,            plus,           notequal,        plusminus ] };
+
+    key <AC01> { [            a,               A,         adiaeresis,       Adiaeresis ] };
+    key <AC02> { [            o,               O,         odiaeresis,       Odiaeresis ] };
+    key <AC03> { [            e,               E,         squareroot,            U2211 ] };
+    key <AC04> { [            u,               U,         udiaeresis,       Udiaeresis ] };
+    key <AC05> { [            i,               I,           idotless,        Iabovedot ] };
+    key <AC06> { [            d,               D,        Greek_delta,      Greek_DELTA ] };
+    key <AC07> { [            h,               H,       Greek_lambda,      Greek_theta ] };
+    key <AC08> { [            t,               T,          trademark,           dagger ] };
+    key <AC09> { [            n,               N,             ncaron,           Ncaron ] };
+    key <AC10> { [            s,               S,           scedilla,         Scedilla ] };
+    key <AC11> { [        minus,      underscore,              U2248,              yen ] };
+
+    key <AB01> { [    semicolon,           colon,        acircumflex,      Acircumflex ] };
+    key <AB02> { [            q,               Q,        ocircumflex,      Ocircumflex ] };
+    key <AB03> { [            j,               J,        ucircumflex,      Ucircumflex ] };
+    key <AB04> { [            k,               K,        icircumflex,      Icircumflex ] };
+    key <AB05> { [            x,               X,  partialderivative,         integral ] };
+    key <AB06> { [            b,               B,         Greek_beta,      Greek_alpha ] };
+    key <AB07> { [            m,               M,                 mu,      Greek_gamma ] };
+    key <AB08> { [            w,               W,        Greek_OMEGA,      Greek_omega ] };
+    key <AB09> { [            v,               V,              aring,            Aring ] };
+    key <AB10> { [            z,               Z,             zcaron,           Zcaron ] };
+
+    key <BKSL> { [    backslash,             bar,            notsign,        brokenbar ] };
+    key <LSGT> { [         less,         greater,                bar,        brokenbar ] };
+
+//  key <CAPS> { [  Eisu_toggle,       Caps_Lock                                       ] };
+
+    include "level3(ralt_switch)"
+};
