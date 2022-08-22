@@ -18,7 +18,9 @@ $ sudo apt install <package-name>
 ```
 
 ### Firmware
-firmware-linux
+//nvidia-340-updates
+
+//firmware-linux
 //firmware-iwlwifi
 //firmware-atheros
 //firmware-realtek
