@@ -10,3 +10,10 @@
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 # / was on /dev/sda3 during installation
 UUID=00000000-0000-0000-0000-000000000000 /               ext4    noatime,nodiratime,errors=remount-ro 0       1
+# swap file
+# SIZE=1048576 (kilobytes) is 1 (gigabyte)
+#dd if=/dev/zero of=/PATH/FILENAME bs=1024 count=SIZE
+#chmod 600 /swapfile
+#mkswap /swapfile
+#swapon /swapfile
+/swapfile                                 none            swap    sw              0       0
