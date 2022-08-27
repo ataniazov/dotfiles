@@ -19,3 +19,8 @@ $ git -c http.proxy=socks5://127.0.0.1:1080 <command>
 ```bash
 $ rsync -avzhPn --delete ${SRC} ${DST}
 ```
+
+* pactl
+```bash
+$ pactl load-module module-rtp-send format=s16be channels=2 rate=48000 source=0 destination=RECEIVER_IP port=RECEIVER_PORT mtu=320
+```

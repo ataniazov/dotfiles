@@ -17,7 +17,7 @@
 # ifaces="eth0 wlan0"
 
 # Auto detect interfaces
-ifaces=$(ls /sys/class/net | grep -E '^(eno|enp|ens|enx|eth|wlan|wlp|wlxc)')
+ifaces=$(ls /sys/class/net | grep -E '^(eno|enp|ens|enx|eth|wlan|wlp|wlxc|usb)')
 
 if [ -z "$ifaces" ]; then
     i3status
