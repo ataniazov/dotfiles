@@ -17,7 +17,7 @@ $ git -c http.proxy=socks5://127.0.0.1:1080 <command>
 
 * rsync
 ```bash
-$ rsync -avzhPn --delete ${SRC} ${DST}
+$ rsync -avzhPn --delete --human-readable --progress ${SRC} ${DST}
 ```
 
 * pactl
