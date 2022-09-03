@@ -279,6 +279,7 @@ fcitx5-mozc
 fonts-noto fonts-noto-mono
 fonts-ipafont fonts-vlgothic
 fonts-dejima-mincho fonts-umeplus fonts-umeplus-cl fonts-takao fonts-takao-gothic fonts-takao-mincho
+fonts-ipafont-nonfree-jisx0208 fonts-ipafont-nonfree-uigothic
 fonts-aoyagi-kouzan-t fonts-aoyagi-soseki fonts-kouzan-mouhitsu
 fonts-hanazono fonts-monapo fonts-mplus fonts-kanjistrokeorders
 
