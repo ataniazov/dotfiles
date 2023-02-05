@@ -4,8 +4,16 @@ evdev:atkbd:dmi:bvn*:bvr*:bd*:svn*:pn*:pvr*
  KEYBOARD_KEY_3a=leftmeta
  KEYBOARD_KEY_dc=capslock
 
-evdev:input:b0003v*p*
+#evdev:input:b0003v*p*
 # KEYBOARD_KEY_700e3=f14
- KEYBOARD_KEY_700e3=muhenkan
+# KEYBOARD_KEY_700e3=muhenkan
+# KEYBOARD_KEY_70039=leftmeta
+# KEYBOARD_KEY_700e7=capslock
+
+# Macbook Pro
+evdev:input:b0003v*p*
+ KEYBOARD_KEY_700e2=muhenkan
+ KEYBOARD_KEY_700e3=leftalt
  KEYBOARD_KEY_70039=leftmeta
- KEYBOARD_KEY_700e7=capslock
+ KEYBOARD_KEY_700e7=rightalt
+ KEYBOARD_KEY_700e6=capslock

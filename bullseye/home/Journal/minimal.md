@@ -84,6 +84,7 @@ gvfs-bin
 gvfs-fuse
 
 ### Archive
+unzip
 rar unrar
 p7zip-rar
 
