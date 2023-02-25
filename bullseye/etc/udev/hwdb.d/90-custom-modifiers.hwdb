@@ -16,4 +16,4 @@ evdev:input:b0003v*p*
  KEYBOARD_KEY_700e3=leftalt
  KEYBOARD_KEY_70039=leftmeta
  KEYBOARD_KEY_700e7=rightalt
- KEYBOARD_KEY_700e6=capslock
+ KEYBOARD_KEY_700e6=rightctrl

@@ -580,7 +580,7 @@ exec_always --no-startup-id xsetroot -solid black
 ## Set dvorak as keyboard layout
 #exec_always --no-startup-id setxkbmap -layout "us(dvorak-intl),tr" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
 #exec_always --no-startup-id setxkbmap -layout "custom,ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock,caps:hyper"
-exec_always --no-startup-id setxkbmap -layout "custom,ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll"
+exec_always --no-startup-id setxkbmap -layout "custom,ru(phonetic_dvorak)" -option -option "grp:alt_space_toggle,grp_led:scroll,shift:both_capslock_cancel"
 
 ## Set caps-lock as a modifier
 #exec_always --no-startup-id xmodmap -e "clear lock" ; xmodmap -e "keycode 66 = Super_L" ; xmodmap -e "add mod4 = Super_L"
