@@ -10,6 +10,8 @@ $ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key
 $ sudo apt update
 $ sudo apt install virtualbox-6.1
 
+$ sudo adduser ${USER} vboxusers
+
 ```
 
 ```bash

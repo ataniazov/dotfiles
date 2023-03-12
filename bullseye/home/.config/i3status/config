@@ -27,7 +27,7 @@ order += "battery all"
 order += "disk /"
 order += "memory"
 order += "cpu_usage"
-#order += "cpu_temperature all"
+order += "cpu_temperature all"
 order += "load"
 order += "tztime local"
 
