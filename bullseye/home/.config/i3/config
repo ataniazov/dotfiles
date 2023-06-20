@@ -44,8 +44,8 @@ set $altmod mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-font pango:DejaVu Sans Mono 16
+font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 16
 #font pango:Ubuntu Mono 16
 
 # Before i3 v4.8, we used to recommend this one as the default:
@@ -95,7 +95,8 @@ bindsym $mod+minus kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 #bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 #bindsym $mod+d exec --no-startup-id dmenu_run -i -fn monospace-16 -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
-bindsym $mod+d exec --no-startup-id dmenu_run -i -fn 'DejaVu Sans Mono-16' -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
+bindsym $mod+d exec --no-startup-id dmenu_run -i -fn 'DejaVu Sans Mono-8' -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
+#bindsym $mod+d exec --no-startup-id dmenu_run -i -fn 'DejaVu Sans Mono-16' -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 
 # A more modern dmenu replacement is rofi:
 # bindsym $mod+d exec "rofi -modi drun,run -show drun"
