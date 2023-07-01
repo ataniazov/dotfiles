@@ -31,8 +31,8 @@ firmware-linux
 xinit
 i3
 feh xdotool
-network-manager-gnome
-pulseaudio
+//network-manager-gnome
+//pulseaudio
 xfce4-settings
 xfce4-terminal
 xfce4-power-manager
@@ -40,10 +40,10 @@ xfce4-notifyd
 xfce4-screenshooter
 thunar
 thunar-archive-plugin
-thunar-media-tags-plugin
+//thunar-media-tags-plugin
 thunar-gtkhash
 ristretto
-catfish
+//catfish
 
 ### Fonts
 fonts-terminus
