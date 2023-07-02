@@ -32,7 +32,9 @@ xinit
 i3
 feh xdotool
 network-manager-gnome
-pulseaudio
+//pulseaudio
+pavucontrol
+//blueman
 xfce4-settings
 xfce4-terminal
 xfce4-power-manager
