@@ -144,7 +144,7 @@ git
 
 ### Misc.
 curl
-//rsync
+rsync
 
 #### Other
 meld
