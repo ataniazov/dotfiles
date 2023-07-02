@@ -20,4 +20,5 @@ UUID=0000-0000  /boot/efi       vfat    umask=0077      0       1
 #chmod 600 /swapfile
 #mkswap /swapfile
 #swapon /swapfile
-#/swapfile                                 none            swap    sw              0       0
+# swap file
+#/swapfile       none            swap    sw              0       0

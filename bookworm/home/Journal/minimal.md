@@ -60,7 +60,7 @@ aria2
 
 ### Multimedia
 mpv
-vlc
+//vlc
 
 #### Hardware Video Acceleration
 //libva-glx2
