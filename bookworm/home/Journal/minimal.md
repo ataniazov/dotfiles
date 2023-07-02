@@ -31,8 +31,8 @@ firmware-linux
 xinit
 i3
 feh xdotool
-//network-manager-gnome
-//pulseaudio
+network-manager-gnome
+pulseaudio
 xfce4-settings
 xfce4-terminal
 xfce4-power-manager
@@ -64,7 +64,7 @@ vlc
 
 #### Hardware Video Acceleration
 //libva-glx2
-vdpau-driver-all
+//vdpau-driver-all
 //mesa-va-drivers
 //nvidia-legacy-390xx-vdpau-driver
 //libnvidia-legacy-390xx-nvcuvid1
