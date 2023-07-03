@@ -32,6 +32,7 @@ xinit
 i3
 feh xdotool
 network-manager-gnome
+//pipewire pipewire-audio pipewire-alsa libspa-0.2-bluetooth
 //pulseaudio
 pavucontrol
 //blueman
