@@ -1,0 +1,9 @@
+.include /etc/pulse/default.pa
+
+### Load the simple protocol module
+#load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source=source_name record=true port=server_port listen=ip_address
+#load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source=0 record=true port=12345
+#load-module module-simple-protocol-tcp rate=44100 format=s16le channels=2 source=0 record=true port=12345
+
+#load-module module-simple-protocol-tcp record=true port=12345
+#load-module module-simple-protocol-tcp rate=48000 channels=2 record=true port=12345

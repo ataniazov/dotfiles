@@ -34,11 +34,11 @@ feh xdotool
 network-manager-gnome
 //pipewire pipewire-audio pipewire-alsa libspa-0.2-bluetooth
 //pulseaudio
-pavucontrol
+//pavucontrol
 //blueman
 xfce4-settings
 xfce4-terminal
-xfce4-power-manager
+xfce4-power-manager pkexec
 xfce4-notifyd
 xfce4-screenshooter
 thunar
