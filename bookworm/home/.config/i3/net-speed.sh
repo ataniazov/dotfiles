@@ -75,38 +75,16 @@ readable() {
     echo "$result"
 }
 
-#update_rate() {
-#    local rx tx tmp_rx tmp_tx
-#    local time="$(date +%s)"
-#    rx=0
-#    tx=0
-#
-#    for iface in $ifaces; do
-#        read tmp_rx < "/sys/class/net/${iface}/statistics/rx_bytes"
-#        read tmp_tx < "/sys/class/net/${iface}/statistics/tx_bytes"
-#        rx=$(( rx + tmp_rx ))
-#        tx=$(( tx + tmp_tx ))
-#    done
-#
-#    local interval=$(( time - last_time ))
-#    if [ $interval -gt 0 ]; then
-#        rate="$(readable $(( (rx - last_rx) / interval )) true) $(readable $(( (tx - last_tx) / interval )) false)"
-#    else
-#        rate="0↓ 0↑"
-#    fi
-#
-#    last_time=$time
-#    last_rx=$rx
-#    last_tx=$tx
-#}
-
-iface=$(echo "$ifaces" | cut -d ' ' -f1)
 update_rate() {
-    local rx tx
+    local rx=0 tx=0 tmp_rx tmp_tx
     local time="$(date +%s)"
 
-    read rx < "/sys/class/net/${iface}/statistics/rx_bytes"
-    read tx < "/sys/class/net/${iface}/statistics/tx_bytes"
+    for iface in $ifaces; do
+        read tmp_rx < "/sys/class/net/${iface}/statistics/rx_bytes"
+        read tmp_tx < "/sys/class/net/${iface}/statistics/tx_bytes"
+        rx=$(( rx + tmp_rx ))
+        tx=$(( tx + tmp_tx ))
+    done
 
     local interval=$(( time - last_time ))
     if [ $interval -gt 0 ]; then
@@ -119,6 +97,26 @@ update_rate() {
     last_rx=$rx
     last_tx=$tx
 }
+
+#iface=$(echo "$ifaces" | cut -d ' ' -f1)
+#update_rate() {
+#    local rx tx
+#    local time="$(date +%s)"
+#
+#    read rx < "/sys/class/net/${iface}/statistics/rx_bytes"
+#    read tx < "/sys/class/net/${iface}/statistics/tx_bytes"
+#
+#    local interval=$(( time - last_time ))
+#    if [ $interval -gt 0 ]; then
+#        rate="$(readable $(( (rx - last_rx) / interval )) true) $(readable $(( (tx - last_tx) / interval )) false)"
+#    else
+#        rate="0↓ 0↑"
+#    fi
+#
+#    last_time=$time
+#    last_rx=$rx
+#    last_tx=$tx
+#}
 
 i3status | (read line && echo "$line" && read line && echo "$line" && read line && echo "$line" && update_rate && while :
 do

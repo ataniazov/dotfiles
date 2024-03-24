@@ -35,7 +35,8 @@ set $altmod mod1
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
-font pango:Terminus 17px
+#font pango:Terminus 11px
+font pango:Terminus 8
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,6 +47,7 @@ font pango:Terminus 17px
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 #font pango:DejaVu Sans Mono 16
+#font pango:DejaVu Sans Mono 12
 #font pango:Ubuntu Mono 16
 
 # Before i3 v4.8, we used to recommend this one as the default:
@@ -97,7 +99,8 @@ bindsym $mod+minus kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
+#bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
+bindsym $mod+d exec --no-startup-id dmenu_run -i -fn Terminus-12:style=Regular -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 #bindsym $mod+d exec --no-startup-id dmenu_run -i -fn monospace-16 -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 #bindsym $mod+d exec --no-startup-id dmenu_run -i -fn 'DejaVu Sans Mono-8' -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
 #bindsym $mod+d exec --no-startup-id dmenu_run -i -fn 'DejaVu Sans Mono-16' -nb \#000000 -nf \#ffffff -sb \#ffffff -sf \#000000
