@@ -1,4 +1,4 @@
-#deb cdrom:[Debian GNU/Linux 12.0.0 _Bookworm_ - Official amd64 NETINST with firmware 20230610-10:21]/ bookworm main non-free-firmware
+#deb cdrom:[Debian GNU/Linux 12.5.0 _Bookworm_ - Official amd64 NETINST with firmware 20240210-11:27]/ bookworm contrib main non-free-firmware
 
 deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
