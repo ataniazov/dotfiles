@@ -23,6 +23,11 @@ $ sudo add-apt-repository \
       contrib"
 ```
 
+```bash
+$ VBoxManage setextradata "<VM_NAME>" "VBoxInternal/Devices/nvme/0/Config/MsiXSupported" 0
+$ VBoxManage setextradata "<VM_NAME>" "VBoxInternal/Devices/nvme/0/Config/CtrlMemBufSize" 0
+```
+
 * Disabled systemd services:
 
 ```bash
@@ -37,4 +42,11 @@ $ sudo systemctl disable
 - vboxdrv.service
 - vboxballoonctrl-service.service
 - vboxweb-service.service
+```
+
+* Installed KVM
+```bash
+$ sudo apt install qemu-system libvirt-daemon-system virt-manager
+
+$ sudo adduser ${USER} libvirt
 ```

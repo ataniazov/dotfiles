@@ -6,7 +6,7 @@
 #start-pulseaudio-x11 &
 xfsettingsd --daemon
 xfce4-power-manager --daemon
-#xiccd &
+xiccd &
 #xdg-user-dirs-update &
 #/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
 #compton -cCG

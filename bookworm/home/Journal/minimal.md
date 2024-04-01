@@ -40,6 +40,7 @@ xfce4-settings
 xfce4-terminal
 xfce4-power-manager pkexec
 xfce4-notifyd
+xiccd
 xfce4-screenshooter
 thunar
 thunar-archive-plugin
