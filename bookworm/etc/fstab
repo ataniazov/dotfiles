@@ -19,8 +19,14 @@ UUID=0000-0000  /boot/efi       vfat    umask=0077      0       1
 # swap file
 # SIZE=1048576 (kilobytes) is 1 (gigabyte)
 #dd if=/dev/zero of=/PATH/FILENAME bs=1024 count=SIZE
+#fallocate -l 1G /swapfile
+#mkswap -U clear --size 4G --file /swapfile
 #chmod 600 /swapfile
 #mkswap /swapfile
 #swapon /swapfile
 # swap file
 #/swapfile       none            swap    sw              0       0
+#/swapfile       swap            swap    defaults        0       0
+#sysctl -w vm.swappiness=1
+#findmnt / -o UUID -n
+#filefrag -v /swapfile|awk 'NR==4{gsub(/\./,"");print $4;}'
