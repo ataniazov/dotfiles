@@ -3,10 +3,14 @@
 # startup daemons
 #/usr/libexec/at-spi-bus-launcher --launch-immediately &
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/libexec/polkit-mate-authentication-agent-1 &
+xiccd --edid &
 #start-pulseaudio-x11 &
 xfsettingsd --daemon
 xfce4-power-manager --daemon
-xiccd &
+blueman-applet --loglevel 0 2>/dev/null &
+nm-applet &
+#sh -c "systemctl --user start xfce4-notifyd.service 2>/dev/null || exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd" &
 #xdg-user-dirs-update &
 #/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
 #compton -cCG
