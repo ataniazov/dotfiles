@@ -10,7 +10,7 @@ GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
 #GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 #GRUB_CMDLINE_LINUX_DEFAULT="quiet noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off spectre_v1=off spectre_v2=off spectre_v2_user=off tsx=on tsx_async_abort=off nx_huge_pages=off kvm.nx_huge_pages=off kvm-intel.vmentry_l1d_flush=never mitigations=off ipv6.disable=1 ipv6.disable_ipv6=1 pci=nomsi pci=noaer pcie_aspm=off"
 #GRUB_CMDLINE_LINUX_DEFAULT="quiet noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off spectre_v1=off spectre_v2=off spectre_v2_user=off tsx=on tsx_async_abort=off nx_huge_pages=off kvm.nx_huge_pages=off kvm-intel.vmentry_l1d_flush=never mitigations=off"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet resume=UUID=60b0340a-c618-4ae4-b1d0-016841719341 resume_offset=130521088 noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off spectre_v1=off spectre_v2=off spectre_v2_user=off tsx=on tsx_async_abort=off nx_huge_pages=off kvm.nx_huge_pages=off kvm-intel.vmentry_l1d_flush=never mitigations=off"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 resume=UUID=60b0340a-c618-4ae4-b1d0-016841719341 resume_offset=130521088 noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off spectre_v1=off spectre_v2=off spectre_v2_user=off tsx=on tsx_async_abort=off nx_huge_pages=off kvm.nx_huge_pages=off kvm-intel.vmentry_l1d_flush=never mitigations=off"
 GRUB_CMDLINE_LINUX=""
 
 # If your computer has multiple operating systems installed, then you
