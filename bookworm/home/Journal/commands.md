@@ -18,6 +18,8 @@ $ git -c http.proxy=socks5://127.0.0.1:1080 <command>
 * git ssh clone
 ```bash
 $ git clone git@github.com:ataniazov/dotfiles.git
+$ git config --local user.email ""
+$ git config --local user.name "USER_NAME"
 ```
 
 * rsync
