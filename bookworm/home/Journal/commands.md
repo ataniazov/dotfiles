@@ -15,6 +15,11 @@ $ wget --tries=20 --retry-connrefused --no-parent --no-clobber --mirror --page-r
 $ git -c http.proxy=socks5://127.0.0.1:1080 <command>
 ```
 
+* git ssh clone
+```bash
+$ git clone git@github.com:ataniazov/dotfiles.git
+```
+
 * rsync
 ```bash
 $ rsync -avzhPn --delete ${SRC} ${DST}
