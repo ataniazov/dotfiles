@@ -1,0 +1,125 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        output_format = "i3bar"
+        separator = ""
+        colors = true
+        #interval = 5
+        interval = 1
+}
+
+#order += "ipv6"
+order += "volume master"
+#order += "run_watch DHCP"
+#order += "run_watch VPNC"
+#order += "path_exists VPN"
+#order += "wireless wlan0"
+order += "wireless _first_"
+#order += "ethernet eth0"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "memory"
+order += "cpu_usage"
+order += "cpu_temperature all"
+order += "load"
+order += "tztime local"
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        #device = "default"
+        #device = "pulse"
+        #mixer = "Master"
+        #mixer_idx = 0
+}
+
+wireless _first_ {
+        #format_up = "W: (%quality at %essid, %bitrate / %frequency) %ip"
+        format_up = "W: (%quality at %essid) %ip"
+        #format_down = "W: down"
+        format_down = ""
+}
+
+ethernet _first_ {
+        # if you use %speed, i3status requires the cap_net_admin capability
+        format_up = "E: %ip (%speed)"
+        #format_down = "E: down"
+        format_down = ""
+}
+
+battery all {
+        #format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage %remaining (%emptytime %consumption)"
+        #format_down = "No battery"
+        format_down = ""
+        #status_chr = "⚡ CHR"
+        #status_bat = "🔋 BAT"
+        #status_unk = "? UNK"
+        #status_full = "☻ FULL"
+        #path = "/sys/class/power_supply/BAT%d/uevent"
+        #low_threshold = 10
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPNC {
+        # file containing the PID of a vpnc process
+        pidfile = "/var/run/vpnc/pid"
+}
+
+path_exists VPN {
+        # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+        path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+memory {
+        #format = "%used | %available"
+        format = "%used"
+        #threshold_degraded = "1G"
+        threshold_degraded = "10%"
+        #format_degraded = "MEMORY < %available"
+        format_degraded = "RAM: %used"
+}
+
+cpu_usage {
+        format = "%usage"
+}
+
+disk "/" {
+        #format = "%free (%avail) / %total, %used"
+        #format = "%percentage_used used, %percentage_free free, %percentage_avail avail"
+        format = "%avail"
+        #prefix_type = "custom"
+        low_threshold = 5
+        threshold_type = "percentage_avail"
+        format_below_threshold = "Warning: %percentage_avail %avail"
+}
+
+cpu_temperature all {
+        #path = "/sys/devices/platform/coretemp.0/temp1_input"
+        #path = "/sys/devices/virtual/thermal/thermal_zone0/temp"
+        #path = "/sys/class/thermal/thermal_zone0/temp"
+        path = "/sys/class/thermal/thermal_zone1/temp"
+        format = "T: %degrees °C"
+        max_threshold = 70
+}
+
+load {
+        #format = "%5min"
+        format = "[%1min %5min %15min]"
+}
+
+tztime local {
+        #format = "%Y-%m-%d %H:%M:%S %Z"
+        format = "%a, %d %b %H:%M"
+        #timezone = "Europe/Istanbul"
+}

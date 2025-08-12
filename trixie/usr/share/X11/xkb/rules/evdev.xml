@@ -1,0 +1,12 @@
+    <layout>
+      <configItem>
+	<name>custom</name>
+        <!-- Keyboard indicator for Custom layouts -->
+        <shortDescription>custom</shortDescription>
+        <description>A user-defined custom Layout</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList/>
+    </layout>
